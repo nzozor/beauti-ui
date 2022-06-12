@@ -25,7 +25,7 @@ module.exports = function (config) {
       suppressAll: true // removes the duplicated traces
     },
     coverageReporter: {
-      dir: require('path').join(__dirname, './coverage/my-app-beauti'),
+      dir: require('path').join(__dirname, './coverage/beauti-frontend'),
       subdir: '.',
       reporters: [
         { type: 'html' },
