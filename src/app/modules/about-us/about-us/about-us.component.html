@@ -1,0 +1,55 @@
+<div class="container">
+  <h1>About Beauti Skin Clinic</h1>
+  <div class="beauti">
+    <div> Your local <h2>skin and beauty specialist</h2>, Italian standard.</div>
+  </div>
+
+  <div>
+      <h3>
+        Beauti Skin Clinic was founded by professional Aesthetician Cinzia Campigotto in 2017 who believes in providing advanced but affordable skin treatments, as well as creating a very warm, clean and friendly environment to every customer.
+      </h3>
+    <p>
+      We specialise in providing bespoke and results-driven treatment plans combined with a relaxing, holistic approach to skincare and self-care with the focus to improve problematic skin such as acne, rosacea, pigmentation and aging. 
+    </p>
+    <p>
+      Some of our most popular treatments include Aqua 3 Hydrotherapy Facial, Skin Peels, TriBella, Skin Resurfacing, Radio Frequency Skin Tightening, Plasma Face Lift, Microneedling with Dermapen as well as IPL Laser Hair Removal and Electrolysis.
+    </p>
+    <p>Our waxing is also famous in the area which has received many 5 star online reviews because of our quick and painless technique, we see happy customers keep returning all the time.</p>
+    <p>
+      To continue your journey at home, our clinic stocks premium products from well-known
+      professional skincare brands such as AlumierMD and Sothys etc. which you can purchase in store. 
+      If you want to order AlumierMD at home, please send us an email on 
+      <a href="mailto:info@beautiskinclinic.com" target="_blank">info@beautiskinclinic.com</a> and we will set up an exclusive online account for you.
+    </p>
+  </div>
+
+  <h4>
+    The Founder
+  </h4>
+  <h5>
+    <span>Cinzia Campigotto</span> <br />
+    <span> <i>Aesthetician</i> </span>
+  </h5>
+
+  <div>
+    <p>
+      With 20 years of experience in the advanced skin and beauty industry, Cinzia maintains an excellent reputation with a wide and loyal clientele. She is specialised in providing skin consultations for bespoke treatment plans. If you want to make an appointment with Cinzia, please select Skin Consultation on our
+      <a
+        href="https://widget.treatwell.co.uk/place/beauti-skin-clinic/"
+        target="_blank"
+        rel="noopener"
+        >Booking page</a
+      >.
+    </p>
+  </div>
+</div>
+
+<ngx-slick-carousel
+  id="carousel"
+  #slickModal="slick-carousel"
+  [config]="slideConfig"
+>
+  <div ngxSlickItem *ngFor="let slide of slides" class="slide">
+    <img src="{{ slide.img }}" alt="" width="100%" />
+  </div>
+</ngx-slick-carousel>

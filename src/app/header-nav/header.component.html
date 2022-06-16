@@ -1,0 +1,35 @@
+<div [class.sticky]="sticky">
+  <div>
+    <app-burger-menu
+      [active]="menuLinkOpen"
+      [sticky]="sticky"
+      (menuLinkOpen)="setMenuLink($event)"
+    ></app-burger-menu>
+    <app-beauti-logo
+      [sticky]="sticky"
+      (click)="menuLinkOpen = false"
+    ></app-beauti-logo>
+
+    <ul class="menu-list">
+      <li><a routerLink="/">HOME</a></li>
+      <li><a routerLink="/about-us">ABOUT US</a></li>
+      <li><a routerLink="/treatments">TREATMENTS</a></li>
+      <li><a routerLink="/contact">CONTACT</a></li>
+    </ul>
+    <button
+      mat-flat-button
+      color="primary"
+      class="main-button"
+      (click)="openBooking($event)"
+    >
+      Book now
+    </button>
+
+    <div class="mobile-menu"></div>
+  </div>
+</div>
+<app-menu-link
+  [active]="menuLinkOpen"
+  [class.active]="menuLinkOpen"
+  (menuLinkOpen)="setMenuLink($event)"
+></app-menu-link>

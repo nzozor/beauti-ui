@@ -1,0 +1,14 @@
+{
+    "apps": [{
+        "root": "src",
+        "stylePreprocessorOptions": {
+            "includePaths": [
+              "./scss"
+            ]
+        },
+        "assets": [
+            "assets",
+            "favicon.ico"
+          ]
+    }]
+}

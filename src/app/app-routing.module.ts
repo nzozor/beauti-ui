@@ -1,12 +1,31 @@
 import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
+import { Routes, RouterModule } from '@angular/router';
 
-const routes: Routes = [];
+const routes: Routes = [
+  {
+    path: '',
+    loadChildren: () => import('./modules/home-page/home-page.module').then(m => m.HomePageModule)
+  },
+  {
+    path: 'treatments',
+    loadChildren: () => import('./modules/treatments/treatments.module').then(m => m.TreatmentsModule)
+  },
+  {
+    path: 'contact',
+    loadChildren: () => import('./modules/contact/contact.module').then(m => m.ContactModule)
+  },
+  {
+    path: 'about-us',
+    loadChildren: () => import('./modules/about-us/about-us.module').then(m => m.AboutUsModule)
+  },
+  {
+    path: '**',
+    redirectTo: ''
+  }
+];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes, {
-    initialNavigation: 'enabledBlocking'
-})],
+  imports: [RouterModule.forRoot(routes, { anchorScrolling: 'enabled', relativeLinkResolution: 'corrected' })],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }

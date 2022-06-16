@@ -1,0 +1,53 @@
+@import '../../../scss/palette';
+
+.header-wrapper {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  transition: all .8s;
+  z-index: 1;
+  border-bottom: 1px solid $blue-type1;
+}
+
+.sticky {
+  background: white;
+}
+
+.parallax {
+  min-height: 500px;
+  // min-height: 650px;
+
+  background-attachment: fixed;
+  // background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  
+
+  @media (max-width: 767px) {
+    // min-height: 263px;
+    // background-size: initial;
+    // background-position: top;
+    // background-size: 156%;
+    
+    // background-attachment: initial;
+
+    // min-height: 263px;
+    // background-size: initial;
+    // background-position-y: 0!important;
+    // background-position-x: -73px;
+    // background-size: 165%;
+
+    background-attachment: initial;
+    min-height: 170px;
+    background-size: initial;
+    background-position-y: -90px!important;
+    /* background-position-x: -72px; */
+    background-size: 128%;
+  }
+}
+
+#scene {
+  img {
+    width: 100%;
+  }
+}
