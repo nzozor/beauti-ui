@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Subscription } from 'rxjs';
+import { DataService } from 'src/app/shared/services/data.service';
 
 @Component({
   selector: 'app-about-us',
@@ -41,9 +43,17 @@ export class AboutUsComponent implements OnInit {
     {img: 'assets/cinzia-campigotto-3.jpg' },
   ];
 
-  constructor() { }
+  constructor(private dataService: DataService) { }
+  aboutUsContent = '';
+  aboutUsSub: Subscription;
+
 
   ngOnInit() {
+    this.aboutUsSub = this.dataService
+      .getAboutUsPage()
+      .subscribe((content) => {
+        this.aboutUsContent = content.Content;
+      });
   }
 
 }

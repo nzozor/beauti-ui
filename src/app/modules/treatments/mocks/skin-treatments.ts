@@ -181,14 +181,14 @@ export const SKIN_TREATMENTS: any = [
         treatment: `One Area`,
         options: [
           { key: 'Duration', value: '60 mins' },
-          { key: 'Single', value: '£175' },
+          { key: 'Single', value: '£200' },
         ]
       },
       {
         treatment: `Two Areas`,
         options: [
           { key: 'Duration', value: '60 mins' },
-          { key: 'Single', value: '£250' },
+          { key: 'Single', value: '£280' },
         ]
       },
       {
@@ -198,7 +198,7 @@ export const SKIN_TREATMENTS: any = [
         text ever since the 1500s, when an unknown printer`,
         options: [
           { key: 'Duration', value: '60 mins' },
-          { key: 'Single', value: '£325' },
+          { key: 'Single', value: '£320' },
         ]
       },
     ]

@@ -1,6 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
 @import 'buttons';
 @import 'palette';
+@import 'about-us-page';
 // @import 'indigo';
 // @import "@angular/material/prebuilt-themes/indigo-pink.css";
 
@@ -34,7 +35,7 @@ h4 {
 }
 
 h3 {
-  font-size: 32px!important;
+  font-size: 32px !important;
   margin-bottom: 50px;
 }
 
@@ -67,6 +68,7 @@ h3 {
 
 .carousel.carousel-light-bg .slick-dots {
   bottom: -35px;
+
   li {
     button::before {
       border: 1px solid $blue-type1;
@@ -203,4 +205,3 @@ h3 {
     content: "c";
   }
 }
-

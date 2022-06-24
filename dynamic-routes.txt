@@ -19,3 +19,4 @@
 /TriBella
 /Skin-Resurfacing
 /Profhilo
+/about-us-page

@@ -9,6 +9,7 @@ axios
     console.log(res);
     routes = res;
     routes = routes.data.map(route => `/${route.slug}`)
+    routes.push('/about-us-page');
     routes = routes.join('\r\n');
     writeToFile(routes)
   })

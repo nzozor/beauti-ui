@@ -2,8 +2,9 @@ import { Injectable, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
 import { TreatmentShowcase } from '../models/treatmentShowcase';
-import { environment } from '../../../environments/environment.prod';
+
 import { map } from 'rxjs/operators';
+import { environment } from 'src/environments/environment';
 
 @Injectable({
   providedIn: 'root'
@@ -24,9 +25,15 @@ export class DataService {
     return this.http.get<TreatmentShowcase>(`${this.beautiCmsUrl}/treatments?slug=${slug}`);  // Template litterral ``
   }
 
+  getAboutUsPage(): Observable<{Content: string}> {
+    return this.http.get<{Content: string}>(`${this.beautiCmsUrl}/about-us-page`);  // Template litterral ``
+  }
+
   getHomageBanners(): Observable<any> {
     return this.http.get<any>(`${this.beautiCmsUrl}/homepage-sliders`).pipe(
       map((banners) => banners.sort((a: any, b: any) => new Date(b.publication).getTime() - new Date(a.publication).getTime()))
     );
   }
+
+
 }
