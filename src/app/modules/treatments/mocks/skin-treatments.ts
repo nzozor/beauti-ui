@@ -119,7 +119,7 @@ export const SKIN_TREATMENTS: any = [
         treatment: '                            ',
         options: [
           { key: '   Duration', value: '' },
-          { key: '   1 course', value: '' },
+          { key: '   Single', value: '' },
           { key: '   4 courses', value: '' },
         ]
       },
@@ -127,16 +127,16 @@ export const SKIN_TREATMENTS: any = [
         treatment: `    Face Meso`,
         options: [
           { key: '', value: '    60 mins' },
-          { key: '', value: '    £300' },
-          { key: '', value: '    £1080' },
+          { key: '', value: '    £350' },
+          { key: '', value: '    £1260' },
         ]
       },
       {
         treatment: `Neck & Decolletage`,
         options: [
           { key: '', value: '60 mins' },
-          { key: '', value: '£350' },
-          { key: '', value: '£1260' },
+          { key: '', value: '£400' },
+          { key: '', value: '£1440' },
         ]
       },
     ]
@@ -164,8 +164,8 @@ export const SKIN_TREATMENTS: any = [
     text ever since the 1500s, when an unknown printer`,
     options: [
       { key: 'Duration', value: '60 mins' },
-      { key: 'Single', value: '£200' },
-      { key: '4 Courses', value: '£720' }
+      { key: 'Single', value: '£350' },
+      { key: '4 Courses', value: '£1260' }
     ]
   },
   {
@@ -213,27 +213,27 @@ export const SKIN_TREATMENTS: any = [
     orientation: 'row',
     options: [
       {
-        treatment: `Lip Filler`,
+        treatment: `0.5ml`,
         options: [
           { key: 'Duration', value: '60 mins' },
           { key: 'Single', value: '£190' },
         ]
       },
       {
-        treatment: `Marionette Filler`,
+        treatment: `1ml`,
         options: [
           { key: 'Duration', value: '60 mins' },
-          { key: 'Single', value: '£190' },
+          { key: 'Single', value: '£250' },
         ]
       },
       {
-        treatment: `Laugh Line Filler`,
+        treatment: `2ml`,
         description: `Lorem of the printing and typesetting industry.
         Lorem Ipsum has been the industry’s standard dummy
         text ever since the 1500s, when an unknown printer`,
         options: [
           { key: 'Duration', value: '60 mins' },
-          { key: 'Single', value: '£250' },
+          { key: 'Single', value: '£350' },
         ]
       },
     ]
