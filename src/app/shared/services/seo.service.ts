@@ -9,6 +9,8 @@ export class SeoService {
     "Beauti Skin Clinic | Advanced Skin Treatments in SW London";
 
   constructor(private meta: Meta, private titleService: Title) {}
+  defaultMetaContent = `Professional skin and waxing services only 5 mins walk from Oval Station.
+  Founded by Aesthetician Cinzia Campigotto who has over 20 years of experience.`;
 
   public setTitle(newTitle: string) {
     this.titleService.setTitle(`${newTitle} | ${this.defaultTitle}`);
@@ -25,9 +27,7 @@ export class SeoService {
     this.meta.addTags([
       {
         name: 'description',
-        content:
-          `Professional skin and waxing services only 5 mins walk from Oval Station.
-           Founded by Aesthetician Cinzia Campigotto who has over 20 years of experience.`,
+        content: this.defaultMetaContent
       },
     ]);
   }

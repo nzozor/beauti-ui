@@ -11,6 +11,7 @@ import { DataService } from 'src/app/shared/services/data.service';
 import { ViewportScroller } from '@angular/common';
 import { PLATFORM_ID } from "@angular/core";
 import { isPlatformBrowser } from '@angular/common';
+import { SeoService } from 'src/app/shared/services/seo.service';
 
 @Component({
   selector: 'app-treatments',
@@ -42,8 +43,9 @@ export class TreatmentsComponent implements OnInit, AfterViewInit, AfterContentC
     private dataService: DataService,
     private viewPortScroller: ViewportScroller,
     @Inject(PLATFORM_ID) private platformId: any,
-
-  ) { }
+    private seo: SeoService ) { 
+      this.seo.setDefaultMeta();
+    }
 
   get isWideScreen() {
     return this.innerWidth >= 600;

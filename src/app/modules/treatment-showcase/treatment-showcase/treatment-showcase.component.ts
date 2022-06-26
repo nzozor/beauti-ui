@@ -43,7 +43,7 @@ export class TreatmentShowcaseComponent implements OnInit, OnDestroy {
         );
         this.seo.setMeta([{
           name: 'description',
-          content: this.treatment?.content,
+          content: `${this.treatment?.title} | ${this.seo.defaultMetaContent}`,
         }]);
       });
     this.breakpointObserver

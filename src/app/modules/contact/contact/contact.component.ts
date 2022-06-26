@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { SeoService } from 'src/app/shared/services/seo.service';
 
 @Component({
   selector: 'app-contact',
@@ -23,7 +24,9 @@ export class ContactComponent implements OnInit {
     {img: 'assets/beauti-skin-clinic-oval-waxed.jpg' },
   ];
 
-  constructor() { }
+  constructor(private seo: SeoService ) { 
+    this.seo.setDefaultMeta();
+  }
 
   ngOnInit() {
   }

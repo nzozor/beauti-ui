@@ -1,5 +1,6 @@
 import { Component, AfterContentInit, HostListener, AfterViewInit, Inject } from '@angular/core';
 import { DOCUMENT } from '@angular/common';
+import { SeoService } from 'src/app/shared/services/seo.service';
 
 @Component({
   selector: 'app-home-page',
@@ -15,7 +16,9 @@ export class HomePageComponent implements AfterViewInit {
   // initialTop: number;
   // parallaxDiv: HTMLDivElement;
 
-  constructor(@Inject(DOCUMENT) private document: Document) {}
+  constructor(@Inject(DOCUMENT) private document: Document, private seo: SeoService ) { 
+    this.seo.setDefaultMeta();
+  }
   
   setStickyHeader(value: boolean): void {
     this.stickyHeader = value;

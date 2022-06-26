@@ -3,7 +3,6 @@ import { Router, NavigationEnd, RouteConfigLoadStart, RouteConfigLoadEnd } from 
 import { MatDialog } from '@angular/material/dialog';
 import { TreatwellComponent } from './components/treatwell/treatwell.component';
 import { BookingService } from './shared/services/booking.service';
-import { SeoService } from './shared/services/seo.service';
 import { isPlatformBrowser } from '@angular/common';
 
 @Component({
@@ -20,10 +19,8 @@ export class AppComponent implements OnInit {
     private router: Router,
     private bookingService: BookingService,
     public dialog: MatDialog,
-    public seo: SeoService,
     @Inject(PLATFORM_ID) private platformId: any,
   ) {
-    this.seo.setDefaultMeta();
   }
   ngOnInit() {
     this.router.events.subscribe((event) => {

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Subscription } from 'rxjs';
 import { DataService } from 'src/app/shared/services/data.service';
+import { SeoService } from 'src/app/shared/services/seo.service';
 
 @Component({
   selector: 'app-about-us',
@@ -43,7 +44,10 @@ export class AboutUsComponent implements OnInit {
     {img: 'assets/cinzia-campigotto-3.jpg' },
   ];
 
-  constructor(private dataService: DataService) { }
+  constructor(private dataService: DataService, private seo: SeoService ) { 
+    this.seo.setDefaultMeta();
+  }
+  
   aboutUsContent = '';
   aboutUsSub: Subscription;
 
