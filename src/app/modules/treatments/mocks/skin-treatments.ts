@@ -422,7 +422,7 @@ export const SKIN_TREATMENTS: any = [
       {
         treatment: `PRP Vampire Facelift    `,
         options: [
-          { key: '   Duration', value: '75 mins' },
+          { key: '', value: '75 mins' },
           { key: '   Single', value: '£475' },
           { key: '   3 Courses', value: '£1283' },
         ]
@@ -430,7 +430,7 @@ export const SKIN_TREATMENTS: any = [
       {
         treatment: 'PRP Hair Loss Treatment',
         options: [
-          { key: '   Duration', value: '75 mins' },
+          { key: '', value: '75 mins' },
           { key: '   Single', value: '£475' },
           { key: '   3 Courses', value: '£1283' },
         ]
@@ -448,7 +448,7 @@ export const SKIN_TREATMENTS: any = [
       {
         treatment: `Head and Neck(One Area)`,
         options: [
-          { key: '   Duration', value: '45 mins' },
+          { key: '', value: '45 mins' },
           { key: '   Single', value: '£450' },
           { key: '   2 Courses', value: '£810' },
         ]
@@ -456,7 +456,7 @@ export const SKIN_TREATMENTS: any = [
       {
         treatment: `Body(One Area)         `,
         options: [
-          { key: '   Duration', value: '45 mins' },
+          { key: '', value: '45 mins' },
           { key: '   Single', value: '£500' },
           { key: '   3 Courses', value: '£1800' },
         ]
