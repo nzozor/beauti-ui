@@ -388,3 +388,8 @@
   font-family: 'Roboto', sans-serif;
 
 }
+#PRP-Therapy ~ .direction-row, #Fat-Dissolving-Injections ~ .direction-row {
+  .row > div:first-of-type {
+    min-width: 188px;
+  }
+}
