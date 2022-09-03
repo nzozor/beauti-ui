@@ -207,6 +207,7 @@
 
   .direction-row {
     overflow: auto;
+
     .row {
       display: flex;
 
@@ -378,18 +379,20 @@
   text-transform: uppercase;
 
   @media (min-width: 600px) {
-    display: none!important;
+    display: none !important;
   }
 }
 
-.mat-expansion-panel-header-title, .mat-expansion-panel-header-description {
-  color: rgba(0, 0, 0, 0.6)!important;
+.mat-expansion-panel-header-title,
+.mat-expansion-panel-header-description {
+  color: rgba(0, 0, 0, 0.6) !important;
   font-weight: 100;
   font-family: 'Roboto', sans-serif;
 
 }
-#PRP-Therapy ~ .direction-row, #Fat-Dissolving-Injections ~ .direction-row {
-  .row > div:first-of-type {
-    min-width: 188px;
-  }
-}
+
+// #PRP-Therapy ~ .direction-row, #Fat-Dissolving-Injections ~ .direction-row {
+//   .row > div:first-of-type {
+//     min-width: 188px;
+//   }
+// }

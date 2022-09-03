@@ -412,27 +412,53 @@ export const SKIN_TREATMENTS: any = [
     ]
   },
   {
-    title: `PRP Therapy`,
-    hasShowcase: false,
+    title: `PRP Vampire Facial`,
+    hasShowcase: true,
+    treatment: ``,
+    description: ``,
+    orientation: 'row',
+    fullOptions: 'true',
+    options: [
+    {
+        treatment: '',
+        options: [
+          { key: '   Duration', value: '' },
+          { key: '   Single', value: '' },
+          { key: '   3 Courses', value: '' },
+        ]
+      },
+      {
+        treatment: ``,
+        options: [
+          { key: '', value: '75 mins' },
+          { key: '', value: '£475' },
+          { key: '', value: '£1283' },
+        ]
+      },
+    ]
+  },
+  {
+    title: `PRP Hair Loss Treatment`,
+    hasShowcase: true,
     treatment: ``,
     description: ``,
     orientation: 'row',
     fullOptions: 'true',
     options: [
       {
-        treatment: `PRP Vampire Facelift    `,
+        treatment: '',
         options: [
-          { key: '', value: '75 mins' },
-          { key: '   Single', value: '£475' },
-          { key: '   3 Courses', value: '£1283' },
+          { key: '   Duration', value: '' },
+          { key: '   Single', value: '' },
+          { key: '   3 Courses', value: '' },
         ]
       },
       {
-        treatment: 'PRP Hair Loss Treatment',
+        treatment: '',
         options: [
           { key: '', value: '75 mins' },
-          { key: '   Single', value: '£475' },
-          { key: '   3 Courses', value: '£1283' },
+          { key: '', value: '£475' },
+          { key: '', value: '£1283' },
         ]
       },
     ]
@@ -446,7 +472,15 @@ export const SKIN_TREATMENTS: any = [
     fullOptions: 'true',
     options: [
       {
-        treatment: `Head and Neck(One Area)`,
+        treatment: '(One Area)',
+        options: [
+          { key: '   Duration', value: '' },
+          { key: '   Single', value: '' },
+          { key: '   Courses', value: '' },
+        ]
+      },
+      {
+        treatment: `Head and Neck`,
         options: [
           { key: '', value: '45 mins' },
           { key: '   Single', value: '£450' },
@@ -454,7 +488,7 @@ export const SKIN_TREATMENTS: any = [
         ]
       },
       {
-        treatment: `Body(One Area)         `,
+        treatment: `Body`,
         options: [
           { key: '', value: '45 mins' },
           { key: '   Single', value: '£500' },
