@@ -12,6 +12,7 @@ import { ViewportScroller } from '@angular/common';
 import { PLATFORM_ID } from "@angular/core";
 import { isPlatformBrowser } from '@angular/common';
 import { SeoService } from 'src/app/shared/services/seo.service';
+import { AESTHETIC_TREATMENTS } from '../mocks/aesthetic-treatments';
 
 @Component({
   selector: 'app-treatments',
@@ -28,6 +29,7 @@ export class TreatmentsComponent implements OnInit, AfterViewInit, AfterContentC
   beautyNail: any[] = BEAUTY_NAIL;
   hairRemoveLaser: {} = HAIR_REMOVAL_IPL_LASER;
   hairRemoveElectro: any[] = HAIR_REMOVAL_ELECTRO;
+  aestheticTreatments: any[] = AESTHETIC_TREATMENTS
   innerWidth: any;
 
   leftCol: [];

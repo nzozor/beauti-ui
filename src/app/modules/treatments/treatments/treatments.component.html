@@ -45,7 +45,7 @@
               </div>
 
               <button
-                (click)="openBooking($event,treatment)"
+                (click)="openBooking($event, treatment)"
                 mat-stroked-button
                 color="primary"
                 class="main-button"
@@ -117,7 +117,6 @@
               </div>
             </div>
           </div>
-          
         </mat-expansion-panel>
         <mat-expansion-panel
           [expanded]="isActive('Classic Skin Treatments')"
@@ -127,7 +126,7 @@
             <mat-panel-title> Classic Skin Treatments </mat-panel-title>
             <mat-panel-description> </mat-panel-description>
           </mat-expansion-panel-header>
-          
+
           <div class="sub">
             <div class="skin-treatment" *ngFor="let treatment of beautyFacial">
               <div class="title" id="{{ getSlug(treatment.title) }}">
@@ -233,16 +232,14 @@
           </mat-expansion-panel-header>
           <div>
             <div>
-              <div class="skin-treatment" *ngFor="let element of skinImperfectionRemoval">
-                <div
-                  class="title"
-                  id="{{ getSlug(element.title) }}"
-                >
+              <div
+                class="skin-treatment"
+                *ngFor="let element of skinImperfectionRemoval"
+              >
+                <div class="title" id="{{ getSlug(element.title) }}">
                   <div>
                     <span>{{ element.title }}</span>
-                    <span
-                      [innerHTML]="element.treatment"
-                    ></span>
+                    <span [innerHTML]="element.treatment"></span>
                     <span
                       class="read-more"
                       *ngIf="element.hasShowcase"
@@ -254,7 +251,7 @@
                       "
                     >
                       Read More
-                    </span> 
+                    </span>
                   </div>
 
                   <button
@@ -287,17 +284,13 @@
                 </div>
                 <div class="direction-column content">
                   <div class="options-key">
-                    <div
-                      *ngFor="let option of element.options"
-                    >
+                    <div *ngFor="let option of element.options">
                       {{ option.key }}
                     </div>
                   </div>
 
                   <div class="options-value">
-                    <div
-                      *ngFor="let option of element.options"
-                    >
+                    <div *ngFor="let option of element.options">
                       {{ option.value }}
                     </div>
                   </div>
@@ -407,11 +400,11 @@
                   class="read-more"
                   *ngIf="mainTreat.hasShowcase"
                   (click)="
-                  goToTreatmentShowcase(
-                    ['Permanent Hair Removal', 'Permanent Hair Removal'],
-                    mainTreat.treatmentName
-                  )
-                "
+                    goToTreatmentShowcase(
+                      ['Permanent Hair Removal', 'Permanent Hair Removal'],
+                      mainTreat.treatmentName
+                    )
+                  "
                 >
                   Read More
                 </span>
@@ -796,6 +789,115 @@
           </div>
         </mat-expansion-panel>
         <!-- </mat-accordion> -->
+      </div>
+    </mat-expansion-panel>
+    <mat-expansion-panel [expanded]="isActive('Skin-Treatments')">
+      <mat-expansion-panel-header>
+        <mat-panel-title>Aesthetic Treatments</mat-panel-title>
+        <mat-panel-description>
+          <button
+            (click)="openBooking($event)"
+            mat-flat-button
+            color="primary"
+            class="main-button"
+          >
+            Book now
+          </button>
+        </mat-panel-description>
+      </mat-expansion-panel-header>
+      <div class="sub">
+        <div
+          class="skin-treatment"
+          *ngFor="let treatment of aestheticTreatments"
+        >
+          <div class="title" id="{{ getSlug(treatment.title) }}">
+            <div>
+              <span [innerHtml]="treatment.title"></span>
+              <span [innerHTML]="treatment.treatment"></span>
+              <span
+                class="read-more"
+                *ngIf="treatment.hasShowcase"
+                (click)="
+                  goToTreatmentShowcase(
+                    ['Skin Treatments', 'Advanced Skin Treatments'],
+                    treatment.title
+                  )
+                "
+              >
+                Read More
+              </span>
+            </div>
+
+            <button
+              (click)="openBooking($event, treatment)"
+              mat-stroked-button
+              color="primary"
+              class="main-button"
+              *ngIf="!treatment.hasShowcase"
+            >
+              Book now
+            </button>
+
+            <button
+              (click)="
+                goToTreatmentShowcase(
+                  ['Skin Treatments', 'Advanced Skin Treatments'],
+                  treatment.title
+                )
+              "
+              mat-stroked-button
+              color="primary"
+              class="main-button"
+              *ngIf="treatment.hasShowcase"
+            >
+              Read More
+            </button>
+          </div>
+          <div class="description">{{ treatment.description }}</div>
+          <div class="direction-column" *ngIf="treatment.orientation !== 'row'">
+            <div class="options-key">
+              <div *ngFor="let option of treatment.options">
+                {{ option.key }}
+              </div>
+            </div>
+
+            <div class="options-value">
+              <div *ngFor="let option of treatment.options">
+                {{ option.value }}
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="direction-row"
+            *ngIf="
+              treatment.orientation === 'row' &&
+              treatment.fullOptions !== 'true'
+            "
+          >
+            <div class="row" *ngFor="let option of treatment.options">
+              <div>{{ option.treatment }}</div>
+              <div>{{ option.options[1].value }}</div>
+            </div>
+          </div>
+          <div
+            class="direction-row"
+            *ngIf="
+              treatment.orientation === 'row' &&
+              treatment.fullOptions === 'true'
+            "
+          >
+            <div class="row" *ngFor="let option of treatment.options">
+              <div>{{ option.treatment }}</div>
+              <div *ngFor="let op of option.options">
+                <div>
+                  {{ op.key }}
+                  <span>{{ op.value }}</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </mat-expansion-panel>
   </mat-accordion>
