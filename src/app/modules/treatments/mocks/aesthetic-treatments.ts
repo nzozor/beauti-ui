@@ -290,7 +290,7 @@ export const AESTHETIC_TREATMENTS: any = [
         treatment: `Head and Neck`,
         options: [
           { key: '', value: '45 mins' },
-          { key: '   Single', value: '£450' },
+          { key: '', value: '£450' },
           { key: '   2 Courses', value: '£810' },
         ]
       },
@@ -298,7 +298,7 @@ export const AESTHETIC_TREATMENTS: any = [
         treatment: `Body`,
         options: [
           { key: '', value: '45 mins' },
-          { key: '   Single', value: '£500' },
+          { key: '', value: '£500' },
           { key: '   3 Courses', value: '£1800' },
         ]
       },
