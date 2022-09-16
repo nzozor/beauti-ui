@@ -105,7 +105,7 @@ export const SKIN_TREATMENTS: any = [
     ]
   },
   {
-    title: `Beauti Fusion Mesotherapy`,
+    title: `Mesotherapy`,
     treatment: `Add Dermaplaning for £30, (extra 15 mins)<br />
      Add LED Light Therapy for £20, (extra 15 mins)`,
     hasShowcase: true,

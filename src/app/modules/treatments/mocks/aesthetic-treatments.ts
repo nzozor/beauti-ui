@@ -271,7 +271,7 @@ export const AESTHETIC_TREATMENTS: any = [
     ]
   },
   {
-    title: `Fat Dissolving Injections`,
+    title: `Aqualyx Fat Dissolving Injections`,
     hasShowcase: false,
     treatment: ``,
     description: ``,
@@ -279,7 +279,7 @@ export const AESTHETIC_TREATMENTS: any = [
     fullOptions: 'true',
     options: [
       {
-        treatment: '(One Area)',
+        treatment: 'One Area',
         options: [
           { key: '   Duration', value: '' },
           { key: '   Single', value: '' },
