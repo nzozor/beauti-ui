@@ -105,43 +105,6 @@ export const SKIN_TREATMENTS: any = [
     ]
   },
   {
-    title: `Mesotherapy`,
-    treatment: `Add Dermaplaning for £30, (extra 15 mins)<br />
-     Add LED Light Therapy for £20, (extra 15 mins)`,
-    hasShowcase: true,
-    description: `Lorem of the printing and typesetting industry.
-    Lorem Ipsum has been the industry’s standard dummy
-    text ever since the 1500s, when an unknown printer`,
-    orientation: 'row',
-    fullOptions: 'true',
-    options: [
-      {
-        treatment: '                            ',
-        options: [
-          { key: '   Duration', value: '' },
-          { key: '   Single', value: '' },
-          { key: '   4 courses', value: '' },
-        ]
-      },
-      {
-        treatment: `    Face Meso`,
-        options: [
-          { key: '', value: '    60 mins' },
-          { key: '', value: '    £350' },
-          { key: '', value: '    £1260' },
-        ]
-      },
-      {
-        treatment: `Neck & Decolletage`,
-        options: [
-          { key: '', value: '60 mins' },
-          { key: '', value: '£400' },
-          { key: '', value: '£1440' },
-        ]
-      },
-    ]
-  },
-  {
     title: 'IPL Skin Rejuvenation',
     treatment: ``,
     hasShowcase: true,
