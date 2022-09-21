@@ -4,31 +4,35 @@
   [config]="slideConfig"
 >
   <div ngxSlickItem *ngFor="let slide of banners" class="slide">
-    <div [style.background-image]="getBackGroudImg(slide.image.url,slide.imgSmall.url)">
-
-      <h3>{{slide.title1}}</h3>
-      <h4 class="semi-bold">{{slide.title2}}</h4>
-      <h4 class="light">{{slide.title3}}</h4>
-      <h5 class="light">{{slide.title4}}</h5>
-      <button *ngIf="slide.findOutMoreUrl"
+    <div
+      [style.background-image]="
+        getBackGroudImg(slide.image.url, slide.imgSmall.url)
+      "
+    >
+      <h3>{{ slide.title }}</h3>
+      <h4 class="semi-bold">{{ slide.title2 }}</h4>
+      <h4 class="light">{{ slide.title3 }}</h4>
+      <h5 class="light">{{ slide.title4 }}</h5>
+      <button
+        *ngIf="slide.findOutMoreUrl"
         mat-flat-button
         color="primary"
         class="main-button treatments"
-        [routerLink]="'/treatments/'+ slide.findOutMoreUrl"
+        [routerLink]="'/treatments/' + slide.findOutMoreUrl"
       >
-      FIND OUT MORE
+        FIND OUT MORE
       </button>
-      <button *ngIf="!slide.findOutMoreUrl"
+      <button
+        *ngIf="!slide.findOutMoreUrl"
         mat-flat-button
         color="primary"
         class="main-button treatments"
         (click)="openBooking($event)"
       >
-      BOOK NOW
+        BOOK NOW
       </button>
-      
-      <div class="asterisk">{{slide.asterisk}}</div>
+
+      <div class="asterisk">{{ slide.asterisk }}</div>
     </div>
-    
   </div>
 </ngx-slick-carousel>

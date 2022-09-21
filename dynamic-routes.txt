@@ -4,9 +4,9 @@
 /Skin-Peel
 /Radio-Frequency-Skin-Tightening
 /Advanced-Beauti-Signature-Relaxing-Facial
-/Beauti-Fusion-Mesotherapy
+/Mesotherapy
 /IPL-Skin-Rejuvenation
-/Micro-Needling-with-Dermapen
+/Micro-needling-with-Dermapen
 /Anti-Wrinkle-Injections
 /Dermal-Fillers
 /Plasma-Face-Lift
@@ -19,4 +19,6 @@
 /TriBella
 /Skin-Resurfacing
 /Profhilo
+/PRP-Vampire-Facial
+/PRP-Hair-Loss-Treatment
 /about-us-page

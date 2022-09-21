@@ -1,5 +1,5 @@
 export const HAIR_REMOVAL_IPL_LASER = [{
-  treatmentName: 'IPL Laser Hair Removal',
+  treatmentName: 'Laser Hair Removal',
   hasShowcase:  true,
     description: `Lorem of the printing and typesetting industry.
       Lorem Ipsum has been the industry’s standard dummy

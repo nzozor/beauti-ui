@@ -216,8 +216,12 @@
       }
 
       >div {
-        min-width: 144px;
+        min-width: 140px;
         padding: 10px 15px;
+
+        &:last-of-type {
+          padding-right: 0
+        }
       }
     }
   }

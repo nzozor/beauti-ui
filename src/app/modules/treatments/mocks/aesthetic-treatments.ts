@@ -1,5 +1,156 @@
 export const AESTHETIC_TREATMENTS: any = [
   {
+    title: `PRP Vampire Facial`,
+    hasShowcase: true,
+    treatment: ``,
+    description: ``,
+    orientation: 'row',
+    fullOptions: 'true',
+    options: [
+    {
+        treatment: '',
+        options: [
+          { key: '   Duration', value: '' },
+          { key: '   Single', value: '' },
+          { key: '   3 Courses', value: '' },
+        ]
+      },
+      {
+        treatment: ``,
+        options: [
+          { key: '', value: '75 mins' },
+          { key: '', value: '£475' },
+          { key: '', value: '£1283' },
+        ]
+      },
+    ]
+  },
+  {
+    title: `PRP Hair Loss Treatment`,
+    hasShowcase: true,
+    treatment: ``,
+    description: ``,
+    orientation: 'row',
+    fullOptions: 'true',
+    options: [
+      {
+        treatment: '',
+        options: [
+          { key: '   Duration', value: '' },
+          { key: '   Single', value: '' },
+          { key: '   3 Courses', value: '' },
+        ]
+      },
+      {
+        treatment: '',
+        options: [
+          { key: '', value: '75 mins' },
+          { key: '', value: '£475' },
+          { key: '', value: '£1283' },
+        ]
+      },
+    ]
+  },
+  {
+    title: `Profhilo`,
+    hasShowcase: true,
+    treatment: ``,
+    description: ``,
+    orientation: 'row',
+    fullOptions: 'true',
+    options: [
+      {
+        treatment: '                            ',
+        options: [
+          { key: '   Duration', value: '' },
+          { key: '   Single', value: '' },
+          { key: '   2 Courses', value: '' },
+        ]
+      },
+      {
+        treatment: `    Face or Neck`,
+        options: [
+          { key: '', value: '    60 mins' },
+          { key: '', value: '    £340' },
+          { key: '', value: '    £612' },
+        ]
+      },
+      {
+        treatment: `Face and Neck`,
+        options: [
+          { key: '', value: '60 mins' },
+          { key: '', value: '£646' },
+          { key: '', value: '£1163' },
+        ]
+      },
+    ]
+  },
+  {
+    title: `Jalupro`,
+    hasShowcase: false,
+    treatment: ``,
+    description: ``,
+    orientation: 'row',
+    fullOptions: 'true',
+    options: [
+    {
+        treatment: '',
+        options: [
+          { key: '   Duration', value: '' },
+          { key: '   Single', value: '' },
+          { key: '   2 Courses', value: '' },
+          { key: '   3 Courses', value: '' },
+        ]
+      },
+      {
+        treatment: ``,
+        options: [
+          { key: '', value: '60 mins' },
+          { key: '', value: '£200' },
+          { key: '', value: '£360' },
+          { key: '', value: '£540' },
+        ]
+      },
+    ]
+  },
+    {
+    title: `Mesotherapy`,
+    treatment: `Add Dermaplaning for £30, (extra 15 mins)<br />
+     Add LED Light Therapy for £20, (extra 15 mins)`,
+    hasShowcase: true,
+    description: `Lorem of the printing and typesetting industry.
+    Lorem Ipsum has been the industry’s standard dummy
+    text ever since the 1500s, when an unknown printer`,
+    orientation: 'row',
+    fullOptions: 'true',
+    options: [
+      {
+        treatment: '                            ',
+        options: [
+          { key: '   Duration', value: '' },
+          { key: '   Single', value: '' },
+          { key: '   4 courses', value: '' },
+        ]
+      },
+      {
+        treatment: `    Face Meso`,
+        options: [
+          { key: '', value: '    60 mins' },
+          { key: '', value: '    £350' },
+          { key: '', value: '    £1260' },
+        ]
+      },
+      {
+        treatment: `Neck & Decolletage`,
+        options: [
+          { key: '', value: '60 mins' },
+          { key: '', value: '£400' },
+          { key: '', value: '£1440' },
+        ]
+      },
+    ]
+  },
+  {
     title: 'Anti-Wrinkle Injections',
     treatment: ``,
     hasShowcase: true,
@@ -70,66 +221,6 @@ export const AESTHETIC_TREATMENTS: any = [
     ]
   },
   {
-    title: `PRP Vampire Facial`,
-    hasShowcase: true,
-    treatment: ``,
-    description: ``,
-    orientation: 'row',
-    fullOptions: 'true',
-    options: [
-    {
-        treatment: '',
-        options: [
-          { key: '   Duration', value: '' },
-          { key: '   Single', value: '' },
-          { key: '   3 Courses', value: '' },
-        ]
-      },
-      {
-        treatment: ``,
-        options: [
-          { key: '', value: '75 mins' },
-          { key: '', value: '£475' },
-          { key: '', value: '£1283' },
-        ]
-      },
-    ]
-  },
-  {
-    title: `Profhilo`,
-    hasShowcase: true,
-    treatment: ``,
-    description: ``,
-    orientation: 'row',
-    fullOptions: 'true',
-    options: [
-      {
-        treatment: '                            ',
-        options: [
-          { key: '   Duration', value: '' },
-          { key: '   Single', value: '' },
-          { key: '   2 Courses', value: '' },
-        ]
-      },
-      {
-        treatment: `    Face or Neck`,
-        options: [
-          { key: '', value: '    60 mins' },
-          { key: '', value: '    £340' },
-          { key: '', value: '    £646' },
-        ]
-      },
-      {
-        treatment: `Face and Neck`,
-        options: [
-          { key: '', value: '60 mins' },
-          { key: '', value: '£646' },
-          { key: '', value: '£1163' },
-        ]
-      },
-    ]
-  },
-  {
     title: `Aqualyx Fat Dissolving Injections`,
     hasShowcase: false,
     treatment: ``,
@@ -159,43 +250,6 @@ export const AESTHETIC_TREATMENTS: any = [
           { key: '', value: '45 mins' },
           { key: '', value: '£500' },
           { key: '   3 Courses', value: '£1800' },
-        ]
-      },
-    ]
-  },
-  {
-    title: `Mesotherapy`,
-    treatment: `Add Dermaplaning for £30, (extra 15 mins)<br />
-     Add LED Light Therapy for £20, (extra 15 mins)`,
-    hasShowcase: true,
-    description: `Lorem of the printing and typesetting industry.
-    Lorem Ipsum has been the industry’s standard dummy
-    text ever since the 1500s, when an unknown printer`,
-    orientation: 'row',
-    fullOptions: 'true',
-    options: [
-      {
-        treatment: '                            ',
-        options: [
-          { key: '   Duration', value: '' },
-          { key: '   Single', value: '' },
-          { key: '   4 courses', value: '' },
-        ]
-      },
-      {
-        treatment: `    Face Meso`,
-        options: [
-          { key: '', value: '    60 mins' },
-          { key: '', value: '    £350' },
-          { key: '', value: '    £1260' },
-        ]
-      },
-      {
-        treatment: `Neck & Decolletage`,
-        options: [
-          { key: '', value: '60 mins' },
-          { key: '', value: '£400' },
-          { key: '', value: '£1440' },
         ]
       },
     ]
@@ -315,30 +369,5 @@ export const AESTHETIC_TREATMENTS: any = [
       }
     ]
   },
-  {
-    title: `PRP Hair Loss Treatment`,
-    hasShowcase: true,
-    treatment: ``,
-    description: ``,
-    orientation: 'row',
-    fullOptions: 'true',
-    options: [
-      {
-        treatment: '',
-        options: [
-          { key: '   Duration', value: '' },
-          { key: '   Single', value: '' },
-          { key: '   3 Courses', value: '' },
-        ]
-      },
-      {
-        treatment: '',
-        options: [
-          { key: '', value: '75 mins' },
-          { key: '', value: '£475' },
-          { key: '', value: '£1283' },
-        ]
-      },
-    ]
-  },
+
 ];
