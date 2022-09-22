@@ -14,6 +14,10 @@
   }
 }
 
+h3 {
+  margin-bottom: 0;
+}
+
 .drag {
   align-items: center;
   bottom: 0;
@@ -169,7 +173,8 @@
       display: flex;
       flex-direction: column;
       justify-content: center;
-      padding-bottom: 50px!important;
+      padding-bottom: 50px !important;
+
       @media (min-width: 1024px) {
         -webkit-mask-image: linear-gradient(to left, transparent 1%, black 7%);
         mask-image: linear-gradient(to left, transparent 1%, black 7%);

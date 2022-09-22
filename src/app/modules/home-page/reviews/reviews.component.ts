@@ -69,10 +69,10 @@ export class ReviewsComponent {
     variableWidth: true,
     adaptiveHeight: true,
     focusOnSelect: false,
-    touchThreshold: 1000,
+    touchThreshold: 200,
     autoplay: true,
     speed: 2500,
-    touchMove: false,
+    touchMove: true,
     responsive: [
       {
         breakpoint: 768,

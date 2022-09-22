@@ -4,8 +4,7 @@
 
 export const environment = {
   production: false,
-  cmsUrl: 'http://localhost:1337',
-  // cmsUrl: 'https://cms.beautiskinclinic.com'
+  cmsUrl: 'http://192.168.1.104:1337/',
 };
 
 /*

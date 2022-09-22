@@ -38,7 +38,6 @@ export class MainSliderComponent implements OnInit {
   getBanners() {
     this.dataService.getHomageBanners().subscribe(banners => {
       this.banners = banners;
-      console.log(this.banners);
     });
   }
 
