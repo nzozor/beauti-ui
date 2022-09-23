@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  cmsUrl: 'http://192.168.1.104:1337',
+  cmsUrl: 'http://192.168.1.104:1339',
 };
 
 /*

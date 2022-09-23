@@ -1,5 +1,5 @@
 <ngx-slick-carousel
-  class="carousel"
+  class="carousel hp-slider"
   #slickModal="slick-carousel"
   [config]="slideConfig"
 >
@@ -11,18 +11,9 @@
     >
       <h3>{{ slide.title1 }}</h3>
       <h4 class="semi-bold">{{ slide.title2 }}</h4>
-      <h4 class="semi-bold" *ngIf="slide.title2extra">
-        {{ slide.title2extra }}
-      </h4>
+
       <h4 class="light">{{ slide.title3 }}</h4>
       <h5 class="light">{{ slide.title4 }}</h5>
-      <h4
-        *ngIf="!slide.title2extra"
-        class="semi-bold"
-        [style.visibility]="'hidden'"
-      >
-        .
-      </h4>
       <button
         *ngIf="slide.findOutMoreUrl"
         mat-flat-button

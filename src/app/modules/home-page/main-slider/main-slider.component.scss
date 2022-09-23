@@ -50,7 +50,9 @@ button {
 }
 
 .slide {
+
   >div {
+    min-height: 503px;
     display: flex;
     flex-direction: column;
     justify-self: center;
