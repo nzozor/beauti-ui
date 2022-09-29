@@ -7,16 +7,19 @@ import { DOCUMENT } from '@angular/common';
 })
 export class BookingService {
   private bookNow = new Subject<boolean>();
+  private window: Window;
 
-  constructor (@Inject(DOCUMENT) private document: Document) {}
+  constructor(@Inject(DOCUMENT) private document: Document) {
+    this.window = this.document.defaultView;
+  }
 
 
   sendBooking(): void {
-    window.open('https://widget.treatwell.co.uk/place/beauti-skin-clinic/', '_blank', 'noopener');
+    this.window.open('https://widget.treatwell.co.uk/place/beauti-skin-clinic/', '_blank', 'noopener');
   }
 
   sendBookingBespoke(): void {
-    window.open('mailto:info@beautiskinclinic.com?subject=Beauti Skin Clinic Booking', '_blank', 'noopener');
+    this.window.open('mailto:info@beautiskinclinic.com?subject=Beauti Skin Clinic Booking', '_blank', 'noopener');
   }
 
   getBooking(): Observable<boolean> {

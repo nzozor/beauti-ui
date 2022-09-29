@@ -1,15 +1,17 @@
-import { AfterViewInit, Directive } from '@angular/core';
+import { DOCUMENT } from '@angular/common';
+import { AfterViewInit, Directive, Inject } from '@angular/core';
 
 @Directive({
   selector: '[appImgLazyLoad]'
 })
 export class LazyImgDirective implements AfterViewInit  {
   observer: IntersectionObserver;
-  constructor() { }
+  constructor(@Inject(DOCUMENT) private document: Document) { }
+
   ngAfterViewInit(): void {
     const supports = 'loading' in HTMLImageElement.prototype;
 
-    const images = document.querySelectorAll('.js-lazy-image');
+    const images = this.document.querySelectorAll('.js-lazy-image');
     if (supports) {
       images.forEach(image => image.setAttribute('loading', 'lazy'));
     } else if ('IntersectionObserver' in window) {
