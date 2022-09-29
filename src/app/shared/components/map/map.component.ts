@@ -1,17 +1,18 @@
-import { Component, OnInit, AfterViewInit } from '@angular/core';
+import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
 declare var require: any;
 
 @Component({
   selector: 'app-map',
   templateUrl: './map.component.html',
-  styleUrls: ['./map.component.scss']
+  styleUrls: ['./map.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class MapComponent implements OnInit, AfterViewInit{
+export class MapComponent implements OnInit {
   map: any;
   constructor() {
   }
 
-  ngOnInit() {
+  ngOnInit(): any {
     const mapboxgl = require('mapbox-gl/dist/mapbox-gl.js');
     mapboxgl.accessToken = 'pk.eyJ1IjoiZWxzYWJlbiIsImEiOiJjanZ4b2ZndDQwNnB5M3pyejNrZWQwaGVwIn0.T8MZoM6PJVvNkME819rAkw';
     this.map = new mapboxgl.Map({
@@ -22,14 +23,5 @@ export class MapComponent implements OnInit, AfterViewInit{
 
     const nav = new mapboxgl.NavigationControl();
     this.map.addControl(nav, 'bottom-right');
-  }
-
-  ngAfterViewInit() {
-    // const mapboxgl = require('mapbox-gl/dist/mapbox-gl.js');
-    // mapboxgl.accessToken = 'pk.eyJ1IjoiZWxzYWJlbiIsImEiOiJjanZ4b2ZndDQwNnB5M3pyejNrZWQwaGVwIn0.T8MZoM6PJVvNkME819rAkw';
-    // this.map = new mapboxgl.Map({
-    //   style: 'mapbox://styles/elsaben/ck2i2adsm1y8t1ds0xwwbz7fe',
-    //   interactive: false
-    // });
   }
 }

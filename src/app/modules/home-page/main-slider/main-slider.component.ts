@@ -1,14 +1,17 @@
 import { isPlatformBrowser } from '@angular/common';
-import { Component, HostListener, Inject, OnInit, PLATFORM_ID } from '@angular/core';
+import { ChangeDetectionStrategy, Component, HostListener, Inject, OnInit, PLATFORM_ID } from '@angular/core';
+import { Observable } from 'rxjs';
+import { HomePageSlider } from 'src/app/shared/models/homepageSlider.model';
 import { BookingService } from 'src/app/shared/services/booking.service';
 import { DataService } from 'src/app/shared/services/data.service';
 
 @Component({
   selector: 'app-main-slider',
   templateUrl: './main-slider.component.html',
-  styleUrls: ['./main-slider.component.scss']
+  styleUrls: ['./main-slider.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class MainSliderComponent implements OnInit {
+export class MainSliderComponent {
   banners;
   isMobile: boolean;
   testClass: any = {
@@ -26,30 +29,27 @@ export class MainSliderComponent implements OnInit {
     fade: true,
   };
 
+  homageBanners$ = this.getBanners();
+
   constructor(private dataService: DataService, private bookingService: BookingService, @Inject(PLATFORM_ID) private platformId: any) { }
 
   get cmsUrl() {
     return this.dataService.beautiCmsUrl;
   }
-  ngOnInit() {
-    this.getBanners();
+
+  getBanners(): Observable<HomePageSlider> {
+    return this.dataService.getHomageBanners();
   }
 
-  getBanners() {
-    this.dataService.getHomageBanners().subscribe(banners => {
-      this.banners = banners;
-    });
+  openBooking(event): void {
+    this.bookingService.sendBooking();
   }
 
-  openBooking(event) {
-    this.bookingService.sendBooking(event);
-  }
-
-  getBackGroudImg(imgLarge: string, imgSmall: string) {
+  getBackGroudImg(imgLarge: string, imgSmall: string): string {
     if (isPlatformBrowser(this.platformId) && window.innerWidth > 768) {
-      return 'url(' + this.cmsUrl + imgLarge + ')';
+      return `url('${this.cmsUrl}${imgLarge}')`;
     } else {
-      return 'url(' + this.cmsUrl + imgSmall + ')';
+      return `url('${this.cmsUrl}${imgSmall}')`;
     }
   }
 }

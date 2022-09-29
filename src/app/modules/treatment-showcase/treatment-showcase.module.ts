@@ -6,6 +6,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import {MarkdownToHtmlModule} from 'markdown-to-html-pipe';
+import { SafePipe } from 'src/app/shared/pipes/safe.pipe';
 
 const routes: Routes = [
   {
@@ -15,7 +16,7 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  declarations: [TreatmentShowcaseComponent],
+  declarations: [TreatmentShowcaseComponent, SafePipe],
   imports: [
     CommonModule,
     RouterModule.forChild(routes),

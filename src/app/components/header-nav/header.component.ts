@@ -1,14 +1,15 @@
-import { Component, OnInit, Inject } from '@angular/core';
-import { fromEvent, Subscription } from 'rxjs';
+import { Component, OnInit, Inject, ChangeDetectionStrategy } from '@angular/core';
+import { fromEvent } from 'rxjs';
 import { throttleTime, tap } from 'rxjs/operators';
 
 import { DOCUMENT } from '@angular/common';
-import { BookingService } from '../shared/services/booking.service';
+import { BookingService } from '../../shared/services/booking.service';
 
 @Component({
   selector: 'app-header-nav',
   templateUrl: './header.component.html',
-  styleUrls: ['./header.component.scss']
+  styleUrls: ['./header.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class HeaderNavComponent implements OnInit {
 
@@ -16,7 +17,6 @@ export class HeaderNavComponent implements OnInit {
 
   scrolltop = false;
   stickyHeader = false;
-  // windowScroll: Subscription;
   private _menuLinkOpen = false;
 
   sticky = false;
@@ -28,8 +28,7 @@ export class HeaderNavComponent implements OnInit {
     return this._menuLinkOpen;
   }
 
-
-  ngOnInit() {
+  ngOnInit(): void {
     fromEvent<MouseEvent>(this.document, 'scroll')
       .pipe(
         throttleTime(20),
@@ -52,11 +51,11 @@ export class HeaderNavComponent implements OnInit {
     }
   }
 
-  setMenuLink(value: boolean) {
+  setMenuLink(value: boolean): void {
     this.menuLinkOpen = value;
   }
 
-  openBooking(event: any) {
-    this.bookingService.sendBooking(event);
+  openBooking(): void {
+    this.bookingService.sendBooking();
   }
 }

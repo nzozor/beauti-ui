@@ -1,16 +1,24 @@
-import { Component, OnInit } from '@angular/core';
-import { Subscription } from 'rxjs';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { Observable } from 'rxjs';
 import { DataService } from 'src/app/shared/services/data.service';
 import { SeoService } from 'src/app/shared/services/seo.service';
+
+export interface SlideConf {
+  slidesToShow: number;
+  slidesToScroll: number;
+  centerMode: boolean;
+  responsive: { breakpoint: number, settings: {} }[]
+}
 
 @Component({
   selector: 'app-about-us',
   templateUrl: './about-us.component.html',
-  styleUrls: ['./about-us.component.scss']
+  styleUrls: ['./about-us.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class AboutUsComponent implements OnInit {
+export class AboutUsComponent {
 
-  slideConfig = {
+  slideConfig: SlideConf = {
     slidesToShow: 3,
     slidesToScroll: 1,
     centerMode: true,
@@ -48,16 +56,5 @@ export class AboutUsComponent implements OnInit {
     this.seo.setDefaultMeta();
   }
   
-  aboutUsContent = '';
-  aboutUsSub: Subscription;
-
-
-  ngOnInit() {
-    this.aboutUsSub = this.dataService
-      .getAboutUsPage()
-      .subscribe((content) => {
-        this.aboutUsContent = content.Content;
-      });
-  }
-
+  aboutUs$: Observable<any> =  this.dataService.getAboutUsPage();
 }

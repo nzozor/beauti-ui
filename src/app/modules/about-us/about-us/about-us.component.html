@@ -1,6 +1,8 @@
-<div class="container about-us-page" [innerHTML]="aboutUsContent | MarkdownToHtml">
-  
-</div>
+<div
+  *ngIf="aboutUs$ | async as aboutUsContent"
+  class="container about-us-page"
+  [innerHTML]="aboutUsContent.Content | MarkdownToHtml"
+></div>
 
 <ngx-slick-carousel
   id="carousel"

@@ -1,23 +1,19 @@
 <div>
   <h3>5 Star Reviews</h3>
-  <ngx-slick-carousel class="carousel carousel-light-bg" 
- #slickModal="slick-carousel" 
- [config]="slideConfig" 
- (init)="slickInit($event)"
- (breakpoint)="breakpoint($event)"
- (afterChange)="afterChange($event)"
- (beforeChange)="beforeChange($event)"
- (swipe)="swipe()"
- >
-
-<div class='slider-panel' ngxSlickItem  *ngFor="let review of reviews ">
-    <div>
-      <div class="quote">"{{review.quote}}"</div>
-      <div class="name">{{review.reviewerName}}</div>
-      <div class="stars">
-        <mat-icon *ngFor="let star of stars">star</mat-icon>
+  <ngx-slick-carousel
+    class="carousel carousel-light-bg"
+    #slickModal="slick-carousel"
+    [config]="slideConfig"
+    (swipe)="swipe()"
+  >
+    <div class="slider-panel" ngxSlickItem *ngFor="let review of reviews">
+      <div>
+        <div class="quote">"{{ review.quote }}"</div>
+        <div class="name">{{ review.reviewerName }}</div>
+        <div class="stars">
+          <mat-icon *ngFor="let star of stars">star</mat-icon>
+        </div>
       </div>
     </div>
-  </div>
-</ngx-slick-carousel>
+  </ngx-slick-carousel>
 </div>

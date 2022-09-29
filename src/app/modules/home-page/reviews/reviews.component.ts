@@ -1,36 +1,18 @@
-import { Component, ElementRef, ViewChild } from '@angular/core';
-
+import { ChangeDetectionStrategy, Component, ElementRef, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'app-reviews',
   templateUrl: './reviews.component.html',
-  styleUrls: ['./reviews.component.scss']
+  styleUrls: ['./reviews.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class ReviewsComponent {
   @ViewChild('sliderEl') sliderEl: ElementRef;
   @ViewChild('start') start: ElementRef;
   @ViewChild('slickModal') slickModal: any;
 
-  activeSlide = 0;
-  slideCount = 0;
-  visiblePanels = 3;
-  sensitivity = 25;
-  visibleContainerStyle: {};
-  sliderMainContainerStyle: {};
-  sliderWidth: number;
-  activeSliderWidth: number;
-
-  sliderPanelstyle = {
-    width: '347px'
-  };
-
-  minHeight = 373;
-  marginBetweenSlides = 10;
-  totalSlideWidth: number;
   stars = [1, 2, 3, 4, 5];
-  innerWidth: number;
-
-  reviews = [
+  reviews: {quote: string, reviewerName:string}[] = [
     {
       quote: `There is nowhere I would trust more with my skin! I've been coming here for about a year now and will continue. Cinza and her team are professional but also like my agony aunts!`,
       reviewerName: 'Ruth'
@@ -56,7 +38,6 @@ export class ReviewsComponent {
       reviewerName: 'Angela'
     },
   ];
-
 
   slideConfig = {
     slidesToShow: 3,
@@ -94,34 +75,9 @@ export class ReviewsComponent {
     ]
   };
 
-  constructor() { }
-
-  slickInit(e) {
-    console.log('slick initialized');
-  }
-
-  breakpoint(e) {
-    console.log('breakpoint');
-  }
-
-  afterChange(e) {
-    console.log('afterChange');
-    console.log('afterChange');
-  }
-
-  beforeChange(e) {
-    console.log('beforeChange');
-
-  }
-
-  swipe() {
+  swipe():void {
     setTimeout(() => {
       this.slickModal.slickGoTo(this.slickModal.currentIndex);
     }, 0);
-  }
-  slickGoTo(e) {
-    this.slickModal.slickGoTo(4);
-    console.log(e);
-    console.log(this.slickModal);
   }
 }

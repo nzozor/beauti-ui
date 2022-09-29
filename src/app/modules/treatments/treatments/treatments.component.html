@@ -425,23 +425,6 @@
           </button>
         </mat-panel-description>
       </mat-expansion-panel-header>
-      <!-- <div >
-          <div
-            class="waxing "
-            *ngFor="let treatment of waxing"
-          >
-            <div class="direction-row" *ngFor="let option of treatment.options">
-              <div class="header row">
-                <div>{{option.treatment}}</div>
-                <div>Single</div>
-              </div>
-              <div class="body row" *ngFor="let rowTreatment of option.options">
-                  <div>{{rowTreatment.key}}</div>
-                  <div>{{rowTreatment.value}}</div>
-              </div>
-            </div>
-        </div>
-      </div> -->
       <div class="waxing">
         <div class="description">
           {{ waxing[0].description }}
@@ -698,7 +681,6 @@
         </mat-panel-description>
       </mat-expansion-panel-header>
       <div class="sub">
-        <!-- <mat-accordion> -->
         <mat-expansion-panel>
           <mat-expansion-panel-header>
             <mat-panel-title> Relaxing Massages </mat-panel-title>

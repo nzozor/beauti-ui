@@ -1,7 +1,6 @@
 import { Component, Inject, OnInit, PLATFORM_ID } from '@angular/core';
 import { Router, NavigationEnd, RouteConfigLoadStart, RouteConfigLoadEnd } from '@angular/router';
 import { MatDialog } from '@angular/material/dialog';
-import { TreatwellComponent } from './components/treatwell/treatwell.component';
 import { BookingService } from './shared/services/booking.service';
 import { isPlatformBrowser } from '@angular/common';
 
@@ -37,16 +36,5 @@ export class AppComponent implements OnInit {
   }
   setStickyHeader(value: boolean): void {
     this.stickyHeader = value;
-  }
-
-  private openBookingModal() {
-    this.dialog.open(
-      TreatwellComponent,
-      {
-        height: '800px',
-        width: '1100px',
-        panelClass: 'custom-dialog-container'
-      },
-    );
   }
 }

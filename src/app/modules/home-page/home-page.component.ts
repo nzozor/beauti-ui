@@ -1,20 +1,18 @@
-import { Component, AfterContentInit, HostListener, AfterViewInit, Inject } from '@angular/core';
+import { Component, Inject, ChangeDetectionStrategy } from '@angular/core';
 import { DOCUMENT } from '@angular/common';
 import { SeoService } from 'src/app/shared/services/seo.service';
 
 @Component({
   selector: 'app-home-page',
   templateUrl: './home-page.component.html',
-  styleUrls: ['./home-page.component.scss']
+  styleUrls: ['./home-page.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush,
+
 })
-export class HomePageComponent implements AfterViewInit {
+export class HomePageComponent {
   title = 'beauti-frontend';
   stickyHeader = false;
-  // imgUrl = 'assets/beauti-girl.jpg'; // ToDO: move to component or directive
-
-  imgUrl = 'assets/beauti-nail-skin.jpg'; // ToDO: move to component or directive
-  // initialTop: number;
-  // parallaxDiv: HTMLDivElement;
+  imgUrl = 'assets/beauti-nail-skin.jpg';
 
   constructor(@Inject(DOCUMENT) private document: Document, private seo: SeoService ) { 
     this.seo.setDefaultMeta();
@@ -23,18 +21,4 @@ export class HomePageComponent implements AfterViewInit {
   setStickyHeader(value: boolean): void {
     this.stickyHeader = value;
   }
-
-  ngAfterViewInit() {
-    // this.parallaxDiv = this.document.querySelector('.parallax');
-
-    // this.parallaxDiv.style.backgroundPositionY = '100px';
-    // this.initialTop = parseInt(this.parallaxDiv.style.backgroundPositionY, 10);
-  }
-
-  // @HostListener('window:scroll')
-  // onWindowScroll() {
-  //   if (window.innerWidth > 600) {
-  //     this.parallaxDiv.style.backgroundPositionY = this.initialTop - window.scrollY * 0.5 + 'px';
-  //   }
-  // }
 }

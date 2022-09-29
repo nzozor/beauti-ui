@@ -2,6 +2,7 @@
   class="carousel hp-slider"
   #slickModal="slick-carousel"
   [config]="slideConfig"
+  *ngIf="homageBanners$ | async as banners"
 >
   <div ngxSlickItem *ngFor="let slide of banners" class="slide">
     <div
@@ -32,7 +33,6 @@
       >
         BOOK NOW
       </button>
-
       <div class="asterisk">{{ slide.asterisk }}</div>
     </div>
   </div>

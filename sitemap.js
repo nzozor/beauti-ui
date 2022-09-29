@@ -33,22 +33,8 @@ function readXml() {
         return !element.loc._text.includes("/treatments/");
       }
     );
-    // if (
-    //   existingSitemapList.urlset &&
-    //   existingSitemapList.urlset.url &&
-    //   existingSitemapList.urlset.url.length
-    // ) {
-    //   existingSitemapURLStringList = existingSitemapList.urlset.url.map(
-    //     (ele) => ele.loc._text
-    //   );
-    // }
 
     for (const project of projs) {
-      // if (
-      //   existingSitemapURLStringList.indexOf(
-      //     `${url}/treatments/${project.slug}`
-      //   ) == -1
-      // ) {
       existingSitemapList.urlset.url.push({
         loc: {
           _text: `${url}/treatments/${project.slug}`,
@@ -67,7 +53,6 @@ function readXml() {
     createSitemapFile(existingSitemapList);
   });
 }
-
 /*
     Method to convert JSON format data into XML format
 */

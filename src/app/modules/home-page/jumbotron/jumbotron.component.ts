@@ -1,20 +1,17 @@
-import { Component, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { BookingService } from 'src/app/shared/services/booking.service';
 
 @Component({
   selector: 'app-jumbotron',
   templateUrl: './jumbotron.component.html',
-  styleUrls: ['./jumbotron.component.scss']
+  styleUrls: ['./jumbotron.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class JumbotronComponent implements OnInit {
+export class JumbotronComponent {
 
   constructor(private bookingService: BookingService) { }
 
-  ngOnInit() {
-  }
-
   openBooking(event) {
-    this.bookingService.sendBooking(event);
+    this.bookingService.sendBooking();
   }
-
 }

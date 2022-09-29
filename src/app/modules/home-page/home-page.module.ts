@@ -1,13 +1,11 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { MatButtonModule } from '@angular/material/button';
-
 import { HomePageComponent } from './home-page.component';
 import { HomePageRoutingModule } from './home-page.routing.module';
 import { ExcluStocklistComponent } from './exclu-stocklist/exclu-stocklist.component';
 import { JumbotronComponent } from './jumbotron/jumbotron.component';
 import { ReviewsComponent } from './reviews/reviews.component';
-
 import { MatIconModule } from '@angular/material/icon';
 import { SlickCarouselModule } from 'ngx-slick-carousel';
 import { MapComponent } from 'src/app/shared/components/map/map.component';

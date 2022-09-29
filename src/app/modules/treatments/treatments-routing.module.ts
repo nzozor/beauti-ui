@@ -1,7 +1,6 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { TreatmentsComponent } from './treatments/treatments.component';
-import { TreatmentShowcaseComponent } from '../treatment-showcase/treatment-showcase/treatment-showcase.component';
 
 const routes: Routes = [
   {

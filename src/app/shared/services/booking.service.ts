@@ -1,5 +1,6 @@
-import { Injectable } from '@angular/core';
+import { Inject, Injectable } from '@angular/core';
 import { Subject, Observable } from 'rxjs';
+import { DOCUMENT } from '@angular/common';
 
 @Injectable({
   providedIn: 'root'
@@ -7,22 +8,16 @@ import { Subject, Observable } from 'rxjs';
 export class BookingService {
   private bookNow = new Subject<boolean>();
 
-  constructor() { }
+  constructor (@Inject(DOCUMENT) private document: Document) {}
 
-  sendBooking(event) {
-    // event.preventDefault();
-    // event.stopPropagation();
+
+  sendBooking(): void {
     window.open('https://widget.treatwell.co.uk/place/beauti-skin-clinic/', '_blank', 'noopener');
-    // window.open('mailto:info@beautiskinclinic.com?subject=Beauti Skin Clinic Booking', '_blank', 'noopener');
-
-    // location.href = "mailto:info@beautiskinclinic.com "+'&body='+'Booking Beauti Skin Clinic';
-
   }
 
-  sendBookingBespoke(event) {
+  sendBookingBespoke(): void {
     window.open('mailto:info@beautiskinclinic.com?subject=Beauti Skin Clinic Booking', '_blank', 'noopener');
   }
-
 
   getBooking(): Observable<boolean> {
     return this.bookNow.asObservable();

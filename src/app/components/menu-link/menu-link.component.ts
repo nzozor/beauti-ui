@@ -1,5 +1,6 @@
-import { Component, OnInit, Input, OnChanges, Output, EventEmitter } from '@angular/core';
+import { Component, Input, OnChanges, Output, EventEmitter, ChangeDetectionStrategy } from '@angular/core';
 import { trigger, style, animate, transition, query, stagger } from '@angular/animations';
+
 export interface Menu {
   title: string;
   subMenu?: SubMenu[];
@@ -25,9 +26,11 @@ export interface SubMenu {
         )
       ])
     ])
-  ]
+  ],
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class MenuLinkComponent implements OnInit, OnChanges {
+  
+export class MenuLinkComponent implements OnChanges {
   @Input() active = false;
   @Output() menuLinkOpen = new EventEmitter<boolean>();
   mainMenu: Menu[] = [
@@ -39,27 +42,21 @@ export class MenuLinkComponent implements OnInit, OnChanges {
     },
     { title: 'Contact', route: '/contact' }
   ];
-
   subMenuActive = false;
   activeSubMenu = {} as Menu;
 
-  ngOnChanges() {
+  ngOnChanges(): void {
     if (!this.active) {
       this.subMenuActive = false;
     }
   }
 
-  ngOnInit() {
-  }
-  constructor() { }
-
   togglesSubenu(subMenu: Menu): void {
     this.subMenuActive = !this.subMenuActive;
     this.activeSubMenu = subMenu;
-    console.log(this.activeSubMenu);
   }
 
-  closeMenuLink() {
+  closeMenuLink():void {
     this.menuLinkOpen.emit(false);
   }
 }

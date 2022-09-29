@@ -173,11 +173,11 @@ h3 {
       flex-direction: column;
       justify-content: center;
       padding-bottom: 36px !important;
-      // margin-top: 60px;
 
       @media (min-width: 1024px) {
         -webkit-mask-image: linear-gradient(to left, transparent 1%, black 7%);
         mask-image: linear-gradient(to left, transparent 1%, black 7%);
+        padding-bottom: 0 !important;
 
         &::before {
           content: "\00a0 ";
@@ -200,7 +200,6 @@ h3 {
 
     .slick-track {
       transition: all .5s;
-
     }
 
     .slick-slide {

@@ -1,13 +1,14 @@
 <div class="outer">
-  <div *ngIf="treatment" class="container">
+  <div *ngIf="treatmentShowcase$ | async as treatment" class="container">
     <div class="header">
-      <button (click)="goToParent()"         mat-stroked-button
-      class="arrow-button main-button"
+      <button
+        (click)="goToParent()"
+        mat-stroked-button
+        class="arrow-button main-button"
       >
-        <!-- <mat-icon>keyboard_arrow_left</mat-icon> -->
         <i class="arrow left"></i>
         <h4>
-          {{ activeTreatmentList[activeTreatmentList.length - 1]}}
+          {{ activeTreatmentList[activeTreatmentList.length - 1] }}
         </h4>
       </button>
     </div>
@@ -15,15 +16,6 @@
       <h3>
         {{ treatment.title }}
       </h3>
-      <!-- <button
-      mat-flat-button
-      color="primary"
-      class="main-button"
-      (click)="openBooking()"
-    >
-
-      Book now
-    </button> -->
       <button
         (click)="openBooking($event)"
         mat-flat-button
@@ -33,17 +25,19 @@
         Book now
       </button>
     </div>
-    <img [src]="getImage()" />
+    <img [src]="imageUrl | safeUrl" />
     <div class="showcase-content">
       <div [innerHTML]="treatment.content | MarkdownToHtml"></div>
     </div>
-    <!-- <div>
-      {{treatment.content}}
-    </div> -->
   </div>
   <div class="book-treatment-fixed">
-    <button (click)="openBooking($event)" mat-flat-button color="primary" class="main-button mobile">
-            Book now
-        </button>
+    <button
+      (click)="openBooking($event)"
+      mat-flat-button
+      color="primary"
+      class="main-button mobile"
+    >
+      Book now
+    </button>
   </div>
 </div>

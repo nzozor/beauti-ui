@@ -5,6 +5,7 @@ import { TreatmentShowcase } from '../models/treatmentShowcase';
 
 import { map } from 'rxjs/operators';
 import { environment } from 'src/environments/environment';
+import { HomePageSlider } from '../models/homepageSlider.model';
 
 @Injectable({
   providedIn: 'root'
@@ -15,21 +16,20 @@ export class DataService {
   }
 
   beautiCmsUrl = environment.cmsUrl;
-  // beautiCmsUrl = `http://localhost:1337`;
 
   currentParentTreatment = 'Skin Treatmetns';
   activeTreatmentList: string[];
   activeTreatment: string;
   
   getTreatmentShowcase(slug: string): Observable<TreatmentShowcase> {
-    return this.http.get<TreatmentShowcase>(`${this.beautiCmsUrl}/treatments?slug=${slug}`);  // Template litterral ``
+    return this.http.get<TreatmentShowcase>(`${this.beautiCmsUrl}/treatments?slug=${slug}`).pipe(map(treatment =>treatment[0]));
   }
 
   getAboutUsPage(): Observable<{Content: string}> {
-    return this.http.get<{Content: string}>(`${this.beautiCmsUrl}/about-us-page`);  // Template litterral ``
+    return this.http.get<{Content: string}>(`${this.beautiCmsUrl}/about-us-page`);
   }
 
-  getHomageBanners(): Observable<any> {
+  getHomageBanners(): Observable<HomePageSlider> {
     return this.http.get<any>(`${this.beautiCmsUrl}/homepage-sliders`).pipe(
       map((banners) => banners.sort((a: any, b: any) => new Date(b.publication).getTime() - new Date(a.publication).getTime()).filter((banner) => !banner.hide))
     );

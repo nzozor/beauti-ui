@@ -1,9 +1,9 @@
-import { Component, OnInit, OnDestroy } from "@angular/core";
+import { ChangeDetectionStrategy, Component } from "@angular/core";
 import { ActivatedRoute, Router } from "@angular/router";
 import { TreatmentShowcase } from "src/app/shared/models/treatmentShowcase";
 import { DataService } from "src/app/shared/services/data.service";
-import { Subscription } from "rxjs";
-import { DomSanitizer } from "@angular/platform-browser";
+import { map, Observable, Subscription, tap } from "rxjs";
+import { DomSanitizer, SafeUrl } from "@angular/platform-browser";
 import { BookingService } from "src/app/shared/services/booking.service";
 import { BreakpointObserver, Breakpoints } from "@angular/cdk/layout";
 import { SeoService } from "src/app/shared/services/seo.service";
@@ -12,8 +12,9 @@ import { SeoService } from "src/app/shared/services/seo.service";
   selector: "app-treatment-showcase",
   templateUrl: "./treatment-showcase.component.html",
   styleUrls: ["./treatment-showcase.component.scss"],
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class TreatmentShowcaseComponent implements OnInit, OnDestroy {
+export class TreatmentShowcaseComponent {
   constructor(
     private route: ActivatedRoute,
     private dataService: DataService,
@@ -24,28 +25,19 @@ export class TreatmentShowcaseComponent implements OnInit, OnDestroy {
     public seo: SeoService
   ) {}
   treatment: TreatmentShowcase;
-  treatmentShowcaseSub: Subscription;
   treatmentParentName: string;
   activeTreatmentList: string[];
   breakpoint: string;
-  ngOnInit() {
+  treatmentShowcase$: Observable<TreatmentShowcase>;
+  imageUrl: SafeUrl;
+
+  ngOnInit(): void {
     const slug: string = this.route.snapshot.params.slug;
     this.treatmentParentName = this.dataService.currentParentTreatment;
     this.activeTreatmentList = this.dataService.activeTreatmentList
       ? this.dataService.activeTreatmentList
       : ["Back to Treatments"];
-    this.treatmentShowcaseSub = this.dataService
-      .getTreatmentShowcase(slug)
-      .subscribe((treatment) => {
-        this.treatment = treatment[0];
-        this.seo.setTitle(
-          `${this.treatment?.title} | ${this.treatmentParentName}`
-        );
-        this.seo.setMeta([{
-          name: 'description',
-          content: `${this.treatment?.title} | ${this.seo.defaultMetaContent}`,
-        }]);
-      });
+    this.treatmentShowcase$ = this.treatmentShowcase(slug);
     this.breakpointObserver
       .observe([
         Breakpoints.XSmall,
@@ -64,27 +56,34 @@ export class TreatmentShowcaseComponent implements OnInit, OnDestroy {
       });
   }
 
-  ngOnDestroy() {
-    this.treatmentShowcaseSub.unsubscribe();
+  treatmentShowcase(slug: string): Observable<TreatmentShowcase> {
+    return this.dataService
+      .getTreatmentShowcase(slug)
+      .pipe(
+        tap((treatment) => {
+        this.seo.setTitle(
+          `${treatment?.title} | ${this.treatmentParentName}`
+        );
+        this.seo.setMeta([{
+          name: 'description',
+          content: `${treatment?.title} | ${this.seo.defaultMetaContent}`,
+        }]);
+        this.imageUrl = this.getImageUrl(treatment)
+      }))
   }
 
-  getImage() {
+  getImageUrl(treatment: TreatmentShowcase): string{
     if (this.breakpoint === "large") {
-      return this.domSanitizer.bypassSecurityTrustUrl(
-        `${this.dataService.beautiCmsUrl}${this.treatment.images[0].formats.large.url}`
-      );
-    } else {
-      return this.domSanitizer.bypassSecurityTrustUrl(
-        `${this.dataService.beautiCmsUrl}${this.treatment.images[0].formats.small.url}`
-      );
-    }
+    return `${this.dataService.beautiCmsUrl}${treatment.images[0].formats.large.url}`
+    } 
+    return `${this.dataService.beautiCmsUrl}${treatment.images[0].formats.small.url}`
   }
 
-  goToParent() {
+  goToParent(): void {
     this.router.navigate([`treatments`]);
   }
 
-  openBooking(e) {
-    this.bookingService.sendBooking(e);
+  openBooking(e): void {
+    this.bookingService.sendBooking();
   }
 }

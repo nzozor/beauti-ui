@@ -1,4 +1,4 @@
-import { Component, OnInit, AfterViewInit, AfterContentChecked, Inject } from '@angular/core';
+import { Component, OnInit, AfterViewInit, AfterContentChecked, Inject, ChangeDetectionStrategy } from '@angular/core';
 import { SKIN_TREATMENTS } from '../mocks/skin-treatments';
 import { SKIN_IMP_REM } from '../mocks/skin-imperfections';
 import { WAX_DATA } from '../mocks/waxing';
@@ -17,11 +17,12 @@ import { AESTHETIC_TREATMENTS } from '../mocks/aesthetic-treatments';
 @Component({
   selector: 'app-treatments',
   templateUrl: './treatments.component.html',
-  styleUrls: ['./treatments.component.scss']
+  styleUrls: ['./treatments.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class TreatmentsComponent implements OnInit, AfterViewInit, AfterContentChecked {
-  skinTreatments = SKIN_TREATMENTS;
-  skinImperfectionRemoval = SKIN_IMP_REM;
+  skinTreatments: any[] = SKIN_TREATMENTS;
+  skinImperfectionRemoval: any[] = SKIN_IMP_REM;
   waxing: any[] = WAX_DATA;
   bodyRelaxingMassage: any[] = BODY_MASSAGE;
   bodyContouring: any[] = BODY_CONTOURING;
@@ -31,13 +32,13 @@ export class TreatmentsComponent implements OnInit, AfterViewInit, AfterContentC
   hairRemoveElectro: any[] = HAIR_REMOVAL_ELECTRO;
   aestheticTreatments: any[] = AESTHETIC_TREATMENTS
   innerWidth: any;
-
   leftCol: [];
   rightCol: [];
   activeTreatment: string;
   activeParrentTreatment: string;
   activeTreatmentList: string[];
-  scrollAdjusted;
+  scrollAdjusted: boolean;
+
   constructor(
     private bookingService: BookingService,
     private router: Router,
@@ -49,27 +50,27 @@ export class TreatmentsComponent implements OnInit, AfterViewInit, AfterContentC
       this.seo.setDefaultMeta();
     }
 
-  get isWideScreen() {
+  get isWideScreen(): boolean {
     return this.innerWidth >= 600;
   }
 
-  openBooking(e, treatment = null) {
+  openBooking(e, treatment = null): void {
     if (treatment?.bespoke) {
-      this.bookingService.sendBookingBespoke(e);
+      this.bookingService.sendBookingBespoke();
     } else {
-      this.bookingService.sendBooking(e);
+      this.bookingService.sendBooking();
     }
   }
 
-  ngOnInit() {
+  ngOnInit(): void {
     this.leftCol = this.waxing[0].options.slice(0, Math.ceil(this.waxing[0].options.length / 2));
     this.rightCol = this.waxing[0].options.slice(Math.ceil(this.waxing[0].options.length / 2));
     this.innerWidth = isPlatformBrowser(this.platformId) ? window.innerWidth: 0;
     this.activeParrentTreatment = this.dataService.currentParentTreatment;
     this.activeTreatmentList = this.dataService.activeTreatmentList;
     this.activeTreatment = this.dataService.activeTreatment;
-
   }
+
   ngAfterViewInit(): void {
     if (this.activeTreatment) {
       this.viewPortScroller.scrollToAnchor(this.activeTreatment);
@@ -89,14 +90,14 @@ export class TreatmentsComponent implements OnInit, AfterViewInit, AfterContentC
     }
   }
 
-  goToTreatmentShowcase(treatmentParentList: string[], treatmentName: string) {
+  goToTreatmentShowcase(treatmentParentList: string[], treatmentName: string): void {
     this.dataService.activeTreatmentList = treatmentParentList;
     this.dataService.activeTreatment = this.getSlug(treatmentName);
 
     this.router.navigate([this.getSlug(treatmentName)], { relativeTo: this.route });
   }
 
-  getSlug(treatmentName: string) {
+  getSlug(treatmentName: string): string {
     return treatmentName.split(' ').join('-').split('/').join('');
   }
 
