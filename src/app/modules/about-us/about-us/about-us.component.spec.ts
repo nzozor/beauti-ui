@@ -1,4 +1,7 @@
+import { HttpClientTestingModule } from '@angular/common/http/testing';
 import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
+import { MockModule } from 'ng-mocks';
+import { SlickCarouselModule } from 'ngx-slick-carousel';
 
 import { AboutUsComponent } from './about-us.component';
 
@@ -8,9 +11,10 @@ describe('AboutUsComponent', () => {
 
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
-      declarations: [ AboutUsComponent ]
+      declarations: [AboutUsComponent],
+      imports: [HttpClientTestingModule, MockModule(SlickCarouselModule)],
     })
-    .compileComponents();
+      .compileComponents();
   }));
 
   beforeEach(() => {

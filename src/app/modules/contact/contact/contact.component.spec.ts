@@ -1,6 +1,9 @@
 import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
+import { MockModule } from 'ng-mocks';
+import { SlickCarouselModule } from 'ngx-slick-carousel';
 
 import { ContactComponent } from './contact.component';
+
 
 describe('ContactComponent', () => {
   let component: ContactComponent;
@@ -8,9 +11,10 @@ describe('ContactComponent', () => {
 
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
-      declarations: [ ContactComponent ]
+      declarations: [ContactComponent,],
+      imports: [MockModule(SlickCarouselModule)],
     })
-    .compileComponents();
+      .compileComponents();
   }));
 
   beforeEach(() => {

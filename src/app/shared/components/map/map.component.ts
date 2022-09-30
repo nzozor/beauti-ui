@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, Component, OnInit, NgZone } from '@angular/core';
 declare var require: any;
 
 @Component({
@@ -9,19 +9,20 @@ declare var require: any;
 })
 export class MapComponent implements OnInit {
   map: any;
-  constructor() {
+  constructor(private zone: NgZone) {
   }
 
   ngOnInit(): any {
-    const mapboxgl = require('mapbox-gl/dist/mapbox-gl.js');
-    mapboxgl.accessToken = 'pk.eyJ1IjoiZWxzYWJlbiIsImEiOiJjanZ4b2ZndDQwNnB5M3pyejNrZWQwaGVwIn0.T8MZoM6PJVvNkME819rAkw';
-    this.map = new mapboxgl.Map({
-      container: 'map',
-      style: 'mapbox://styles/elsaben/ck2mfzocf0e271co95fjg4wry',
-      interactive: false
+    this.zone.runOutsideAngular(() => {
+      const mapboxgl = require('mapbox-gl/dist/mapbox-gl.js');
+      mapboxgl.accessToken = 'pk.eyJ1IjoiZWxzYWJlbiIsImEiOiJjanZ4b2ZndDQwNnB5M3pyejNrZWQwaGVwIn0.T8MZoM6PJVvNkME819rAkw';
+      this.map = new mapboxgl.Map({
+        container: 'map',
+        style: 'mapbox://styles/elsaben/ck2mfzocf0e271co95fjg4wry',
+        interactive: false
+      });
+      const nav = new mapboxgl.NavigationControl();
+      this.map.addControl(nav, 'bottom-right');
     });
-
-    const nav = new mapboxgl.NavigationControl();
-    this.map.addControl(nav, 'bottom-right');
   }
 }

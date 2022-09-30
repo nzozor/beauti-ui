@@ -41,7 +41,7 @@ export class MainSliderComponent {
     return this.dataService.getHomageBanners();
   }
 
-  openBooking(event): void {
+  openBooking(): void {
     this.bookingService.sendBooking();
   }
 

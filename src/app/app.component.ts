@@ -1,7 +1,5 @@
 import { Component, Inject, OnInit, PLATFORM_ID } from '@angular/core';
 import { Router, NavigationEnd, RouteConfigLoadStart, RouteConfigLoadEnd } from '@angular/router';
-import { MatDialog } from '@angular/material/dialog';
-import { BookingService } from './shared/services/booking.service';
 import { DOCUMENT, isPlatformBrowser } from '@angular/common';
 
 @Component({
@@ -18,12 +16,10 @@ export class AppComponent implements OnInit {
 
   constructor(
     private router: Router,
-    private bookingService: BookingService,
-    public dialog: MatDialog,
     @Inject(PLATFORM_ID) private platformId: any,
     @Inject(DOCUMENT) private document: Document
   ) {
-  this.window = this.document.defaultView;
+    this.window = this.document.defaultView;
   }
 
   ngOnInit(): void {
@@ -32,9 +28,9 @@ export class AppComponent implements OnInit {
         this.window.scrollTo(0, 0);
       }
       if (event instanceof RouteConfigLoadStart) {
-          this.loadingRouteConfig = true;
+        this.loadingRouteConfig = true;
       } else if (event instanceof RouteConfigLoadEnd) {
-        this.loadingRouteConfig  = false;
+        this.loadingRouteConfig = false;
       }
     });
 

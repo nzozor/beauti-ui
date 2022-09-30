@@ -1,4 +1,6 @@
 import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
+import { MockModule } from 'ng-mocks';
+import { SlickCarouselModule } from 'ngx-slick-carousel';
 
 import { ReviewsComponent } from './reviews.component';
 
@@ -8,9 +10,11 @@ describe('ReviewsComponent', () => {
 
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
-      declarations: [ ReviewsComponent ]
+      declarations: [ReviewsComponent],
+      imports: [MockModule(SlickCarouselModule)],
+
     })
-    .compileComponents();
+      .compileComponents();
   }));
 
   beforeEach(() => {

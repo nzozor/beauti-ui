@@ -1,4 +1,6 @@
+import { HttpClientTestingModule } from '@angular/common/http/testing';
 import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
+import { RouterTestingModule } from '@angular/router/testing';
 
 import { TreatmentShowcaseComponent } from './treatment-showcase.component';
 
@@ -8,9 +10,10 @@ describe('TreatmentShowcaseComponent', () => {
 
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
-      declarations: [ TreatmentShowcaseComponent ]
+      declarations: [TreatmentShowcaseComponent],
+      imports: [RouterTestingModule, HttpClientTestingModule]
     })
-    .compileComponents();
+      .compileComponents();
   }));
 
   beforeEach(() => {

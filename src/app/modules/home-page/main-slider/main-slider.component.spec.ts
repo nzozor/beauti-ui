@@ -1,3 +1,4 @@
+import { HttpClientTestingModule } from '@angular/common/http/testing';
 import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 
 import { MainSliderComponent } from './main-slider.component';
@@ -8,9 +9,10 @@ describe('MainSliderComponent', () => {
 
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
-      declarations: [ MainSliderComponent ]
+      declarations: [MainSliderComponent],
+      imports: [HttpClientTestingModule],
     })
-    .compileComponents();
+      .compileComponents();
   }));
 
   beforeEach(() => {
