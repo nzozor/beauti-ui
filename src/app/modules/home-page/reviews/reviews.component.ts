@@ -12,7 +12,7 @@ export class ReviewsComponent {
   @ViewChild('slickModal') slickModal: any;
 
   stars = [1, 2, 3, 4, 5];
-  reviews: {quote: string, reviewerName:string}[] = [
+  reviews: { quote: string, reviewerName: string }[] = [
     {
       quote: `There is nowhere I would trust more with my skin! I've been coming here for about a year now and will continue. Cinza and her team are professional but also like my agony aunts!`,
       reviewerName: 'Ruth'
@@ -51,7 +51,7 @@ export class ReviewsComponent {
     adaptiveHeight: true,
     focusOnSelect: false,
     touchThreshold: 200,
-    autoplay: true,
+    autoplay: false,
     speed: 2500,
     touchMove: true,
     responsive: [
@@ -75,7 +75,7 @@ export class ReviewsComponent {
     ]
   };
 
-  swipe():void {
+  swipe(): void {
     setTimeout(() => {
       this.slickModal.slickGoTo(this.slickModal.currentIndex);
     }, 0);
