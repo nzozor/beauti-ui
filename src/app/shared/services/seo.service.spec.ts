@@ -13,4 +13,11 @@ describe('Service: Seo', () => {
   it('should ...', inject([SeoService], (service: SeoService) => {
     expect(service).toBeTruthy();
   }));
+
+  it('should set specific title', inject([SeoService], (service: SeoService) => {
+    const customTitle = 'custom Title'
+    service.setTitle(customTitle);
+    const titeTag = document.querySelector("title") as HTMLElement;
+    expect(titeTag.innerHTML).toBe('custom Title | Beauti Skin Clinic | Advanced Skin Treatments in SW London');
+  }));
 });

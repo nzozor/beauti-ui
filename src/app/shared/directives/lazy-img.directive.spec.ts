@@ -14,7 +14,6 @@ class TestComponent {
 
 
 describe('Directive: LazyImgDirective', () => {
-
   let component: TestComponent;
   let fixture: ComponentFixture<TestComponent>;
   let imgEl: DebugElement;
