@@ -7,7 +7,7 @@ export const AESTHETIC_TREATMENTS: any = [
     orientation: 'row',
     fullOptions: 'true',
     options: [
-    {
+      {
         treatment: '',
         options: [
           { key: '   Duration', value: '' },
@@ -87,13 +87,13 @@ export const AESTHETIC_TREATMENTS: any = [
   },
   {
     title: `Jalupro`,
-    hasShowcase: false,
+    hasShowcase: true,
     treatment: ``,
     description: ``,
     orientation: 'row',
     fullOptions: 'true',
     options: [
-    {
+      {
         treatment: '',
         options: [
           { key: '   Duration', value: '' },
@@ -113,7 +113,7 @@ export const AESTHETIC_TREATMENTS: any = [
       },
     ]
   },
-    {
+  {
     title: `Mesotherapy`,
     treatment: `Add Dermaplaning for £30, (extra 15 mins)<br />
      Add LED Light Therapy for £20, (extra 15 mins)`,
@@ -249,7 +249,7 @@ export const AESTHETIC_TREATMENTS: any = [
         options: [
           { key: '', value: '45 mins' },
           { key: '', value: '£500' },
-          { key: '   3 Courses', value: '£1800' },
+          { key: '   3 Courses', value: '£1350' },
         ]
       },
     ]

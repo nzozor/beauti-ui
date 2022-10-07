@@ -115,7 +115,7 @@ export const SKIN_TREATMENTS: any = [
     ],
   },
   {
-    title: 'Micro needling with Dermapen',
+    title: 'Microneedling with Dermapen',
     treatment: ``,
     hasShowcase: true,
     description: `Lorem of the printing and typesetting industry.
