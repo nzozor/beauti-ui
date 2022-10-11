@@ -123,8 +123,8 @@ export const SKIN_TREATMENTS: any = [
     text ever since the 1500s, when an unknown printer`,
     options: [
       { key: 'Duration', value: '60 mins' },
-      { key: 'Single', value: '£350' },
-      { key: '4 Courses', value: '£1260' }
+      { key: 'Single', value: '£250' },
+      { key: '4 Courses', value: '£900' }
     ]
   },
   {
