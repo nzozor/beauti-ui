@@ -1,5 +1,4 @@
-import { Component, Inject, ChangeDetectionStrategy } from '@angular/core';
-import { DOCUMENT } from '@angular/common';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 import { SeoService } from 'src/app/shared/services/seo.service';
 
 @Component({
@@ -14,10 +13,10 @@ export class HomePageComponent {
   stickyHeader = false;
   imgUrl = 'assets/beauti-nail-skin.jpg';
 
-  constructor(@Inject(DOCUMENT) private document: Document, private seo: SeoService ) { 
+  constructor(private seo: SeoService) {
     this.seo.setDefaultMeta();
   }
-  
+
   setStickyHeader(value: boolean): void {
     this.stickyHeader = value;
   }
