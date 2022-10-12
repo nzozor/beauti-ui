@@ -23,6 +23,8 @@ body {
 }
 
 h3,
+h1,
+h2,
 h4 {
   font-family: 'Roboto';
   text-align: center;
@@ -103,7 +105,9 @@ h3 {
 }
 
 .showcase-content {
-  h4 {
+
+  h4,
+  h2 {
     font-size: 17px;
     font-weight: normal;
     font-family: 'Nunito Sans', sans-serif;

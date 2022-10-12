@@ -367,6 +367,16 @@
   }
 }
 
+h1 {
+  font-size: 32px;
+  margin-bottom: 50px;
+}
+
+h2 {
+  color: inherit;
+  font-size: inherit;
+}
+
 .mat-expansion-panel {
   & .mat-expansion-panel-header.mat-expanded {
     ::ng-deep {
