@@ -23,7 +23,7 @@ export class TreatmentShowcaseComponent {
     private bookingService: BookingService,
     public breakpointObserver: BreakpointObserver,
     public seo: SeoService
-  ) {}
+  ) { }
   treatment: TreatmentShowcase;
   treatmentParentName: string;
   activeTreatmentList: string[];
@@ -61,21 +61,21 @@ export class TreatmentShowcaseComponent {
       .getTreatmentShowcase(slug)
       .pipe(
         tap((treatment) => {
-        this.seo.setTitle(
-          `${treatment?.title} | ${this.treatmentParentName}`
-        );
-        this.seo.setMeta([{
-          name: 'description',
-          content: `${treatment?.title} | ${this.seo.defaultMetaContent}`,
-        }]);
-        this.imageUrl = this.getImageUrl(treatment)
-      }))
+          this.seo.setTitle(
+            treatment?.title
+          );
+          this.seo.setMeta([{
+            name: 'description',
+            content: `${treatment?.title} | ${this.seo.defaultMetaContent}`,
+          }]);
+          this.imageUrl = this.getImageUrl(treatment)
+        }))
   }
 
-  getImageUrl(treatment: TreatmentShowcase): string{
+  getImageUrl(treatment: TreatmentShowcase): string {
     if (this.breakpoint === "large") {
-    return `${this.dataService.beautiCmsUrl}${treatment.images[0].formats.large.url}`
-    } 
+      return `${this.dataService.beautiCmsUrl}${treatment.images[0].formats.large.url}`
+    }
     return `${this.dataService.beautiCmsUrl}${treatment.images[0].formats.small.url}`
   }
 
