@@ -13,7 +13,7 @@ export class SeoService {
   Founded by Aesthetician Cinzia Campigotto who has over 20 years of experience.`;
 
   public setTitle(newTitle: string) {
-    this.titleService.setTitle(`${newTitle} | ${this.defaultTitle}`);
+    this.titleService.setTitle(`${newTitle} | Beauti Skin Clinic`);
   }
 
   public setMeta(meta: MetaDefinition[]) {
