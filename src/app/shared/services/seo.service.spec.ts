@@ -1,6 +1,4 @@
-/* tslint:disable:no-unused-variable */
-
-import { TestBed, inject, waitForAsync } from '@angular/core/testing';
+import { TestBed, inject } from '@angular/core/testing';
 import { SeoService } from './seo.service';
 
 describe('Service: Seo', () => {
@@ -18,6 +16,6 @@ describe('Service: Seo', () => {
     const customTitle = 'custom Title'
     service.setTitle(customTitle);
     const titeTag = document.querySelector("title") as HTMLElement;
-    expect(titeTag.innerHTML).toBe('custom Title | Beauti Skin Clinic | Advanced Skin Treatments in SW London');
+    expect(titeTag.innerHTML).toBe('custom Title | Beauti Skin Clinic');
   }));
 });

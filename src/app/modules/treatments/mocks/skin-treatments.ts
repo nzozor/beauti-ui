@@ -116,7 +116,7 @@ export const SKIN_TREATMENTS: any = [
   },
   {
     title: 'Microneedling with Dermapen',
-    treatment: ``,
+    treatment: `Add Skin Booster for £50, (extra 5 mins)`,
     hasShowcase: true,
     description: `Lorem of the printing and typesetting industry.
     Lorem Ipsum has been the industry’s standard dummy

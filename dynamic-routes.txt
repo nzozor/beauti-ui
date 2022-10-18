@@ -6,7 +6,7 @@
 /Advanced-Beauti-Signature-Relaxing-Facial
 /Mesotherapy
 /IPL-Skin-Rejuvenation
-/Micro-needling-with-Dermapen
+/Microneedling-with-Dermapen
 /Anti-Wrinkle-Injections
 /Dermal-Fillers
 /Plasma-Face-Lift
@@ -15,10 +15,15 @@
 /Skin-imperfection-removal
 /Electrolysis
 /Fat-and-Cellulite-Reduction
-/IPL-Laser-Hair-Removal
+/Laser-Hair-Removal
 /TriBella
 /Skin-Resurfacing
 /Profhilo
 /PRP-Vampire-Facial
 /PRP-Hair-Loss-Treatment
-/about-us-page
+/Aqualyx-Fat-Dissolve-Injection
+/Jalupro
+/about-us
+/contact
+/treatments
+/
