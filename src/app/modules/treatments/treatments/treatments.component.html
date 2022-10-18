@@ -30,7 +30,7 @@
                 (click)="
                   goToTreatmentShowcase(
                     ['Skin Treatments', 'Advanced Skin Treatments'],
-                    treatment.title
+                    treatment.url || treatment.title
                   )
                 "
               >
@@ -52,7 +52,7 @@
               (click)="
                 goToTreatmentShowcase(
                   ['Skin Treatments', 'Advanced Skin Treatments'],
-                  treatment.title
+                  treatment.url || treatment.title
                 )
               "
               mat-stroked-button
