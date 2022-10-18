@@ -28,6 +28,7 @@ export const SKIN_TREATMENTS: any = [
   },
   {
     title: 'Advanced Beauti Signature Relaxing Facial',
+    url: 'Advanced-Beauti-Signature-Relaxing-Facial',
     hasShowcase: true,
     treatment: `
     Choose from Radio Frequency, Skin Rejuvenation, LED Light Therapy.<br /> Add Dermaplaning for £30, (extra 15 mins)`,
@@ -46,6 +47,7 @@ export const SKIN_TREATMENTS: any = [
   },
   {
     title: 'Aqua 3 Hydrotherapy Facial',
+    url: 'Aqua-3-Hydrotherapy-Facial',
     hasShowcase: true,
     treatment: `
     Choose from Deep-cleaning, Anti-Aging. <br />Add Black Head Extraction for £10, (extra 10 mins)
@@ -74,6 +76,7 @@ export const SKIN_TREATMENTS: any = [
   },
   {
     title: `Skin Peel`,
+    url: `Skin-Peel`,
     hasShowcase: true,
     treatment: `Add LED Light Therapy for £20, (extra 15 mins)`,
     description: `Lorem of the printing and typesetting industry.
@@ -88,6 +91,7 @@ export const SKIN_TREATMENTS: any = [
   },
   {
     title: `Radio Frequency Skin Tightening`,
+    url: `Radio-Frequency-Skin-Tightening`,
     treatment: `Add LED Light Therapy for £20, (extra 15 mins)<br /> Add Dermaplaning for £30, (extra 15 mins)	`,
     hasShowcase: true,
     description: `Lorem of the printing and typesetting industry.
@@ -102,6 +106,7 @@ export const SKIN_TREATMENTS: any = [
   },
   {
     title: 'IPL Skin Rejuvenation',
+    url: 'IPL-Skin-Rejuvenation',
     treatment: ``,
     hasShowcase: true,
     description: `Lorem of the printing and typesetting industry.
@@ -116,6 +121,7 @@ export const SKIN_TREATMENTS: any = [
   },
   {
     title: 'Microneedling with Dermapen',
+    url: 'Microneedling-with-Dermapen',
     treatment: `Add Skin Booster for £50, (extra 5 mins)`,
     hasShowcase: true,
     description: `Lorem of the printing and typesetting industry.
@@ -141,6 +147,7 @@ export const SKIN_TREATMENTS: any = [
   },
   {
     title: 'Skin Resurfacing',
+    url: 'Skin-Resurfacing',
     treatment: ``,
     hasShowcase: true,
     description: `Lorem of the printing and typesetting industry.

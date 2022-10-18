@@ -1,6 +1,7 @@
 export const SKIN_IMP_REM: any = [
   {
-    title : 'Mole Removal',
+    title: 'Mole Removal',
+    url: 'Skin-imperfection-removal',
     treatment: '',
     hasShowcase: true,
     description: `Lorem of the printing and typesetting industry.
@@ -13,7 +14,8 @@ export const SKIN_IMP_REM: any = [
     ]
   },
   {
-    title : 'Thread Veins Removal',
+    title: 'Thread Veins Removal',
+    url: 'Skin-imperfection-removal',
     treatment: '',
     hasShowcase: true,
     description: `Lorem of the printing and typesetting industry.
@@ -26,7 +28,8 @@ export const SKIN_IMP_REM: any = [
     ]
   },
   {
-    title : 'Milia Removal',
+    title: 'Milia Removal',
+    url: 'Skin-imperfection-removal',
     treatment: '',
     hasShowcase: true,
     description: `Lorem of the printing and typesetting industry.
@@ -39,7 +42,8 @@ export const SKIN_IMP_REM: any = [
     ]
   },
   {
-    title : 'Skin Tag Removal',
+    title: 'Skin Tag Removal',
+    url: 'Skin-imperfection-removal',
     treatment: '',
     hasShowcase: true,
     description: `Lorem of the printing and typesetting industry.
@@ -52,7 +56,8 @@ export const SKIN_IMP_REM: any = [
     ]
   },
   {
-    title : 'Wart / Verruca Removal',
+    title: 'Wart / Verruca Removal',
+    url: 'Skin-imperfection-removal',
     treatment: '',
     hasShowcase: true,
     description: `Lorem of the printing and typesetting industry.

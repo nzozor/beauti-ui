@@ -1,6 +1,7 @@
 export const AESTHETIC_TREATMENTS: any = [
   {
     title: 'Anti-Wrinkle Injections',
+    url: 'Anti-Wrinkle-Injections',
     treatment: ``,
     hasShowcase: true,
     description: `Lorem of the printing and typesetting industry.
@@ -36,6 +37,7 @@ export const AESTHETIC_TREATMENTS: any = [
   },
   {
     title: 'Dermal Fillers',
+    url: 'Dermal-Fillers',
     treatment: ``,
     hasShowcase: true,
     description: `Lorem of the printing and typesetting industry.
@@ -207,6 +209,7 @@ export const AESTHETIC_TREATMENTS: any = [
   },
   {
     title: `PRP Vampire Facial`,
+    url: `PRP-Vampire-Facial`,
     hasShowcase: true,
     treatment: ``,
     description: ``,
@@ -233,6 +236,7 @@ export const AESTHETIC_TREATMENTS: any = [
   },
   {
     title: `PRP Hair Loss Treatment`,
+    url: `PRP-Hair-Loss-Treatment`,
     hasShowcase: true,
     treatment: ``,
     description: ``,
@@ -259,6 +263,7 @@ export const AESTHETIC_TREATMENTS: any = [
   },
   {
     title: 'Plasma Face Lift',
+    url: 'Plasma-Face-Lift',
     hasShowcase: true,
     treatment: `Prices below include one free top up session`,
     description: `Lorem of the printing and typesetting industry.

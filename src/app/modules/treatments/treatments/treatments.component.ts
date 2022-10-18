@@ -46,7 +46,7 @@ export class TreatmentsComponent implements OnInit, AfterViewInit, AfterContentC
     private dataService: DataService,
     private viewPortScroller: ViewportScroller,
     @Inject(PLATFORM_ID) private platformId: any,
-    private seo: SeoService ) { 
+    private seo: SeoService ) {
       this.seo.setDefaultMeta();
     }
 
@@ -93,8 +93,6 @@ export class TreatmentsComponent implements OnInit, AfterViewInit, AfterContentC
   goToTreatmentShowcase(treatmentParentList: string[], treatmentName: string): void {
     this.dataService.activeTreatmentList = treatmentParentList;
     this.dataService.activeTreatment = this.getSlug(treatmentName);
-
-    this.router.navigate([this.getSlug(treatmentName)], { relativeTo: this.route });
   }
 
   getSlug(treatmentName: string): string {

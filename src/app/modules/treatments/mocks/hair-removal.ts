@@ -1,5 +1,6 @@
 export const HAIR_REMOVAL_IPL_LASER = [{
   treatmentName: 'Laser Hair Removal',
+  url: 'Laser-Hair-Removal',
   hasShowcase:  true,
     description: `Lorem of the printing and typesetting industry.
       Lorem Ipsum has been the industry’s standard dummy
@@ -218,6 +219,8 @@ export const HAIR_REMOVAL_IPL_LASER = [{
 export const HAIR_REMOVAL_ELECTRO = [
   {
     treatmentName: `Electrolysis`,
+    title: `Electrolysis`,
+    url: `Electrolysis`,
     hasShowcase: true,
     description: `Lorem of the printing and typesetting industry.
       Lorem Ipsum has been the industry’s standard dummy
