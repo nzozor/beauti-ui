@@ -52,9 +52,21 @@ export class AboutUsComponent {
     {img: 'assets/cinzia-campigotto-3.jpg' },
   ];
 
-  constructor(private dataService: DataService, private seo: SeoService ) { 
+  constructor(private dataService: DataService, private seo: SeoService ) {
     this.seo.setDefaultMeta();
+    this.setSeo();
   }
-  
+
+  setSeo(): void {
+    const pageTitle = 'About Page';
+    this.seo.setTitle(
+      pageTitle
+    );
+    this.seo.setMeta([{
+      name: 'description',
+      content: `${pageTitle} | ${this.seo.defaultMetaContent}`,
+    }]);
+  }
+
   aboutUs$: Observable<any> =  this.dataService.getAboutUsPage();
 }

@@ -69,6 +69,7 @@ export class TreatmentsComponent implements OnInit, AfterViewInit, AfterContentC
     this.activeParrentTreatment = this.dataService.currentParentTreatment;
     this.activeTreatmentList = this.dataService.activeTreatmentList;
     this.activeTreatment = this.dataService.activeTreatment;
+    this.setSeo();
   }
 
   ngAfterViewInit(): void {
@@ -88,6 +89,17 @@ export class TreatmentsComponent implements OnInit, AfterViewInit, AfterContentC
       );
       this.scrollAdjusted = true;
     }
+  }
+
+  setSeo(): void {
+    const pageTitle = 'Treatments Page';
+    this.seo.setTitle(
+      pageTitle
+    );
+    this.seo.setMeta([{
+      name: 'description',
+      content: `${pageTitle} | ${this.seo.defaultMetaContent}`,
+    }]);
   }
 
   goToTreatmentShowcase(treatmentParentList: string[], treatmentName: string): void {
