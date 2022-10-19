@@ -15,7 +15,8 @@ axios
   .then((res) => {
     console.log(`statusCode: ${res.status}`);
     console.log(res);
-    projs = res.data;
+    projs = res.data.filter(treat => treat.content);
+
     readXml();
   })
   .catch((error) => {
@@ -26,7 +27,6 @@ function readXml() {
   fs.readFile("./src/sitemap.xml", (err, data) => {
     if (!data) return;
     const existingSitemapList = JSON.parse(convert.xml2json(data, options));
-    let existingSitemapURLStringList = [];
     existingSitemapList.urlset.url = existingSitemapList.urlset.url.filter(
       (element) => {
         console.log(element);

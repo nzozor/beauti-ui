@@ -19,6 +19,7 @@ import { RouterModule } from '@angular/router';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { FooterComponent } from './components/footer/footer.component';
 import { InstaComponent } from './shared/components/svg/insta/insta.component';
+import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 
 @NgModule({
   declarations: [
@@ -29,6 +30,7 @@ import { InstaComponent } from './shared/components/svg/insta/insta.component';
     MenuLinkComponent,
     FooterComponent,
     InstaComponent,
+    PageNotFoundComponent,
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'serverApp' }), // Configures a browser-based app to transition from a server-rendered app, if one is present on the page.

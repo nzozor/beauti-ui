@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import {PageNotFoundComponent} from "./components/page-not-found/page-not-found.component";
 
 const routes: Routes = [
   {
@@ -18,10 +19,7 @@ const routes: Routes = [
     path: 'about-us',
     loadChildren: () => import('./modules/about-us/about-us.module').then(m => m.AboutUsModule)
   },
-  {
-    path: '**',
-    redirectTo: ''
-  }
+  {path: '**', component: PageNotFoundComponent}
 ];
 
 @NgModule({
