@@ -8,7 +8,7 @@ axios
     console.log(`statusCode: ${res.status}`);
     console.log(res);
     routes = res;
-    routes = routes.data.map((route) => `/${route.slug}`);
+    routes = routes.data.map((route) => `/treatments/${route.slug}`);
     routes.push("/about-us");
     routes.push("/contact");
     routes.push("/treatments");
