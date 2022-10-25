@@ -10,6 +10,11 @@
   [config]="slideConfig"
 >
   <div ngxSlickItem *ngFor="let slide of slides" class="slide">
-    <img src="{{ slide.img }}" alt="" width="100%" class="js-lazy-image" />
+    <img
+      src="{{ slide.img }}"
+      alt="Cinzia profile picture"
+      width="100%"
+      class="js-lazy-image"
+    />
   </div>
 </ngx-slick-carousel>

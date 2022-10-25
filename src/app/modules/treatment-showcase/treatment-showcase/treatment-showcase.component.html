@@ -25,7 +25,11 @@
         Book now
       </button>
     </div>
-    <img [src]="imageUrl" class="js-lazy-image" />
+    <img
+      [src]="imageUrl"
+      class="js-lazy-image"
+      alt="Treatment showcase image"
+    />
     <div class="showcase-content">
       <div [innerHTML]="treatment.content | MarkdownToHtml"></div>
     </div>
