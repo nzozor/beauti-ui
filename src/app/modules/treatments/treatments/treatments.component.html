@@ -30,22 +30,6 @@
             <div>
               <span [innerHtml]="treatment.title"></span>
               <span [innerHTML]="treatment.treatment"></span>
-              <a
-                [routerLink]="treatment.url || treatment.title"
-                *ngIf="treatment.hasShowcase"
-              >
-                <span
-                  class="read-more"
-                  (click)="
-                    goToTreatmentShowcase(
-                      ['Skin Treatments', 'Advanced Skin Treatments'],
-                      treatment.url || treatment.title
-                    )
-                  "
-                >
-                  Read More
-                </span>
-              </a>
             </div>
             <a
               href="https://widget.treatwell.co.uk/place/beauti-skin-clinic/"
@@ -71,7 +55,7 @@
                 "
                 mat-stroked-button
                 color="primary"
-                class="main-button"
+                class="main-button main-button-read-more"
               >
                 Read More
               </button>
@@ -159,22 +143,6 @@
               <div>
                 <span [innerHtml]="treatment.title"></span>
                 <span [innerHTML]="treatment.treatment"></span>
-                <a
-                  [routerLink]="treatment.url || treatment.title"
-                  *ngIf="treatment.hasShowcase"
-                >
-                  <span
-                    class="read-more"
-                    (click)="
-                      goToTreatmentShowcase(
-                        ['Skin Treatments', 'Advanced Skin Treatments'],
-                        treatment.title
-                      )
-                    "
-                  >
-                    Read More
-                  </span>
-                </a>
               </div>
               <a
                 href="https://widget.treatwell.co.uk/place/beauti-skin-clinic/"
@@ -189,24 +157,6 @@
                   class="main-button"
                 >
                   Book now
-                </button>
-              </a>
-              <a
-                [routerLink]="treatment.url || treatment.title"
-                *ngIf="treatment.hasShowcase"
-              >
-                <button
-                  (click)="
-                    goToTreatmentShowcase(
-                      ['Skin Treatments', 'Advanced Skin Treatments'],
-                      treatment.title
-                    )
-                  "
-                  mat-stroked-button
-                  color="primary"
-                  class="main-button"
-                >
-                  Read More
                 </button>
               </a>
             </div>
@@ -275,22 +225,6 @@
                   <span [innerHtml]="treatment.title"></span>
 
                   <span [innerHTML]="treatment.treatment"></span>
-                  <a
-                    [routerLink]="treatment.url || treatment.title"
-                    *ngIf="treatment.hasShowcase"
-                  >
-                    <span
-                      class="read-more"
-                      (click)="
-                        goToTreatmentShowcase(
-                          ['Skin Treatments', 'Classic Skin Treatments'],
-                          treatment.title
-                        )
-                      "
-                    >
-                      Read More
-                    </span>
-                  </a>
                 </div>
                 <a
                   href="https://widget.treatwell.co.uk/place/beauti-skin-clinic/"
@@ -320,7 +254,7 @@
                     "
                     mat-stroked-button
                     color="primary"
-                    class="main-button"
+                    class="main-button-read-more"
                   >
                     Read More
                   </button>
@@ -393,22 +327,6 @@
                   <div>
                     <span>{{ element.title }}</span>
                     <span [innerHTML]="element.treatment"></span>
-                    <a
-                      [routerLink]="element.url || element.title"
-                      *ngIf="element.hasShowcase"
-                    >
-                      <span
-                        class="read-more"
-                        (click)="
-                          goToTreatmentShowcase(
-                            ['Skin Treatments', 'Skin Imperfection Removal'],
-                            'Skin-imperfection-removal'
-                          )
-                        "
-                      >
-                        Read More
-                      </span>
-                    </a>
                   </div>
                   <a
                     href="https://widget.treatwell.co.uk/place/beauti-skin-clinic/"
@@ -438,7 +356,7 @@
                       "
                       mat-stroked-button
                       color="primary"
-                      class="main-button"
+                      class="main-button-read-more"
                     >
                       Read More
                     </button>
@@ -556,22 +474,6 @@
               <div>
                 <span></span>
                 <span></span>
-                <a
-                  [routerLink]="mainTreat.url || mainTreat.title"
-                  *ngIf="mainTreat.hasShowcase"
-                >
-                  <span
-                    class="read-more"
-                    (click)="
-                      goToTreatmentShowcase(
-                        ['Permanent Hair Removal', 'Permanent Hair Removal'],
-                        mainTreat.treatmentName
-                      )
-                    "
-                  >
-                    Read More
-                  </span>
-                </a>
               </div>
               <a
                 [routerLink]="mainTreat.url || mainTreat.title"
@@ -586,7 +488,7 @@
                   "
                   mat-stroked-button
                   color="primary"
-                  class="main-button"
+                  class="main-button-read-more"
                 >
                   Read More
                 </button>
@@ -648,22 +550,6 @@
               <div>
                 <span>{{ mainTreat.title }}</span>
                 <span [innerHTML]="mainTreat.treatment"></span>
-                <a
-                  [routerLink]="mainTreat.url || mainTreat.treatmentName"
-                  *ngIf="mainTreat.hasShowcase"
-                >
-                  <span
-                    class="read-more"
-                    (click)="
-                      goToTreatmentShowcase(
-                        'Electrolysis',
-                        mainTreat.treatmentName
-                      )
-                    "
-                  >
-                    Read More
-                  </span>
-                </a>
               </div>
               <a
                 href="https://widget.treatwell.co.uk/place/beauti-skin-clinic/"
@@ -693,7 +579,7 @@
                   "
                   mat-stroked-button
                   color="primary"
-                  class="main-button"
+                  class="main-button main-button-read-more"
                 >
                   Read More
                 </button>
@@ -872,22 +758,6 @@
                 <div>
                   <span>{{ treatment.title }}</span>
                   <span [innerHTML]="treatment.treatment"></span>
-                  <a
-                    [routerLink]="treatment.url || treatment.title"
-                    *ngIf="treatment.hasShowcase"
-                  >
-                    <span
-                      class="read-more"
-                      (click)="
-                        goToTreatmentShowcase(
-                          ['Body', 'Body Contouring'],
-                          treatment.title
-                        )
-                      "
-                    >
-                      Read More
-                    </span>
-                  </a>
                 </div>
                 <a
                   href="https://widget.treatwell.co.uk/place/beauti-skin-clinic/"
@@ -917,7 +787,7 @@
                     "
                     mat-stroked-button
                     color="primary"
-                    class="main-button"
+                    class="main-button main-button-read-more"
                   >
                     Read More
                   </button>
