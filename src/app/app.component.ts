@@ -1,6 +1,7 @@
 import { Component, Inject, OnInit, PLATFORM_ID } from '@angular/core';
 import { Router, NavigationEnd, RouteConfigLoadStart, RouteConfigLoadEnd } from '@angular/router';
 import { DOCUMENT, isPlatformBrowser } from '@angular/common';
+import { SeoService } from './shared/services/seo.service';
 
 @Component({
   selector: 'app-root',
@@ -17,7 +18,8 @@ export class AppComponent implements OnInit {
   constructor(
     private router: Router,
     @Inject(PLATFORM_ID) private platformId: any,
-    @Inject(DOCUMENT) private document: Document
+    @Inject(DOCUMENT) private document: Document,
+    private seoService: SeoService
   ) {
     this.window = this.document.defaultView;
   }
@@ -34,8 +36,14 @@ export class AppComponent implements OnInit {
       }
     });
 
+    this.createLinkForCanonicalURL();
   }
+
   setStickyHeader(value: boolean): void {
     this.stickyHeader = value;
+  }
+
+  createLinkForCanonicalURL() {
+    this.seoService.createLinkForCanonicalURL();
   }
 }
