@@ -33,7 +33,13 @@ export class SeoService {
     ]);
   }
 
-  createLinkForCanonicalURL() {
+  createLinkForCanonicalURL(): void {
+    const canonical = document.querySelector('link[rel="canonical"');
+    if (canonical) {
+      canonical.setAttribute('href', 'https://www.beautiskinclinic.com' + this.doc.location.pathname);
+      return;
+    }
+
     let link: HTMLLinkElement = this.doc.createElement('link');
     link.setAttribute('rel', 'canonical');
     this.doc.head.appendChild(link);

@@ -2,6 +2,7 @@ import { Component, Inject, OnInit, PLATFORM_ID } from '@angular/core';
 import { Router, NavigationEnd, RouteConfigLoadStart, RouteConfigLoadEnd } from '@angular/router';
 import { DOCUMENT, isPlatformBrowser } from '@angular/common';
 import { SeoService } from './shared/services/seo.service';
+import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-root',
@@ -14,20 +15,22 @@ export class AppComponent implements OnInit {
   stickyHeader = false;
   loadingRouteConfig = false;
   private window: Window;
-
+  routerEventSub: Subscription;
   constructor(
     private router: Router,
     @Inject(PLATFORM_ID) private platformId: any,
     @Inject(DOCUMENT) private document: Document,
-    private seoService: SeoService
+    private seoService: SeoService,
   ) {
     this.window = this.document.defaultView;
   }
 
   ngOnInit(): void {
-    this.router.events.subscribe((event) => {
+    this.routerEventSub = this.router.events.subscribe((event) => {
+
       if ((event instanceof NavigationEnd) && isPlatformBrowser(this.platformId)) {
         this.window.scrollTo(0, 0);
+        this.createLinkForCanonicalURL();
       }
       if (event instanceof RouteConfigLoadStart) {
         this.loadingRouteConfig = true;
@@ -35,6 +38,7 @@ export class AppComponent implements OnInit {
         this.loadingRouteConfig = false;
       }
     });
+
 
     this.createLinkForCanonicalURL();
   }
