@@ -159,6 +159,24 @@
                   Book now
                 </button>
               </a>
+              <a
+                [routerLink]="treatment.url || treatment.title"
+                *ngIf="treatment.hasShowcase"
+              >
+                <button
+                  (click)="
+                    goToTreatmentShowcase(
+                      ['Skin Treatments', 'Advanced Skin Treatments'],
+                      treatment.title
+                    )
+                  "
+                  mat-stroked-button
+                  color="primary"
+                  class="main-button-read-more"
+                >
+                  Read More
+                </button>
+              </a>
             </div>
             <div class="description">{{ treatment.description }}</div>
             <div
