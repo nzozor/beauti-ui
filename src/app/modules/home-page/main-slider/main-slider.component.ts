@@ -31,14 +31,16 @@ export class MainSliderComponent {
 
   homageBanners$ = this.getBanners();
 
-  constructor(private dataService: DataService, private bookingService: BookingService, @Inject(PLATFORM_ID) private platformId: any) { }
+  constructor(private dataService: DataService, private bookingService: BookingService, @Inject(PLATFORM_ID) private platformId: any) {
+  }
+
 
   get cmsUrl() {
     return this.dataService.beautiCmsUrl;
   }
 
-  getBanners(): Observable<HomePageSlider> {
-    return this.dataService.getHomageBanners();
+  getBanners(): Observable<HomePageSlider[]> {
+    return this.dataService.getServerTimeThenBanner();
   }
 
   openBooking(): void {

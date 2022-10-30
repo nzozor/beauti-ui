@@ -5,6 +5,7 @@
 export const environment = {
   production: false,
   cmsUrl: 'http://localhost:1337',
+  dateApi: "http://167.99.200.71:3006"
 };
 
 /*
