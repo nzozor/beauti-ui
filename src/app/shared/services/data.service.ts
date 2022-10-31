@@ -3,7 +3,7 @@ import { Observable } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
 import { TreatmentShowcase } from '../models/treatmentShowcase';
 
-import { map, switchMap } from 'rxjs/operators';
+import { catchError, map, switchMap } from 'rxjs/operators';
 import { environment } from 'src/environments/environment';
 import { HomePageSlider } from '../models/homepageSlider.model';
 
@@ -46,8 +46,9 @@ export class DataService {
     return this.getServerDate().pipe(
       switchMap((serverTime: Date) =>
         this.getHomageBanners(serverTime)
-      )
-    )
+      ),
+      catchError(() => this.getHomageBanners()
+      ))
   }
 
   getServerDate(): Observable<Date> {
