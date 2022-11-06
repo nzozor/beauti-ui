@@ -24,7 +24,7 @@ export class MainSliderComponent {
     adaptiveHeight: false,
     focusOnSelect: false,
     touchThreshold: 1000,
-    autoplay: true,
+    autoplay: false,
     speed: 2500,
     fade: true,
   };
