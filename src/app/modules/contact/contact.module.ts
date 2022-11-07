@@ -10,7 +10,7 @@ import { HomePageModule } from '../home-page/home-page.module';
   imports: [
     CommonModule,
     ContactRoutingModule,
-    HomePageModule
+    HomePageModule,
   ]
 })
 export class ContactModule { }

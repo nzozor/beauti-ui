@@ -230,3 +230,21 @@ h3 {
     bottom: 20px !important;
   }
 }
+
+.address-google-map {
+  text-decoration: underline !important;
+  color: inherit;
+  // border-bottom: $grey-black solid 1px;
+  position: relative;
+
+  // &:hover {
+  //   text-decoration: none;
+  // }
+
+  .mat-icon {
+    font-size: 19px;
+    position: absolute;
+    bottom: -3px;
+    margin-left: 3px
+  }
+}
