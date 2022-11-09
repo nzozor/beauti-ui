@@ -19,7 +19,7 @@ export class MapComponent implements OnInit {
     this.map = new mapboxgl.Map({
       container: 'map',
       style: 'mapbox://styles/elsaben/ck2mfzocf0e271co95fjg4wry',
-      interactive: false
+      interactive: true
     });
     const nav = new mapboxgl.NavigationControl();
     this.map.addControl(nav, 'bottom-right');
