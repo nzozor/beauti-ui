@@ -13,16 +13,16 @@ export class MapComponent implements OnInit {
   }
 
   ngOnInit(): any {
-    this.zone.runOutsideAngular(() => {
-      const mapboxgl = require('mapbox-gl/dist/mapbox-gl.js');
-      mapboxgl.accessToken = 'pk.eyJ1IjoiZWxzYWJlbiIsImEiOiJjanZ4b2ZndDQwNnB5M3pyejNrZWQwaGVwIn0.T8MZoM6PJVvNkME819rAkw';
-      this.map = new mapboxgl.Map({
-        container: 'map',
-        style: 'mapbox://styles/elsaben/ck2mfzocf0e271co95fjg4wry',
-        interactive: false
-      });
-      const nav = new mapboxgl.NavigationControl();
-      this.map.addControl(nav, 'bottom-right');
+    // this.zone.runOutsideAngular(() => {
+    const mapboxgl = require('mapbox-gl/dist/mapbox-gl.js');
+    mapboxgl.accessToken = 'pk.eyJ1IjoiZWxzYWJlbiIsImEiOiJjanZ4b2ZndDQwNnB5M3pyejNrZWQwaGVwIn0.T8MZoM6PJVvNkME819rAkw';
+    this.map = new mapboxgl.Map({
+      container: 'map',
+      style: 'mapbox://styles/elsaben/ck2mfzocf0e271co95fjg4wry',
+      interactive: false
     });
+    const nav = new mapboxgl.NavigationControl();
+    this.map.addControl(nav, 'bottom-right');
+    // });
   }
 }
