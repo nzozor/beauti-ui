@@ -42,7 +42,7 @@ h5.light {
 }
 
 .asterisk {
-  margin-top: 5%;
+  margin-bottom: 0;
   font-size: 16px;
   color: rgba(255, 255, 255, 0.67);
 }
@@ -54,7 +54,7 @@ button {
 .slide {
 
   >div {
-    min-height: 503px;
+    // min-height: 503px;
     display: flex;
     flex-direction: column;
     justify-self: center;
@@ -84,6 +84,7 @@ button {
 .carousel {
   width: 100%;
   overflow: hidden;
+  max-height: 550px;
 }
 
 
