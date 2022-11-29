@@ -185,10 +185,6 @@ h3 {
     height: 41px;
     max-height: 146px;
     padding: 0;
-    // margin: 10px;
-    // left: 50%;
-    // transform: translate(0, -50%);
-    // bottom: 13px;
     z-index: 10;
   }
 
@@ -196,8 +192,6 @@ h3 {
     display: flex;
   }
 }
-
-
 
 .showcase-content {
   img {
@@ -234,12 +228,7 @@ h3 {
 .address-google-map {
   text-decoration: underline !important;
   color: inherit;
-  // border-bottom: $grey-black solid 1px;
   position: relative;
-
-  // &:hover {
-  //   text-decoration: none;
-  // }
 
   .mat-icon {
     font-size: 19px;

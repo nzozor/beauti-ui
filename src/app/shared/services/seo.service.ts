@@ -8,13 +8,17 @@ import { Title, Meta, MetaDefinition } from "@angular/platform-browser";
 export class SeoService {
   private defaultTitle =
     "Beauti Skin Clinic | Advanced Skin Treatments in SW London";
-
+  private seoTitle = 'Beauti Skin Clinic | Oval, Brixton London'
   constructor(private meta: Meta, private titleService: Title, @Inject(DOCUMENT) private doc: Document) { }
-  defaultMetaContent = `Professional skin and waxing services only 5 mins walk from Oval Station.
-  Founded by Aesthetician Cinzia Campigotto who has over 20 years of experience.`;
+  defaultMetaContent = `Professional skin and waxing services only 5 mins walk from Oval Station, Brixton road London.
+  Founded by Aesthetician Cinzia Campigotto | 20 years experience`;
+
+  get seoAltTitle() {
+    return this.defaultTitle;
+  }
 
   public setTitle(newTitle: string) {
-    this.titleService.setTitle(`${newTitle} | Beauti Skin Clinic`);
+    this.titleService.setTitle(`${newTitle} | Oval, Brixton, SW`);
   }
 
   public setMeta(meta: MetaDefinition[]) {
