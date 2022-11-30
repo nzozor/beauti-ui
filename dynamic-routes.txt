@@ -1,6 +1,4 @@
 /treatments/Aqua-3-Hydrotherapy-Facial
-/treatments/Skin-Treatments
-/treatments/Advanced-Skin-Treatments
 /treatments/Skin-Peel
 /treatments/Radio-Frequency-Skin-Tightening
 /treatments/Advanced-Beauti-Signature-Relaxing-Facial
@@ -23,6 +21,19 @@
 /treatments/PRP-Hair-Loss-Treatment
 /treatments/Aqualyx-Fat-Dissolving-Injections
 /treatments/Jalupro
+/treatments/Skin-Consultation
+/treatments/Beauti-Advanced-Bespoke-Facial
+/treatments/Mole-Removal
+/treatments/Thread-Veins-Removal
+/treatments/Milia-Removal
+/treatments/Skin-Tag-Removal
+/treatments/Wart-Verruca-Removal
+/treatments/Beauti-Signature-Relaxing-Massage-(Body-+-Face)
+/treatments/Back-Neck-and-Shoulder-Massage
+/treatments/Full-Body-Deep-Tissue-Massage
+/treatments/Hot-Stone-Massage
+/treatments/Foot-Massage
+/treatments/FaceTone-Massage
 /about-us
 /contact
 /treatments
