@@ -7,8 +7,8 @@ import { Title, Meta, MetaDefinition } from "@angular/platform-browser";
 })
 export class SeoService {
   private defaultTitle =
-    "Beauti Skin Clinic | Advanced Skin Treatments in SW London";
-  private seoTitle = 'Beauti Skin Clinic | Oval, Brixton London'
+    "Beauti Skin Clinic | Advanced Skin Treatments in Oval, Vauxhall, Kennington, Stockwell, brixton, clapham, sw9";
+  private seoTitle = 'Beauti Skin Clinic | Oval, Vauxhall, Kennington, Stockwell, brixton, clapham, sw9'
   constructor(private meta: Meta, private titleService: Title, @Inject(DOCUMENT) private doc: Document) { }
   defaultMetaContent = `Professional skin and waxing services only 5 mins walk from Oval Station, Brixton road London.
   Founded by Aesthetician Cinzia Campigotto | 20 years experience`;
@@ -18,7 +18,7 @@ export class SeoService {
   }
 
   public setTitle(newTitle: string) {
-    this.titleService.setTitle(`${newTitle} | Oval, Brixton, SW`);
+    this.titleService.setTitle(`${newTitle} | Oval, Vauxhall, Kennington, Stockwell, Brixton, Clapham, sw9`);
   }
 
   public setMeta(meta: MetaDefinition[]) {
