@@ -38,7 +38,7 @@ export class SeoService {
   }
 
   createLinkForCanonicalURL(): void {
-    const canonical = document.querySelector('link[rel="canonical"');
+    const canonical = this.doc.querySelector('link[rel="canonical"');
     if (canonical) {
       canonical.setAttribute('href', 'https://www.beautiskinclinic.com' + this.doc.location.pathname);
       return;
