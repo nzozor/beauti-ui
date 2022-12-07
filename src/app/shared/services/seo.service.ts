@@ -18,7 +18,7 @@ export class SeoService {
   }
 
   public setTitle(newTitle: string) {
-    this.titleService.setTitle(`${newTitle} | Skin Clinic in Oval, Vauxhall, Kennington, Stockwell, Brixton, Clapham, sw9`);
+    this.titleService.setTitle(`${newTitle} | Advanced Skin Clinic in Oval, Vauxhall, Kennington, Stockwell, Brixton, Clapham, sw9`);
   }
 
   public setMeta(meta: MetaDefinition[]) {
