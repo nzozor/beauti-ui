@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, OnInit, NgZone } from '@angular/core';
+import { ChangeDetectionStrategy, Component, OnInit, NgZone, AfterViewInit } from '@angular/core';
 declare var require: any;
 
 @Component({
@@ -7,13 +7,18 @@ declare var require: any;
   styleUrls: ['./map.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class MapComponent implements OnInit {
+export class MapComponent implements AfterViewInit {
   map: any;
   constructor(private zone: NgZone) {
   }
 
-  ngOnInit(): any {
+  ngAfterViewInit(): any {
+    // this.displayMap();
+  }
+
+  private displayMap(): void {
     // this.zone.runOutsideAngular(() => {
+
     const mapboxgl = require('mapbox-gl/dist/mapbox-gl.js');
     mapboxgl.accessToken = 'pk.eyJ1IjoiZWxzYWJlbiIsImEiOiJjanZ4b2ZndDQwNnB5M3pyejNrZWQwaGVwIn0.T8MZoM6PJVvNkME819rAkw';
     this.map = new mapboxgl.Map({

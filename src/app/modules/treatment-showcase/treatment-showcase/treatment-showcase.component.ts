@@ -2,7 +2,7 @@ import { ChangeDetectionStrategy, Component } from "@angular/core";
 import { ActivatedRoute, Router } from "@angular/router";
 import { TreatmentShowcase } from "src/app/shared/models/treatmentShowcase";
 import { DataService } from "src/app/shared/services/data.service";
-import { map, Observable, Subscription, tap } from "rxjs";
+import { Observable, tap } from "rxjs";
 import { DomSanitizer, SafeUrl } from "@angular/platform-browser";
 import { BookingService } from "src/app/shared/services/booking.service";
 import { BreakpointObserver, Breakpoints } from "@angular/cdk/layout";
@@ -68,15 +68,15 @@ export class TreatmentShowcaseComponent {
             name: 'description',
             content: `${treatment?.title} | ${this.seo.defaultMetaContent}`,
           }]);
-          this.imageUrl = this.getImageUrl(treatment)
+          this.imageUrl = this.getImageUrl(treatment) ? this.getImageUrl(treatment) : ''
         }))
   }
 
   getImageUrl(treatment: TreatmentShowcase): string {
     if (this.breakpoint === "large") {
-      return `${this.dataService.beautiCmsUrl}${treatment.images[0].formats.large.url}`
+      return `${this.dataService.beautiCmsUrl}${treatment.images[0]?.formats.large.url}`
     }
-    return `${this.dataService.beautiCmsUrl}${treatment.images[0].formats.small.url}`
+    return `${this.dataService.beautiCmsUrl}${treatment.images[0]?.formats.small.url}`
   }
 
   goToParent(): void {

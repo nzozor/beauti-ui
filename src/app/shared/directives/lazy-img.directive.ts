@@ -4,9 +4,13 @@ import { AfterViewInit, Directive, Inject } from '@angular/core';
 @Directive({
   selector: '[appImgLazyLoad]'
 })
-export class LazyImgDirective implements AfterViewInit  {
+export class LazyImgDirective implements AfterViewInit {
   observer: IntersectionObserver;
-  constructor(@Inject(DOCUMENT) private document: Document) { }
+  private window: Window;
+
+  constructor(@Inject(DOCUMENT) private document: Document) {
+    this.window = this.document.defaultView;
+  }
 
   ngAfterViewInit(): void {
     const supports = 'loading' in HTMLImageElement.prototype;
@@ -14,7 +18,7 @@ export class LazyImgDirective implements AfterViewInit  {
     const images = this.document.querySelectorAll('.js-lazy-image');
     if (supports) {
       images.forEach(image => image.setAttribute('loading', 'lazy'));
-    } else if ('IntersectionObserver' in window) {
+    } else if (this.window && 'IntersectionObserver' in this.window) {
       const config = {
         rootMargin: '50px 0px',
         threshold: 0.01
@@ -37,8 +41,9 @@ export class LazyImgDirective implements AfterViewInit  {
     });
   }
 
-  preloadImage(url: any): void {
-    const img = new Image();
+  preloadImage(url: any) {
+
+    const img = this.document.createElement('img');
     img.src = url;
   }
 }

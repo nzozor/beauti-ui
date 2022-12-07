@@ -1,4 +1,4 @@
-import { Component, Inject, OnInit, PLATFORM_ID } from '@angular/core';
+import { AfterViewInit, Component, Inject, OnInit, PLATFORM_ID } from '@angular/core';
 import { Router, NavigationEnd, RouteConfigLoadStart, RouteConfigLoadEnd } from '@angular/router';
 import { DOCUMENT, isPlatformBrowser } from '@angular/common';
 import { SeoService } from './shared/services/seo.service';
@@ -9,7 +9,7 @@ import { Subscription } from 'rxjs';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent implements OnInit {
+export class AppComponent implements AfterViewInit {
 
   title = 'beauti-frontend';
   stickyHeader = false;
@@ -25,7 +25,7 @@ export class AppComponent implements OnInit {
     this.window = this.document.defaultView;
   }
 
-  ngOnInit(): void {
+  ngAfterViewInit(): void {
     this.routerEventSub = this.router.events.subscribe((event) => {
 
       if ((event instanceof NavigationEnd) && isPlatformBrowser(this.platformId)) {
