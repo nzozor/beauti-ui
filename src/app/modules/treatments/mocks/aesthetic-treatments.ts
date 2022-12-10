@@ -4,9 +4,7 @@ export const AESTHETIC_TREATMENTS: any = [
     url: 'Anti-Wrinkle-Injections',
     treatment: ``,
     hasShowcase: true,
-    description: `Lorem of the printing and typesetting industry.
-    Lorem Ipsum has been the industry’s standard dummy
-    text ever since the 1500s, when an unknown printer`,
+    description: ``,
     orientation: 'row',
     options: [
       {
@@ -40,9 +38,7 @@ export const AESTHETIC_TREATMENTS: any = [
     url: 'Dermal-Fillers',
     treatment: ``,
     hasShowcase: true,
-    description: `Lorem of the printing and typesetting industry.
-    Lorem Ipsum has been the industry’s standard dummy
-    text ever since the 1500s, when an unknown printer`,
+    description: ``,
     orientation: 'row',
     options: [
       {
@@ -141,9 +137,7 @@ export const AESTHETIC_TREATMENTS: any = [
     treatment: `Add Dermaplaning for £30, (extra 15 mins)<br />
      Add LED Light Therapy for £20, (extra 15 mins)`,
     hasShowcase: true,
-    description: `Lorem of the printing and typesetting industry.
-    Lorem Ipsum has been the industry’s standard dummy
-    text ever since the 1500s, when an unknown printer`,
+    description: ``,
     orientation: 'row',
     fullOptions: 'true',
     options: [
@@ -267,9 +261,7 @@ export const AESTHETIC_TREATMENTS: any = [
     url: 'Plasma-Face-Lift',
     hasShowcase: true,
     treatment: `Prices below include one free top up session`,
-    description: `Lorem of the printing and typesetting industry.
-    Lorem Ipsum has been the industry’s standard dummy
-    text ever since the 1500s, when an unknown printer`,
+    description: ``,
     orientation: 'row',
     options: [
       {

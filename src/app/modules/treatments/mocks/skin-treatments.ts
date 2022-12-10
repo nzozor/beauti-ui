@@ -3,9 +3,7 @@ export const SKIN_TREATMENTS: any = [
     title: 'Skin Consultation',
     hasShowcase: false,
     treatment: ``,
-    description: `Lorem of the printing and typesetting industry.
-    Lorem Ipsum has been the industry’s standard dummy
-    text ever since the 1500s, when an unknown printer`,
+    description: ``,
     options: [
       { key: 'Duration', value: '30 mins' },
       { key: 'Single', value: '£50' }
@@ -16,9 +14,7 @@ export const SKIN_TREATMENTS: any = [
     title: 'Beauti Advanced Bespoke Facial',
     hasShowcase: false,
     treatment: ``,
-    description: `Lorem of the printing and typesetting industry.
-    Lorem Ipsum has been the industry’s standard dummy
-    text ever since the 1500s, when an unknown printer`,
+    description: ``,
     bespoke: false,
     options: [
       { key: 'Duration', value: '120 mins' },
@@ -32,9 +28,7 @@ export const SKIN_TREATMENTS: any = [
     hasShowcase: true,
     treatment: `
     Choose from Radio Frequency, Skin Rejuvenation, LED Light Therapy.<br /> Add Dermaplaning for £30, (extra 15 mins)`,
-    description: `Lorem of the printing and typesetting industry.
-    Lorem Ipsum has been the industry’s standard dummy
-    text ever since the 1500s, when an unknown printer`,
+    description: ``,
     options: [
       { key: 'Duration', value: '75 mins' },
       { key: 'Single', value: '£150' },
@@ -52,9 +46,7 @@ export const SKIN_TREATMENTS: any = [
     treatment: `
     Choose from Deep-cleaning, Anti-Aging. <br />Add Black Head Extraction for £10, (extra 10 mins)
     <br />Add LED Light Therapy for £20, (extra 15 mins)<br />Add Dermaplaning for £30, (extra 15 mins)`,
-    description: `Lorem of the printing and typesetting industry.
-    Lorem Ipsum has been the industry’s standard dummy
-    text ever since the 1500s, when an unknown printer`,
+    description: ``,
     options: [
       {
         key: 'Duration',
@@ -79,9 +71,7 @@ export const SKIN_TREATMENTS: any = [
     url: `Skin-Peel`,
     hasShowcase: true,
     treatment: `Add LED Light Therapy for £20, (extra 15 mins)`,
-    description: `Lorem of the printing and typesetting industry.
-    Lorem Ipsum has been the industry’s standard dummy
-    text ever since the 1500s, when an unknown printer`,
+    description: ``,
     options: [
       { key: 'Duration', value: '60 mins' },
       { key: 'Single', value: '£120' },
@@ -94,9 +84,7 @@ export const SKIN_TREATMENTS: any = [
     url: `Radio-Frequency-Skin-Tightening`,
     treatment: `Add LED Light Therapy for £20, (extra 15 mins)<br /> Add Dermaplaning for £30, (extra 15 mins)	`,
     hasShowcase: true,
-    description: `Lorem of the printing and typesetting industry.
-    Lorem Ipsum has been the industry’s standard dummy
-    text ever since the 1500s, when an unknown printer`,
+    description: ``,
     options: [
       { key: 'Duration', value: '60 mins' },
       { key: 'Single', value: '£120' },
@@ -109,9 +97,7 @@ export const SKIN_TREATMENTS: any = [
     url: 'IPL-Skin-Rejuvenation',
     treatment: ``,
     hasShowcase: true,
-    description: `Lorem of the printing and typesetting industry.
-    Lorem Ipsum has been the industry’s standard dummy
-    text ever since the 1500s, when an unknown printer`,
+    description: ``,
     options: [
       { key: 'Duration', value: '30 mins' },
       { key: 'Single', value: '£110' },
@@ -124,9 +110,7 @@ export const SKIN_TREATMENTS: any = [
     url: 'Microneedling-with-Dermapen',
     treatment: `Add Skin Booster for £50, (extra 5 mins)`,
     hasShowcase: true,
-    description: `Lorem of the printing and typesetting industry.
-    Lorem Ipsum has been the industry’s standard dummy
-    text ever since the 1500s, when an unknown printer`,
+    description: ``,
     options: [
       { key: 'Duration', value: '60 mins' },
       { key: 'Single', value: '£250' },
@@ -137,9 +121,7 @@ export const SKIN_TREATMENTS: any = [
     title: 'TriBella',
     treatment: ``,
     hasShowcase: true,
-    description: `Lorem of the printing and typesetting industry.
-    Lorem Ipsum has been the industry’s standard dummy
-    text ever since the 1500s, when an unknown printer`,
+    description: ``,
     options: [
       { key: 'Single', value: '£520' },
       { key: '3 Courses', value: '£1404' },
@@ -150,9 +132,7 @@ export const SKIN_TREATMENTS: any = [
     url: 'Skin-Resurfacing',
     treatment: ``,
     hasShowcase: true,
-    description: `Lorem of the printing and typesetting industry.
-    Lorem Ipsum has been the industry’s standard dummy
-    text ever since the 1500s, when an unknown printer`,
+    description: ``,
     options: [
       { key: 'Single', value: '£300' },
       { key: '3 Courses', value: '£810' },
