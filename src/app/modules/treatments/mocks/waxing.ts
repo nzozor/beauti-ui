@@ -1,9 +1,7 @@
 export const WAX_DATA = [
   {
     treatment: '',
-    description: `Lorem of the printing and typesetting industry.
-      Lorem Ipsum has been the industry’s standard dummy
-      text ever since the 1500s, when an unknown printer`,
+    description: ``,
     options: [
       {
         treatment: 'Lower Body',

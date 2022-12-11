@@ -3,7 +3,7 @@ export const BODY_MASSAGE = [
     title: 'Beauti Signature Relaxing Massage (Body + Face)',
     treatment: `
         Upgrade to aromatherapy oil for extra £5`,
-   options: [
+    options: [
       { key: 'Duration', value: '90 mins' },
       { key: 'Price', value: '£130' }
     ]
@@ -12,9 +12,7 @@ export const BODY_MASSAGE = [
     title: 'Back, Neck and Shoulder Massage',
     treatment: `
       Upgrade to aromatherapy oil for extra £5`,
-    description: `Lorem of the printing and typesetting industry.
-      Lorem Ipsum has been the industry’s standard dummy
-      text ever since the 1500s, when an unknown printer`,
+    description: ``,
     options: [
       { key: 'Duration', value: '30 mins' },
       { key: 'Price', value: '£50' }
@@ -32,9 +30,7 @@ export const BODY_MASSAGE = [
 
   {
     title: `Hot Stone Massage`,
-    description: `Lorem of the printing and typesetting industry.
-        Lorem Ipsum has been the industry’s standard dummy
-        text ever since the 1500s, when an unknown printer`,
+    description: ``,
     options: [
       { key: 'Duration', value: '60 mins' },
       { key: 'Price', value: '£90' },
@@ -43,9 +39,7 @@ export const BODY_MASSAGE = [
   },
   {
     title: `Foot Massage`,
-    description: `Lorem of the printing and typesetting industry.
-        Lorem Ipsum has been the industry’s standard dummy
-        text ever since the 1500s, when an unknown printer`,
+    description: ``,
     options: [
       { key: 'Duration', value: '30 mins' },
       { key: 'Price', value: '£50' },
@@ -54,9 +48,7 @@ export const BODY_MASSAGE = [
   },
   {
     title: `FaceTone Massage`,
-    description: `Lorem of the printing and typesetting industry.
-        Lorem Ipsum has been the industry’s standard dummy
-        text ever since the 1500s, when an unknown printer`,
+    description: ``,
     options: [
       { key: 'Duration', value: '30 mins' },
       { key: 'Price', value: '£50' },
@@ -69,9 +61,7 @@ export const BODY_CONTOURING = [
     title: `Fat and Cellulite Reduction`,
     url: `Fat-and-Cellulite-Reduction`,
     hasShowcase: true,
-    description: `Lorem of the printing and typesetting industry.
-      Lorem Ipsum has been the industry’s standard dummy
-      text ever since the 1500s, when an unknown printer`,
+    description: ``,
     options: [
       { key: 'Duration', value: '30 mins' },
       { key: 'Single', value: '£80' },

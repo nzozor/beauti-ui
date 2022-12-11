@@ -23,9 +23,7 @@ export const AESTHETIC_TREATMENTS: any = [
       },
       {
         treatment: `Three Areas`,
-        description: `Lorem of the printing and typesetting industry.
-        Lorem Ipsum has been the industry’s standard dummy
-        text ever since the 1500s, when an unknown printer`,
+        description: ``,
         options: [
           { key: 'Duration', value: '60 mins' },
           { key: 'Single', value: '£320' },
@@ -57,9 +55,7 @@ export const AESTHETIC_TREATMENTS: any = [
       },
       {
         treatment: `2ml`,
-        description: `Lorem of the printing and typesetting industry.
-        Lorem Ipsum has been the industry’s standard dummy
-        text ever since the 1500s, when an unknown printer`,
+        description: ``,
         options: [
           { key: 'Duration', value: '60 mins' },
           { key: 'Single', value: '£350' },
@@ -280,9 +276,7 @@ export const AESTHETIC_TREATMENTS: any = [
       },
       {
         treatment: `Upper and Lower Eye`,
-        description: `Lorem of the printing and typesetting industry.
-        Lorem Ipsum has been the industry’s standard dummy
-        text ever since the 1500s, when an unknown printer`,
+        description: ``,
         options: [
           { key: 'Duration', value: '60 mins' },
           { key: 'Single', value: '£600' },
@@ -290,9 +284,7 @@ export const AESTHETIC_TREATMENTS: any = [
       },
       {
         treatment: `Upper Lip`,
-        description: `Lorem of the printing and typesetting industry.
-        Lorem Ipsum has been the industry’s standard dummy
-        text ever since the 1500s, when an unknown printer`,
+        description: ``,
         options: [
           { key: 'Duration', value: '60 mins' },
           { key: 'Single', value: '£450' }
@@ -300,9 +292,7 @@ export const AESTHETIC_TREATMENTS: any = [
       },
       {
         treatment: `Lower Lip`,
-        description: `Lorem of the printing and typesetting industry.
-        Lorem Ipsum has been the industry’s standard dummy
-        text ever since the 1500s, when an unknown printer`,
+        description: ``,
         options: [
           { key: 'Duration', value: '60 mins' },
           { key: 'Single', value: '£350' },
@@ -310,9 +300,7 @@ export const AESTHETIC_TREATMENTS: any = [
       },
       {
         treatment: `Brow Lift`,
-        description: `Lorem of the printing and typesetting industry.
-        Lorem Ipsum has been the industry’s standard dummy
-        text ever since the 1500s, when an unknown printer`,
+        description: ``,
         options: [
           { key: 'Duration', value: '60 mins' },
           { key: 'Single', value: '£450' },
@@ -320,9 +308,7 @@ export const AESTHETIC_TREATMENTS: any = [
       },
       {
         treatment: `Nasal Labia`,
-        description: `Lorem of the printing and typesetting industry.
-        Lorem Ipsum has been the industry’s standard dummy
-        text ever since the 1500s, when an unknown printer`,
+        description: ``,
         options: [
           { key: 'Duration', value: '60 mins' },
           { key: 'Single', value: '£500' }
@@ -330,9 +316,7 @@ export const AESTHETIC_TREATMENTS: any = [
       },
       {
         treatment: `Crow Feet`,
-        description: `Lorem of the printing and typesetting industry.
-        Lorem Ipsum has been the industry’s standard dummy
-        text ever since the 1500s, when an unknown printer`,
+        description: ``,
         options: [
           { key: 'Duration', value: '60 mins' },
           { key: 'Single', value: '£550' },
@@ -340,9 +324,7 @@ export const AESTHETIC_TREATMENTS: any = [
       },
       {
         treatment: `Neck`,
-        description: `Lorem of the printing and typesetting industry.
-        Lorem Ipsum has been the industry’s standard dummy
-        text ever since the 1500s, when an unknown printer`,
+        description: ``,
         options: [
           { key: 'Duration', value: '60 mins' },
           { key: 'Single', value: '£900' }
@@ -350,9 +332,7 @@ export const AESTHETIC_TREATMENTS: any = [
       },
       {
         treatment: `Jawline`,
-        description: `Lorem of the printing and typesetting industry.
-        Lorem Ipsum has been the industry’s standard dummy
-        text ever since the 1500s, when an unknown printer`,
+        description: ``,
         options: [
           { key: 'Duration', value: '60 mins' },
           { key: 'Single', value: '£100' },
@@ -360,9 +340,7 @@ export const AESTHETIC_TREATMENTS: any = [
       },
       {
         treatment: `Full Face`,
-        description: `Lorem of the printing and typesetting industry.
-        Lorem Ipsum has been the industry’s standard dummy
-        text ever since the 1500s, when an unknown printer`,
+        description: ``,
         options: [
           { key: 'Duration', value: '60 mins' },
           { key: 'Single', value: '£2000' },
