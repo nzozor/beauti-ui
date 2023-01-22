@@ -1,5 +1,5 @@
 import { isPlatformBrowser } from '@angular/common';
-import { ChangeDetectionStrategy, Component, HostListener, Inject, OnInit, PLATFORM_ID } from '@angular/core';
+import { ChangeDetectionStrategy, Component, Inject, PLATFORM_ID } from '@angular/core';
 import { Observable } from 'rxjs';
 import { HomePageSlider } from 'src/app/shared/models/homepageSlider.model';
 import { BookingService } from 'src/app/shared/services/booking.service';
@@ -12,7 +12,6 @@ import { DataService } from 'src/app/shared/services/data.service';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class MainSliderComponent {
-  banners;
   isMobile: boolean;
   testClass: any = {
     backgroundColor: 'red'
