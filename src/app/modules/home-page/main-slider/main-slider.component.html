@@ -3,8 +3,9 @@
   #slickModal="slick-carousel"
   [config]="slideConfig"
   *ngIf="homageBanners$ | async as banners"
+  [class.single-banner]="banners.length === 1"
 >
-  <div ngxSlickItem *ngFor="let slide of banners" class="slide">
+  <div ngxSlickItem *ngFor="let slide of banners" class="slide" >
     <div
       [style.background-image]="
         getBackGroudImg(slide.image.url, slide.imgSmall.url)
@@ -31,7 +32,7 @@
         mat-flat-button
         color="primary"
         class="main-button treatments"
-        (click)="openBooking($event)"
+        (click)="openBooking()"
       >
         BOOK NOW
       </button>

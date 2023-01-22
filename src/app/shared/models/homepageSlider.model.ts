@@ -1,5 +1,10 @@
 export interface HomePageSlider {
   images: Image[];
+  image: { url: string}
+  imgSmall: { url: string}
+  title1: string;
+  findOutMoreUrl: string;
+  asterisk: string;
   _id: string;
   name?: string;
   content?: string;
