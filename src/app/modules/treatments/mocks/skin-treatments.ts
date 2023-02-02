@@ -106,7 +106,19 @@ export const SKIN_TREATMENTS: any = [
     ],
   },
   {
-    title: 'Microneedling with Dermapen',
+    title: 'Microneedling with Dermapen (Basic)',
+    url: 'Microneedling-with-Dermapen',
+    treatment: `Add Skin Booster for £50, (extra 5 mins)`,
+    hasShowcase: true,
+    description: ``,
+    options: [
+      { key: 'Duration', value: '60 mins' },
+      { key: 'Single', value: '£150' },
+      { key: '4 Courses', value: '£540' }
+    ]
+  },
+  {
+    title: 'Microneedling with Dermapen (Complete)',
     url: 'Microneedling-with-Dermapen',
     treatment: `Add Skin Booster for £50, (extra 5 mins)`,
     hasShowcase: true,
