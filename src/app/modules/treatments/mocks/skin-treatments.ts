@@ -135,8 +135,8 @@ export const SKIN_TREATMENTS: any = [
     hasShowcase: true,
     description: ``,
     options: [
-      { key: 'Single', value: '£520' },
-      { key: '3 Courses', value: '£1404' },
+      { key: 'Single', value: '£400' },
+      { key: '3 Courses', value: '£1080' },
     ]
   },
   {
