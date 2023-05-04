@@ -4,31 +4,30 @@ export const WAX_DATA = [
     description: ``,
     options: [
       {
-        treatment: 'Lower Body',
+        treatment: 'Ladies Waxing',
         options: [
-          { key: 'Full Legs', value: '£45' },
-          { key: 'Lower Legs', value: '£23' },
-          { key: 'Upper Legs', value: '£25' },
+          { key: 'Bikini', value: '£24' },
+          { key: 'Brazilian', value: '£41' },
+          { key: 'Extended Bikini', value: '£32' },
+          { key: 'Full leg', value: '£48' },
+          { key: 'Hollywood', value: '£43' },
+          { key: 'Lower leg', value: '£28' },
+          { key: 'Upper leg', value: '£30' },
         ]
       },
       {
-        treatment: 'Intimate Waxing for Men',
+        treatment: `Men's Waxing`,
         options: [
           { key: 'Boyzillian (S&C)', value: '£60' },
-          { key: 'Buttocks', value: '£37' },
-          { key: 'Buttocks Crack', value: '£20' },
+          { key: 'Buttock Crack', value: '£25' },
+          { key: 'Buttocks', value: '£35' },
+          { key: 'Full Back', value: '£40' },
           { key: 'Full Body', value: '£160' },
+          { key: 'Full Chest', value: '£29' },
+          { key: 'Full Stomach', value: '£25' },
         ]
       },
-      {
-        treatment: 'Intimate Waxing for Women',
-        options: [
-          { key: 'Bikini', value: '£20' },
-          { key: 'Brazilian', value: '£39' },
-          { key: 'Extended Bikini', value: '£30' },
-          { key: 'Hollywood', value: '£41' },
-        ]
-      },
+
     ]
   }
 ];
