@@ -7,5 +7,11 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class BoutiqueSummaryComponent {
-
+  sendGtaData() {
+    // @ts-ignore
+    gtag('event', 'button clicks', {
+      'event_category' : 'homepage',
+      'event_label' : 'view treatment'
+    });
+  }
 }
