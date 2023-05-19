@@ -23,3 +23,15 @@ div {
 .mat-stroked-button.mat-flat-button.mat-primary {
   padding: 5px 30px;
 }
+
+li {
+  font-family: Nunito Sans,sans-serif;
+  font-size: 17px;
+  font-weight: 100;
+  line-height: 32px;
+  a {
+    font-size: 19px;
+    text-decoration: none;
+    color: black;
+  }
+}
