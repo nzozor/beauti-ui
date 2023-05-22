@@ -45,8 +45,8 @@ h3 {
   position: absolute;
 
   @media (max-width: 768px) {
-    margin-left: 30px;
-    margin-right: 30px;
+    //margin-left: 30px;
+    //margin-right: 30px;
     bottom: 20px !important;
 
     padding-right: 37px;
@@ -189,8 +189,8 @@ ul {
 .about-us {
   ul {
     @media (max-width: 1200px) {
-      margin-left: 0px;
-      margin-right: 0px;
+      margin-left: 0;
+      margin-right: 0;
     }
   }
 }
