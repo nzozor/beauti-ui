@@ -164,6 +164,23 @@ export const AESTHETIC_TREATMENTS: any = [
     ]
   },
   {
+    title: `Cosmelan Depigmentation Peel`,
+    url: `Cosmelan-Depigmentation-Peel`,
+    hasShowcase: true,
+    treatment: ``,
+    description: ``,
+    orientation: 'row',
+    fullOptions: 'true',
+    options: [
+      {
+        treatment: 'Full Program',
+        options: [
+          {  value: '£1200' },
+        ]
+      }
+    ]
+  },
+  {
     title: `Aqualyx Fat Dissolving Injections`,
     url: `Aqualyx-Fat-Dissolving-Injections`,
     hasShowcase: true,
