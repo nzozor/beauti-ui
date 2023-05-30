@@ -74,16 +74,16 @@ export class TreatmentShowcaseComponent {
 
   getImageUrl(treatment: TreatmentShowcase): string {
     if (this.breakpoint === "large") {
-      return `${this.dataService.beautiCmsUrl}${treatment.images[0]?.formats.large.url}`
+      return `${this.dataService.beautiCmsUrl}${treatment.Images?.data.attributes.formats.large.url}`
     }
-    return `${this.dataService.beautiCmsUrl}${treatment.images[0]?.formats.small.url}`
+    return `${this.dataService.beautiCmsUrl}${treatment.Images?.data.attributes.formats.small.url}`
   }
 
   goToParent(): void {
     this.router.navigate([`treatments`]);
   }
 
-  openBooking(e): void {
+  openBooking(): void {
     this.bookingService.sendBooking();
   }
 }

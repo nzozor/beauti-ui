@@ -8,7 +8,7 @@
   <div ngxSlickItem *ngFor="let slide of banners" class="slide" >
     <div
       [style.background-image]="
-        getBackGroudImg(slide.image.url, slide.imgSmall.url)
+        getBackGroudImg(slide.image.data.attributes.url, slide.imgSmall.data.attributes.url)
       "
     >
       <div class="slider-title">
@@ -40,3 +40,4 @@
     </div>
   </div>
 </ngx-slick-carousel>
+

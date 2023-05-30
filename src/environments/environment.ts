@@ -4,8 +4,8 @@
 
 export const environment = {
   production: false,
-  // cmsUrl: 'http://localhost:1337',
-  cmsUrl: 'https://cms.beautiskinclinic.com',
+  cmsUrl: 'http://localhost:1337',
+  // cmsUrl: 'https://cms.beautiskinclinic.com',
   dateApi: "https://date.tracksdigital.com"
 };
 

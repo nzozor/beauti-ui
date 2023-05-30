@@ -1,7 +1,7 @@
 export const SKIN_IMP_REM: any = [
   {
     title: 'Mole Removal',
-    url: 'Skin-imperfection-removal',
+    url: 'Skin-Imperfection-Removal',
     treatment: '',
     hasShowcase: true,
     description: ``,
@@ -13,7 +13,7 @@ export const SKIN_IMP_REM: any = [
   },
   {
     title: 'Thread Veins Removal',
-    url: 'Skin-imperfection-removal',
+    url: 'Skin-Imperfection-Removal',
     treatment: '',
     hasShowcase: true,
     description: ``,
@@ -25,7 +25,7 @@ export const SKIN_IMP_REM: any = [
   },
   {
     title: 'Milia Removal',
-    url: 'Skin-imperfection-removal',
+    url: 'Skin-Imperfection-Removal',
     treatment: '',
     hasShowcase: true,
     description: ``,
@@ -37,7 +37,7 @@ export const SKIN_IMP_REM: any = [
   },
   {
     title: 'Skin Tag Removal',
-    url: 'Skin-imperfection-removal',
+    url: 'Skin-Imperfection-Removal',
     treatment: '',
     hasShowcase: true,
     description: ``,
@@ -49,7 +49,7 @@ export const SKIN_IMP_REM: any = [
   },
   {
     title: 'Wart / Verruca Removal',
-    url: 'Skin-imperfection-removal',
+    url: 'Skin-Imperfection-Removal',
     treatment: '',
     hasShowcase: true,
     description: ``,

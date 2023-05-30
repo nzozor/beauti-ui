@@ -1,11 +1,11 @@
-import { Injectable, OnInit } from '@angular/core';
+import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
 import { TreatmentShowcase } from '../models/treatmentShowcase';
 
 import { catchError, map, switchMap } from 'rxjs/operators';
 import { environment } from 'src/environments/environment';
-import { HomePageSlider } from '../models/homepageSlider.model';
+import {HomePageSlider, HomePageSliderRaw} from '../models/homepageSlider.model';
 
 @Injectable({
   providedIn: 'root'
@@ -22,15 +22,25 @@ export class DataService {
   activeTreatment: string;
 
   getTreatmentShowcase(slug: string): Observable<TreatmentShowcase> {
-    return this.http.get<TreatmentShowcase>(`${this.beautiCmsUrl}/treatments?slug=${slug}`).pipe(map(treatment => treatment[0]));
+    return this.http.get<any>(`${this.beautiCmsUrl}/api/treaments?slug=${slug}&populate=*`).pipe(map(treatment => treatment.data[0].attributes));
   }
 
   getAboutUsPage(): Observable<{ Content: string }> {
-    return this.http.get<{ Content: string }>(`${this.beautiCmsUrl}/about-us-page`);
+    return this.http.get<{ Content: string }>(`${this.beautiCmsUrl}/api/about-us-page`).pipe(
+      map((aboutUsData:any) => {
+        return aboutUsData.data.attributes;
+      })
+    );
   }
 
   getHomageBanners(serverDate: Date = null): Observable<HomePageSlider[]> {
-    return this.http.get<HomePageSlider[]>(`${this.beautiCmsUrl}/homepage-sliders`).pipe(
+    return this.http.get<HomePageSliderRaw[]>(`${this.beautiCmsUrl}/api/home-page-banners?populate=*`).pipe(
+      map((banners: any) => {
+        return banners.data
+      } ),
+      map((banners: HomePageSliderRaw[]) => {
+        return banners.map(banner => banner.attributes)
+      } ),
       map((banners: HomePageSlider[]) => {
         const defaultBanner = () => banners.filter(banner => banner.isDefaultBanner === true)
         const filteredBanners = banners

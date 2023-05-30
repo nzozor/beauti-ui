@@ -1,8 +1,8 @@
 export interface TreatmentShowcase {
-  images?: TreatmentImages[];
+  Images?: { data: { attributes: TreatmentImages }};
   title: string;
   slug: string;
-  content: string;
+  Content: string;
   parent: TreatmentShowcase;
 }
 
