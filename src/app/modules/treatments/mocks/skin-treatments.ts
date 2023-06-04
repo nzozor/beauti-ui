@@ -32,10 +32,6 @@ export const SKIN_TREATMENTS: any = [
     options: [
       { key: 'Duration', value: '75 mins' },
       { key: 'Single', value: '£150' },
-      {
-        key: '6 Courses',
-        value: '£900'
-      }
     ],
     new: true
   },
