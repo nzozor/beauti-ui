@@ -1,7 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
 @import 'buttons';
 @import 'palette';
-@import 'about-us-page';
+@import 'feature-pages';
 @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;600;700&display=swap');
 
 html {
@@ -263,3 +263,13 @@ ul {
     margin-left: 3px
   }
 }
+
+.consultation-page {
+  img {
+    width: 100%;
+    max-width: 500px;
+  }
+}
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

@@ -47,9 +47,9 @@ export class AboutUsComponent {
   };
 
   slides = [
-    {img: 'assets/cinzia-campigotto-1.jpg' },
-    {img: 'assets/cinzia-campigotto-2.jpg' },
-    {img: 'assets/cinzia-campigotto-3.jpg' },
+    {img: 'assets/consultation/cinzia-beauti-consultation-1.jpg' },
+    {img: 'assets/consultation/cinzia-beauti-consultation-2.jpg' },
+    {img: 'assets/consultation/cinzia-beauti-consultation-3.jpg' },
   ];
 
   constructor(private dataService: DataService, private seo: SeoService ) {

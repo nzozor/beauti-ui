@@ -25,10 +25,19 @@ export class DataService {
     return this.http.get<any>(`${this.beautiCmsUrl}/api/treaments?slug=${slug}&populate=*`).pipe(map(treatment => treatment.data[0].attributes));
   }
 
+
   getAboutUsPage(): Observable<{ Content: string }> {
     return this.http.get<{ Content: string }>(`${this.beautiCmsUrl}/api/about-us-page`).pipe(
       map((aboutUsData:any) => {
         return aboutUsData.data.attributes;
+      })
+    );
+  }
+  
+  getConsultationPage(): Observable<{ Content: string }> {
+    return this.http.get<{ Content: string }>(`${this.beautiCmsUrl}/api/consultation-page`).pipe(
+      map((response:any) => {
+        return response.data.attributes;
       })
     );
   }

@@ -1,5 +1,5 @@
 
-.about-us-page {
+.about-us-page, .consultation-page {
 
   h1,
   h2,
@@ -22,7 +22,7 @@
   }
 
   h2 {
-    display: inline;
+    //display: inline;
     font-size: inherit;
     font-weight: 300;
   }
@@ -61,5 +61,12 @@
     a {
       color: inherit;
     }
+  }
+}
+
+.consultation-page {
+  h2 {
+    font-size: 36px;
+    font-weight: 100;
   }
 }

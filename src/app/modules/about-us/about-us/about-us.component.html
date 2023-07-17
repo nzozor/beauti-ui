@@ -1,9 +1,3 @@
-<div
-  *ngIf="aboutUs$ | async as aboutUsContent"
-  class="container about-us-page"
-  [innerHTML]="aboutUsContent.Content | MarkdownToHtml"
-></div>
-
 <ngx-slick-carousel
   id="carousel"
   #slickModal="slick-carousel"
@@ -18,3 +12,9 @@
     />
   </div>
 </ngx-slick-carousel>
+
+<div
+  *ngIf="aboutUs$ | async as aboutUsContent"
+  class="container about-us-page"
+  [innerHTML]="aboutUsContent.cke"
+></div>
