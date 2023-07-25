@@ -1,0 +1,40 @@
+<h3>Popular Treatment</h3>
+<div>
+  <div class="popular-grid">
+    <div class="feature-box">
+      <h4>Aesthetics</h4>
+      <div>
+        <p>Anti-Wrinkle Injections</p>
+        <p>Dermal Fillers</p>
+        <p>Profhilo</p>
+        <p>PRP Vampire Facial </p>
+      </div>
+    </div>
+    <div class="feature-box">
+      <h4>Advanced Skin</h4>
+      <div>
+        <p>Aqua 3 Hydrotherapy Facial
+        </p>
+        <p>Skin Peel</p>
+        <p>Microneedling</p>
+        <p>TriBella</p>
+      </div>
+    </div>
+  </div>
+  <h4 class="sub-heading"> Featured in </h4>
+
+</div>
+  <ngx-slick-carousel
+    #slickModal="slick-carousel"
+    [config]="slideConfig"
+    id="carousel"
+  >
+    <div *ngFor="let slide of slides" class="slide" ngxSlickItem>
+      <img
+        alt="Cinzia profile picture | Beauti Skin Clinic | Oval, Vauxhall, Kennington, Stockwell, brixton, clapham, sw9"
+        class="js-lazy-image"
+        src="{{ slide.img }}"
+        width="100%"
+      />
+    </div>
+  </ngx-slick-carousel>
