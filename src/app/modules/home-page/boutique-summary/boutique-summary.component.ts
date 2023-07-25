@@ -1,4 +1,5 @@
-import { ChangeDetectionStrategy, Component } from '@angular/core';
+import {ChangeDetectionStrategy, Component, Inject, PLATFORM_ID} from '@angular/core';
+import {BookingService} from "../../../shared/services/booking.service";
 
 @Component({
   selector: 'app-boutique-summary',
@@ -7,11 +8,19 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class BoutiqueSummaryComponent {
+
+  constructor(private bookingService: BookingService) {
+  }
+
   sendGtaData() {
     // @ts-ignore
     gtag('event', 'button clicks', {
-      'event_category' : 'homepage',
-      'event_label' : 'view treatment'
+      'event_category': 'homepage',
+      'event_label': 'view treatment'
     });
+  }
+
+  openBooking(): void {
+    this.bookingService.sendBooking();
   }
 }

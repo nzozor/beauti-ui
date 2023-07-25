@@ -1,7 +1,8 @@
-import { ChangeDetectionStrategy, Component } from '@angular/core';
-import { Observable } from 'rxjs';
-import { DataService } from 'src/app/shared/services/data.service';
-import { SeoService } from 'src/app/shared/services/seo.service';
+import {ChangeDetectionStrategy, Component, Inject} from '@angular/core';
+import {Observable} from 'rxjs';
+import {DataService} from 'src/app/shared/services/data.service';
+import {SeoService} from 'src/app/shared/services/seo.service';
+import {SLIDE_CONFIG, slideConfig} from "../../../shared/utils/slider-config";
 
 export interface SlideConf {
   slidesToShow: number;
@@ -15,44 +16,19 @@ export interface SlideConf {
   templateUrl: './about-us.component.html',
   styleUrls: ['./about-us.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
+  providers: [{provide: SLIDE_CONFIG, useValue: slideConfig}]
+
 })
 export class AboutUsComponent {
 
-  slideConfig: SlideConf = {
-    slidesToShow: 3,
-    slidesToScroll: 1,
-    centerMode: true,
-    responsive: [
-      {
-        breakpoint: 768,
-        settings: {
-          arrows: true,
-          dots: true,
-          centerMode: true,
-          variableWidth: true,
-          slidesToShow: 2
-        }
-      },
-      {
-        breakpoint: 480,
-        settings: {
-          dots: true,
-
-          arrows: false,
-          centerMode: true,
-          slidesToShow: 1
-        }
-      }
-    ]
-  };
-
   slides = [
-    {img: 'assets/consultation/cinzia-beauti-consultation-1.jpg' },
-    {img: 'assets/consultation/cinzia-beauti-consultation-2.jpg' },
-    {img: 'assets/consultation/cinzia-beauti-consultation-3.jpg' },
+    {img: 'assets/consultation/cinzia-beauti-consultation-1.jpg'},
+    {img: 'assets/consultation/cinzia-beauti-consultation-2.jpg'},
+    {img: 'assets/consultation/cinzia-beauti-consultation-3.jpg'},
   ];
+  aboutUs$: Observable<any> = this.dataService.getAboutUsPage();
 
-  constructor(private dataService: DataService, private seo: SeoService ) {
+  constructor(private dataService: DataService, private seo: SeoService, @Inject(SLIDE_CONFIG) public slideConfig: SlideConf) {
     this.seo.setDefaultMeta();
     this.setSeo();
   }
@@ -67,6 +43,4 @@ export class AboutUsComponent {
       content: `${pageTitle} | ${this.seo.defaultMetaContent}`,
     }]);
   }
-
-  aboutUs$: Observable<any> =  this.dataService.getAboutUsPage();
 }

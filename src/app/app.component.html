@@ -1,11 +1,11 @@
 <div class="header-wrapper sticky">
   <app-header-nav></app-header-nav>
 </div>
-<div *ngIf="!loadingRouteConfig">
+<div *ngIf="!loadingRouteConfig" id="router-outlet-wrapper">
   <router-outlet></router-outlet>
   <app-footer></app-footer>
 </div>
 
 <div *ngIf="loadingRouteConfig">
-  <mat-spinner class="mat-spinner" [diameter]="50"></mat-spinner>
+  <mat-spinner [diameter]="50" class="mat-spinner"></mat-spinner>
 </div>

@@ -1,15 +1,28 @@
-<app-map class="map"></app-map>
+<ngx-slick-carousel
+  #slickModal="slick-carousel"
+  [config]="slideConfig"
+  id="carousel"
+>
+  <div *ngFor="let slide of slides" class="slide" ngxSlickItem>
+    <img
+      alt="Cinzia profile picture | Beauti Skin Clinic | Oval, Vauxhall, Kennington, Stockwell, brixton, clapham, sw9"
+      class="js-lazy-image"
+      src="{{ slide.img }}"
+      width="100%"
+    />
+  </div>
+</ngx-slick-carousel>
 <div class="contact-points">
   <div>
     <h2>Address</h2>
     <div class="address-section">
-      66A Brixton Road <br />
-      Brixton Road, Kennington <br />
+      66A Brixton Road <br/>
+      Brixton Road, Kennington <br/>
       London, &nbsp;
       <a
+        class="address-google-map"
         href="https://g.page/beautiskinclinic?share"
         target="_blank"
-        class="address-google-map"
       >
         SW9 6BP
       </a>
@@ -18,28 +31,23 @@
   <div>
     <h1>Contact Details</h1>
     <div>
-      020 7820 1177 <br />
+      020 7820 1177 <br/>
       info@beautiskinclinic.com
     </div>
   </div>
   <div>
     <h2>Hours</h2>
-    <div>Mon-Fri | 10am-8pm <br /></div>
-    <div>Sat | 9am-5pm <br /></div>
+    <div>Mon-Fri | 10am-8pm <br/></div>
+    <div>Sat | 9am-5pm <br/></div>
   </div>
 </div>
+<div class="map-container">
+  <iframe
+    allowfullscreen=""
+    height="450" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d33593.58946491608!2d-0.10299764110735024!3d51.47014345792829!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4876048c0f3a318d%3A0x58b0262447dc6ecd!2sBeauti%20Skin%20Clinic!5e0!3m2!1sen!2suk!4v1689893891904!5m2!1sen!2suk"
+    style="border:0;"
+    width="600"></iframe>
 
-<ngx-slick-carousel
-  id="carousel"
-  #slickModal="slick-carousel"
-  [config]="slideConfig"
->
-  <div ngxSlickItem *ngFor="let slide of slides" class="slide">
-    <img
-      src="{{ slide.img }}"
-      alt="Beauti Salon interior picture | Beauti Skin Clinic | Oval, Vauxhall, Kennington, Stockwell, brixton, clapham, sw9"
-      width="100%"
-      class="js-lazy-image"
-    />
-  </div>
-</ngx-slick-carousel>
+</div>
+

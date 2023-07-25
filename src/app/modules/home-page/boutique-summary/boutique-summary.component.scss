@@ -1,22 +1,26 @@
 @import '../../../../scss/palette';
 
 :host {
-  max-width: 50%;
+
+  .wrapper {
+    background-color: $grey-opacity-20;
+    width: 100%;
+    margin: auto;
+  }
 }
 
 .container {
   text-align: center;
-}
-
-div {
   font-size: 20px;
   font-family: 'Nunito Sans', sans-serif;
   line-height: 32px;
   font-weight: 300;
   color: $grey-black;
-  margin-top: 60px;
+  padding: 90px;
   max-width: 850px;
-  padding: 0 10px 30px;
+  @media screen and (max-width: 768px) {
+    padding: 30px;
+  }
 }
 
 .main-button.mat-flat-button.mat-primary,
@@ -25,13 +29,18 @@ div {
 }
 
 li {
-  font-family: Nunito Sans,sans-serif;
+  font-family: Nunito Sans, sans-serif;
   font-size: 17px;
   font-weight: 100;
   line-height: 32px;
+
   a {
     font-size: 19px;
     text-decoration: none;
     color: black;
   }
+}
+
+button {
+  margin: 50px 25px 0;
 }

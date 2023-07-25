@@ -1,40 +1,16 @@
 <h3>Exclusive Stockist</h3>
-<h4>Medical grade skincare exclusively available at our clinic</h4>
-<div data-test-id="test-example">
-  <div>
-    <a href="https://www.alumiermd.co.uk/" target="_blank" rel="noopener">
-      <div>
+
+<ngx-slick-carousel
+	#slickModal="slick-carousel"
+  [config]="slideConfig"
+  id="carousel"
+>
+    <div *ngFor="let slide of slides" class="slide" ngxSlickItem>
         <img
-          class="js-lazy-image"
-          src="assets/Stockist_Alumier.jpg"
-          alt="Alumier | Beauti Skin Clinic | Oval, Vauxhall, Kennington, Stockwell, Brixton, clapham, sw9"
+                alt="Cinzia profile picture | Beauti Skin Clinic | Oval, Vauxhall, Kennington, Stockwell, brixton, clapham, sw9"
+                class="js-lazy-image"
+                src="{{ slide.img }}"
+                width="100%"
         />
-        <mat-icon>open_in_new</mat-icon>
-      </div>
-    </a>
-  </div>
-  <div>
-    <a href="https://hayoumethod.com/" target="_blank" rel="noopener">
-      <div>
-        <img
-          class="js-lazy-image"
-          src="assets/beauti_hayo.jpg"
-          alt="Hayou | Beauti Skin Clinic | Oval, Vauxhall, Kennington, Stockwell, Brixton, clapham, sw9"
-        />
-        <mat-icon>open_in_new</mat-icon>
-      </div>
-    </a>
-  </div>
-  <div>
-    <a href="https://skinade.com/" target="_blank" rel="noopener">
-      <div>
-        <img
-          class="js-lazy-image"
-          src="assets/Stockist_Skinade.jpg"
-          alt="Skinade | Beauti Skin Clinic | Oval, Vauxhall, Kennington, Stockwell, Brixton, clapham, sw9"
-        />
-        <mat-icon>open_in_new</mat-icon>
-      </div>
-    </a>
-  </div>
-</div>
+    </div>
+</ngx-slick-carousel>

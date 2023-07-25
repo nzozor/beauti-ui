@@ -1,8 +1,8 @@
-import { AfterViewInit, Component, Inject, OnInit, PLATFORM_ID } from '@angular/core';
-import { Router, NavigationEnd, RouteConfigLoadStart, RouteConfigLoadEnd } from '@angular/router';
-import { DOCUMENT, isPlatformBrowser } from '@angular/common';
-import { SeoService } from './shared/services/seo.service';
-import { Subscription } from 'rxjs';
+import {AfterViewInit, Component, Inject, OnInit, PLATFORM_ID} from '@angular/core';
+import {Router, NavigationEnd, RouteConfigLoadStart, RouteConfigLoadEnd} from '@angular/router';
+import {DOCUMENT, isPlatformBrowser} from '@angular/common';
+import {SeoService} from './shared/services/seo.service';
+import {Subscription} from 'rxjs';
 
 @Component({
   selector: 'app-root',
@@ -14,8 +14,9 @@ export class AppComponent implements AfterViewInit {
   title = 'beauti-frontend';
   stickyHeader = false;
   loadingRouteConfig = false;
-  private window: Window;
   routerEventSub: Subscription;
+  private window: Window;
+
   constructor(
     private router: Router,
     @Inject(PLATFORM_ID) private platformId: any,

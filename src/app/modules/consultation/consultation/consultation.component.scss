@@ -6,10 +6,12 @@
   padding: 30px;
   color: $grey-black;
 }
+
 h1, h2, h3, h4, h5 {
   text-align: left;
   font-family: 'Roboto', sans-serif;
 }
+
 h5, h4 {
   font-size: 29px;
   margin: 20px 0;
@@ -19,11 +21,13 @@ h1 {
   margin: 40px 0 20px 0;
   font-weight: 100;
 }
+
 h2 {
   display: inline;
   font-size: inherit;
   font-weight: 300;
 }
+
 h4 {
   font-weight: 300;
 }
@@ -34,9 +38,11 @@ h5 {
 
 .beauti {
   margin-bottom: 40px;
+
   h5, h4 {
     display: inline;
   }
+
   div {
     font-family: 'Roboto', sans-serif;
     font-weight: 100;
@@ -46,22 +52,65 @@ h5 {
 
 p, h3 {
   font-family: "Nunito Sans", sans-serif;
-  font-size: 17px!important;
+  font-size: 17px !important;
   font-weight: 100;
   line-height: 32px;
   margin-bottom: 40px;
+
   a {
     color: inherit;
   }
 }
 
 #carousel ::ng-deep .slick-list.draggable {
-  padding: 0!important;
-
+  padding: 0 !important;
 }
 
 form {
-   >div {
+  margin-top: 40px;
+
+  .row {
     display: flex;
+
+    > div {
+      width: 100%;
+      margin: 5px 10px;
+    }
+
+    &.submit {
+      text-align: center;
+    }
+  }
+
+  mat-form-field, mat-checkbox {
+    width: 100%;
+    font-family: 'Nunito Sans', sans-serif !important;
+    font-size: 17px;
+    font-weight: 100;
+
+    ::ng-deep .mat-form-field-flex {
+      background: rgba(199, 203, 214, .3);
+    }
+
+    & ::ng-deep {
+      .mat-checkbox-frame {
+        border-width: 1px;
+      }
+
+      .mat-checkbox-checked.mat-accent .mat-checkbox-background {
+        background-color: rgba(199, 203, 214, .3) !important;
+      }
+    }
+
+  }
+
+  .error-hint {
+    margin-top: 20px;
+
+    mat-hint {
+      color: red;
+    }
   }
 }
+
+

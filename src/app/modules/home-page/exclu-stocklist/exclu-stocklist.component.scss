@@ -1,19 +1,19 @@
 @import '../../../../scss/palette';
 
 :host {
-  >div {
+  > div {
     display: flex;
     justify-content: center;
     max-width: 1170px;
     margin: 0 auto;
     flex-wrap: wrap;
-    padding: 0 30px;
+    padding: 0 30px 30px;
 
     @media (min-width: 1024px) {
       flex-wrap: inherit;
     }
 
-    >div {
+    > div {
       margin: 10px;
       max-width: 614px;
       border: 1px solid $blue-type1;
@@ -32,7 +32,7 @@
       a {
         text-decoration: none;
 
-        >div {
+        > div {
           &::before {
             content: '';
             display: block;
@@ -90,4 +90,10 @@ h4 {
   color: $grey-black;
   letter-spacing: .5px;
   margin: 0 30px 30px 30px;
+}
+
+#carousel {
+  max-width: 855px;
+  margin: auto;
+  padding-bottom: 30px;
 }

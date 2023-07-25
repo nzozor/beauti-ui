@@ -14,6 +14,7 @@ import { ArrowComponent } from 'src/app/shared/components/svg/arrow/arrow.compon
 import { LazyImgDirective } from 'src/app/shared/directives/lazy-img.directive';
 import { MainSliderComponent } from './main-slider/main-slider.component';
 import { BoutiqueSummaryComponent } from './boutique-summary/boutique-summary.component';
+import { PopularTreatmentComponent } from './popular-treatment/popular-treatment.component';
 
 @NgModule({
   imports: [
@@ -34,6 +35,7 @@ import { BoutiqueSummaryComponent } from './boutique-summary/boutique-summary.co
     LazyImgDirective,
     MainSliderComponent,
     BoutiqueSummaryComponent,
+    PopularTreatmentComponent,
   ],
   exports: [MapComponent, SlickCarouselModule]
 })

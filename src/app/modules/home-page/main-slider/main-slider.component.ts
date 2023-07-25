@@ -1,9 +1,9 @@
-import { isPlatformBrowser } from '@angular/common';
-import { ChangeDetectionStrategy, Component, Inject, PLATFORM_ID } from '@angular/core';
-import { Observable } from 'rxjs';
-import { HomePageSlider } from 'src/app/shared/models/homepageSlider.model';
-import { BookingService } from 'src/app/shared/services/booking.service';
-import { DataService } from 'src/app/shared/services/data.service';
+import {isPlatformBrowser} from '@angular/common';
+import {ChangeDetectionStrategy, Component, EventEmitter, Inject, Output, PLATFORM_ID} from '@angular/core';
+import {Observable} from 'rxjs';
+import {HomePageSlider} from 'src/app/shared/models/homepageSlider.model';
+import {BookingService} from 'src/app/shared/services/booking.service';
+import {DataService} from 'src/app/shared/services/data.service';
 
 @Component({
   selector: 'app-main-slider',
@@ -16,6 +16,8 @@ export class MainSliderComponent {
   testClass: any = {
     backgroundColor: 'red'
   };
+
+  @Output() bookTreatment = new EventEmitter<boolean>();
 
   slideConfig = {
     slidesToShow: 1, slidesToScroll: 1, dots: true,
@@ -53,4 +55,5 @@ export class MainSliderComponent {
       return `url('${this.cmsUrl}${imgSmall}')`;
     }
   }
+
 }

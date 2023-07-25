@@ -1,33 +1,28 @@
-import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
-import { SeoService } from 'src/app/shared/services/seo.service';
+import {ChangeDetectionStrategy, Component, Inject, OnInit} from '@angular/core';
+import {SeoService} from 'src/app/shared/services/seo.service';
+import {SLIDE_CONFIG, SlideConf, slideConfig} from "../../../shared/utils/slider-config";
 
 @Component({
   selector: 'app-contact',
   templateUrl: './contact.component.html',
   styleUrls: ['./contact.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
+  providers: [{provide: SLIDE_CONFIG, useValue: slideConfig}]
 })
 export class ContactComponent implements OnInit {
-  slideConfig = {
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    dots: true,
-  };
 
   slides = [
-    { img: 'assets/beauti-skin-clinic-oval-1.jpg' },
-    { img: 'assets/beauti-skin-clinic-oval-2.jpg' },
-    { img: 'assets/beauti-skin-clinic-oval-3.jpg' },
-    { img: 'assets/beauti-skin-clinic-oval-alumier.jpg' },
-
-    { img: 'assets/beauti-skin-clinic-oval-waxed.jpg' },
+    {img: 'assets/beauti-Interior-waiting-area-2@2x.jpg'},
+    {img: 'assets/beauti-Exterior-store-front@2x.jpg'},
+    {img: 'assets/beauti-Interior-treatment-room-1@2x.jpg'},
   ];
 
-  constructor(private seo: SeoService) {
+  constructor(private seo: SeoService, @Inject(SLIDE_CONFIG) public slideConfig: SlideConf) {
     this.seo.setDefaultMeta();
   }
 
   ngOnInit(): void {
+    console.log("slideConfig >>>>>> : ", this.slideConfig)
     const pageTitle = 'Contact Page';
     this.seo.setTitle(
       pageTitle
