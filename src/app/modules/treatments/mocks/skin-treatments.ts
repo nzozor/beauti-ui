@@ -5,8 +5,8 @@ export const SKIN_TREATMENTS: any = [
     treatment: ``,
     description: ``,
     options: [
-      { key: 'Duration', value: '30 mins' },
-      { key: 'Single', value: '£50' }
+      {key: 'Duration', value: '30 mins'},
+      {key: 'Single', value: '£50'}
     ],
     new: true
   },
@@ -17,8 +17,8 @@ export const SKIN_TREATMENTS: any = [
     description: ``,
     bespoke: false,
     options: [
-      { key: 'Duration', value: '120 mins' },
-      { key: 'Single', value: '£250' },
+      {key: 'Duration', value: '120 mins'},
+      {key: 'Single', value: '£250'},
     ],
     new: true
   },
@@ -30,8 +30,8 @@ export const SKIN_TREATMENTS: any = [
     Choose from Radio Frequency, Skin Rejuvenation, LED Light Therapy.<br /> Add Dermaplaning for £30, (extra 15 mins)`,
     description: ``,
     options: [
-      { key: 'Duration', value: '75 mins' },
-      { key: 'Single', value: '£150' },
+      {key: 'Duration', value: '75 mins'},
+      {key: 'Single', value: '£150'},
     ],
     new: true
   },
@@ -69,9 +69,9 @@ export const SKIN_TREATMENTS: any = [
     treatment: `Add LED Light Therapy for £20, (extra 15 mins)`,
     description: ``,
     options: [
-      { key: 'Duration', value: '60 mins' },
-      { key: 'Single', value: '£120' },
-      { key: '4 Courses', value: '£432' },
+      {key: 'Duration', value: '60 mins'},
+      {key: 'Single', value: '£120'},
+      {key: '4 Courses', value: '£432'},
     ]
   },
   {
@@ -86,7 +86,7 @@ export const SKIN_TREATMENTS: any = [
       {
         treatment: 'Full Program',
         options: [
-          {  value: '£1200' },
+          {value: '£1200'},
         ]
       }
     ]
@@ -98,10 +98,10 @@ export const SKIN_TREATMENTS: any = [
     hasShowcase: true,
     description: ``,
     options: [
-      { key: 'Duration', value: '60 mins' },
-      { key: 'Single', value: '£120' },
-      { key: '3 Courses', value: '£324' },
-      { key: '6 Courses', value: '£612' }
+      {key: 'Duration', value: '60 mins'},
+      {key: 'Single', value: '£120'},
+      {key: '3 Courses', value: '£324'},
+      {key: '6 Courses', value: '£612'}
     ]
   },
   {
@@ -111,10 +111,10 @@ export const SKIN_TREATMENTS: any = [
     hasShowcase: true,
     description: ``,
     options: [
-      { key: 'Duration', value: '30 mins' },
-      { key: 'Single', value: '£110' },
-      { key: '3 Courses', value: '£297' },
-      { key: '6 Courses', value: '£561' }
+      {key: 'Duration', value: '30 mins'},
+      {key: 'Single', value: '£110'},
+      {key: '3 Courses', value: '£297'},
+      {key: '6 Courses', value: '£561'}
     ],
   },
   {
@@ -124,9 +124,9 @@ export const SKIN_TREATMENTS: any = [
     hasShowcase: true,
     description: ``,
     options: [
-      { key: 'Duration', value: '60 mins' },
-      { key: 'Single', value: '£150' },
-      { key: '4 Courses', value: '£540' }
+      {key: 'Duration', value: '25 mins'},
+      {key: 'Single', value: '£150'},
+      {key: '4 Courses', value: '£540'}
     ]
   },
   {
@@ -136,9 +136,9 @@ export const SKIN_TREATMENTS: any = [
     hasShowcase: true,
     description: ``,
     options: [
-      { key: 'Duration', value: '60 mins' },
-      { key: 'Single', value: '£250' },
-      { key: '4 Courses', value: '£900' }
+      {key: 'Duration', value: '60 mins'},
+      {key: 'Single', value: '£250'},
+      {key: '4 Courses', value: '£900'}
     ]
   },
   {
@@ -147,8 +147,8 @@ export const SKIN_TREATMENTS: any = [
     hasShowcase: true,
     description: ``,
     options: [
-      { key: 'Single', value: '£400' },
-      { key: '3 Courses', value: '£1080' },
+      {key: 'Single', value: '£400'},
+      {key: '3 Courses', value: '£1080'},
     ]
   },
   {
@@ -158,8 +158,8 @@ export const SKIN_TREATMENTS: any = [
     hasShowcase: true,
     description: ``,
     options: [
-      { key: 'Single', value: '£300' },
-      { key: '3 Courses', value: '£810' },
+      {key: 'Single', value: '£300'},
+      {key: '3 Courses', value: '£810'},
     ]
   },
 ];
