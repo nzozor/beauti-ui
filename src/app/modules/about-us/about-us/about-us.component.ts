@@ -22,9 +22,9 @@ export interface SlideConf {
 export class AboutUsComponent {
 
   slides = [
-    {img: 'assets/consultation/cinzia-beauti-consultation-1.jpg'},
-    {img: 'assets/consultation/cinzia-beauti-consultation-2.jpg'},
-    {img: 'assets/consultation/cinzia-beauti-consultation-3.jpg'},
+    {img: 'assets/consultation/cinzia-beauti-consultation-1.jpg', alt: 'Beauti Skin Clinic Founder Cinzia Campigotto'},
+    {img: 'assets/consultation/cinzia-beauti-consultation-2.jpg', alt: 'Beauti Skin Clinic Founder Cinzia Campigotto'},
+    {img: 'assets/consultation/cinzia-beauti-consultation-3.jpg', alt: 'Beauti Skin Clinic Founder Cinzia Campigotto'},
   ];
   aboutUs$: Observable<any> = this.dataService.getAboutUsPage();
 
@@ -34,13 +34,13 @@ export class AboutUsComponent {
   }
 
   setSeo(): void {
-    const pageTitle = 'About Page';
+    const pageTitle = 'About Us | Aesthetic and Skin Specialist in South London';
     this.seo.setTitle(
       pageTitle
     );
     this.seo.setMeta([{
       name: 'description',
-      content: `${pageTitle} | ${this.seo.defaultMetaContent}`,
+      content: `Top-rated Beauti Skin Clinic in South London, serving Oval, Brixton, Kennington, Vauxhall, Stockwell and Clapham`,
     }]);
   }
 }

@@ -11,9 +11,10 @@ import {SectionHostDirective} from "./section-host.directive";
 import { TreatmentSectionComponent } from './treatment-section/treatment-section.component';
 import { TreatmentHostDirective } from './treatment-host.directive';
 import { TreatmentPriceComponent } from './treatment-price/treatment-price.component';
+import { TreatmentInfoComponent } from './treatment-info/treatment-info.component';
 
 @NgModule({
-  declarations: [TreatmentsComponent, SectionHostDirective, SectionHostDirective, TreatmentSectionComponent, TreatmentHostDirective, TreatmentPriceComponent],
+  declarations: [TreatmentsComponent, SectionHostDirective, SectionHostDirective, TreatmentSectionComponent, TreatmentHostDirective, TreatmentPriceComponent, TreatmentInfoComponent],
   imports: [
     CommonModule,
     TreatmentsRoutingModule,

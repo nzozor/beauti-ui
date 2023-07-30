@@ -46,14 +46,14 @@ export class ConsultationComponent implements OnInit {
   }
 
   private setSeo(): void {
-    const pageTitle = 'About Page';
+    const pageTitle = 'Consultation | Aesthetic and Skin Consultation in South London';
     this.seo.setTitle(
       pageTitle
     );
 
     this.seo.setMeta([{
       name: 'description',
-      content: `${pageTitle} | ${this.seo.defaultMetaContent}`,
+      content: `Top-rated Beauti Skin Clinic in South London, serving Oval, Brixton, Kennington, Vauxhall, Stockwell and Clapham`,
     }]);
   }
 }

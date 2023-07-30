@@ -1,13 +1,13 @@
 <ngx-slick-carousel
-  #slickModal="slick-carousel"
+	#slickModal="slick-carousel"
   [config]="slideConfig"
   id="carousel"
 >
   <div *ngFor="let slide of slides" class="slide" ngxSlickItem>
     <img
-      alt="Cinzia profile picture | Beauti Skin Clinic | Oval, Vauxhall, Kennington, Stockwell, brixton, clapham, sw9"
+      [alt]="slide.alt"
+      [src]="slide.img"
       class="js-lazy-image"
-      src="{{ slide.img }}"
       width="100%"
     />
   </div>

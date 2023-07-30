@@ -1,16 +1,5 @@
 export const SKIN_TREATMENTS: any = [
   {
-    title: 'Skin Consultation',
-    hasShowcase: false,
-    treatment: ``,
-    description: ``,
-    options: [
-      {key: 'Duration', value: '30 mins'},
-      {key: 'Single', value: '£50'}
-    ],
-    new: true
-  },
-  {
     title: 'Beauti Advanced Bespoke Facial',
     hasShowcase: false,
     treatment: ``,

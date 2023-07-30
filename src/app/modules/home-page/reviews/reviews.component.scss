@@ -181,8 +181,10 @@ h3 {
     .slick-list {
       cursor: grab;
       margin: 0 auto;
-      height: 250px;
+      height: 355px;
+
       display: flex;
+
       flex-direction: column;
       justify-content: center;
       padding-bottom: 36px !important;

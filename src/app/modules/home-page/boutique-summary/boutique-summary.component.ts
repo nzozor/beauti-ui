@@ -1,4 +1,4 @@
-import {ChangeDetectionStrategy, Component, Inject, PLATFORM_ID} from '@angular/core';
+import {ChangeDetectionStrategy, Component} from '@angular/core';
 import {BookingService} from "../../../shared/services/booking.service";
 
 @Component({
@@ -12,11 +12,11 @@ export class BoutiqueSummaryComponent {
   constructor(private bookingService: BookingService) {
   }
 
-  sendGtaData() {
+  sendGtaData(eventLabel: string, eventCategory = 'homepage', event = 'button clicks') {
     // @ts-ignore
-    gtag('event', 'button clicks', {
-      'event_category': 'homepage',
-      'event_label': 'view treatment'
+    gtag('event', event, {
+      'event_category': eventCategory,
+      'event_label': eventLabel
     });
   }
 

@@ -7,7 +7,8 @@ import {
   Inject,
   OnInit,
   PLATFORM_ID,
-  ViewChild
+  ViewChild,
+  ViewContainerRef
 } from '@angular/core';
 import {SKIN_TREATMENTS} from '../mocks/skin-treatments';
 import {SKIN_IMP_REM} from '../mocks/skin-imperfections';
@@ -21,7 +22,6 @@ import {DataService} from 'src/app/shared/services/data.service';
 import {isPlatformBrowser, ViewportScroller} from '@angular/common';
 import {SeoService} from 'src/app/shared/services/seo.service';
 import {AESTHETIC_TREATMENTS} from '../mocks/aesthetic-treatments';
-import {SectionHostDirective} from "../section-host.directive";
 import {TreatmentSectionComponent} from "../treatment-section/treatment-section.component";
 import {TreatmentPriceComponent} from "../treatment-price/treatment-price.component";
 
@@ -29,7 +29,7 @@ import {TreatmentPriceComponent} from "../treatment-price/treatment-price.compon
   selector: 'app-treatments',
   templateUrl: './treatments.component.html',
   styleUrls: ['./treatments.component.scss'],
-  changeDetection: ChangeDetectionStrategy.OnPush,
+  changeDetection: ChangeDetectionStrategy.Default,
 })
 export class TreatmentsComponent implements OnInit, AfterViewInit, AfterContentChecked {
   skinTreatments: any[] = SKIN_TREATMENTS;
@@ -53,8 +53,7 @@ export class TreatmentsComponent implements OnInit, AfterViewInit, AfterContentC
     {
       type: TreatmentSectionComponent,
       data: {
-        subTreatment: [TreatmentSectionComponent, TreatmentSectionComponent],
-        price: [TreatmentPriceComponent, TreatmentPriceComponent]
+        subTreatment: [{type: TreatmentSectionComponent}, {type: TreatmentSectionComponent}, {type: TreatmentPriceComponent}, {type: TreatmentPriceComponent}],
       }
     },
     {type: TreatmentSectionComponent},
@@ -62,7 +61,10 @@ export class TreatmentsComponent implements OnInit, AfterViewInit, AfterContentC
     // Add more objects as needed for other components
   ];
 
-  @ViewChild(SectionHostDirective, {static: true}) sectionHostDirective!: SectionHostDirective;
+  // @ViewChild(SectionHostDirective, {static: true}) sectionHostDirective!: SectionHostDirective;
+  @ViewChild('container', {read: ViewContainerRef, static: true}) container: ViewContainerRef;
+
+  sections = {};
 
   constructor(
     private bookingService: BookingService,
@@ -95,8 +97,17 @@ export class TreatmentsComponent implements OnInit, AfterViewInit, AfterContentC
     this.activeTreatmentList = this.dataService.activeTreatmentList;
     this.activeTreatment = this.dataService.activeTreatment;
     this.setSeo();
-    this.loadComponents();
 
+    // this.dataService.getTreatmentSections().subscribe(sections => {
+    //   this.sections = sections;
+    //   this.loadComponents()
+    // });
+
+    this.dataService.getFullTreatmentHierarchy().subscribe(full => {
+      this.sections = full;
+      this.loadComponents();
+      console.log('zip result output', full);
+    })
   }
 
   ngAfterViewInit(): void {
@@ -147,11 +158,16 @@ export class TreatmentsComponent implements OnInit, AfterViewInit, AfterContentC
   }
 
   loadComponents() {
-    const viewContainerRef = this.sectionHostDirective.viewContainerRef;
-    viewContainerRef.clear();
-    this.componentDataArray.forEach(componentData => {
-      const componentRef: ComponentRef<any> = viewContainerRef.createComponent<TreatmentSectionComponent>(componentData.type);
-      componentRef.instance.data = componentData.data;
+
+    this.container.clear();
+    Object.keys(this.sections).forEach(section => {
+      const componentRef: ComponentRef<any> = this.container.createComponent<TreatmentSectionComponent>(this.sections[section].type);
+      componentRef.instance.data = {
+        subSections: this.sections[section].subSections,
+        subPrices: this.sections[section].subPrices,
+        subTreatments: this.sections[section].subTreatments
+      };
+      console.log(this.sections[section].subSections)
     });
   }
 }

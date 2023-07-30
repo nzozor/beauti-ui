@@ -12,9 +12,18 @@ import {SLIDE_CONFIG, SlideConf, slideConfig} from "../../../shared/utils/slider
 export class ContactComponent implements OnInit {
 
   slides = [
-    {img: 'assets/beauti-Interior-waiting-area-2@2x.jpg'},
-    {img: 'assets/beauti-Exterior-store-front@2x.jpg'},
-    {img: 'assets/beauti-Interior-treatment-room-1@2x.jpg'},
+    {
+      alt: 'Top-rated Beauti Skin Clinic in South London, serving Oval, Brixton, Kennington, Vauxhall, Stockwell and Clapham',
+      img: 'assets/beauti-Interior-waiting-area-2@2x.jpg'
+    },
+    {
+      alt: 'Top-rated Beauti Skin Clinic in South London, serving Oval, Brixton, Kennington, Vauxhall, Stockwell and Clapham',
+      img: 'assets/beauti-Exterior-store-front@2x.jpg'
+    },
+    {
+      alt: 'Top-rated Beauti Skin Clinic in South London, serving Oval, Brixton, Kennington, Vauxhall, Stockwell and Clapham',
+      img: 'assets/beauti-Interior-treatment-room-1@2x.jpg'
+    },
   ];
 
   constructor(private seo: SeoService, @Inject(SLIDE_CONFIG) public slideConfig: SlideConf) {
@@ -22,14 +31,13 @@ export class ContactComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    console.log("slideConfig >>>>>> : ", this.slideConfig)
-    const pageTitle = 'Contact Page';
+    const pageTitle = 'Contact | Aesthetic and Skin Specialist in South London';
     this.seo.setTitle(
       pageTitle
     );
     this.seo.setMeta([{
       name: 'description',
-      content: `${pageTitle} | ${this.seo.defaultMetaContent}`,
+      content: `Top-rated Beauti Skin Clinic in South London, serving Oval, Brixton, Kennington, Vauxhall, Stockwell and Clapham`,
     }]);
   }
 }

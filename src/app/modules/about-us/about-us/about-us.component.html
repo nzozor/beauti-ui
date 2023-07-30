@@ -1,20 +1,20 @@
 <ngx-slick-carousel
-  id="carousel"
-  #slickModal="slick-carousel"
+	#slickModal="slick-carousel"
   [config]="slideConfig"
+  id="carousel"
 >
-  <div ngxSlickItem *ngFor="let slide of slides" class="slide">
+  <div *ngFor="let slide of slides" class="slide" ngxSlickItem>
     <img
-      src="{{ slide.img }}"
-      alt="Cinzia profile picture | Beauti Skin Clinic | Oval, Vauxhall, Kennington, Stockwell, brixton, clapham, sw9"
-      width="100%"
+      [alt]="slide.alt"
+      [src]="slide.img"
       class="js-lazy-image"
+      width="100%"
     />
   </div>
 </ngx-slick-carousel>
 
 <div
   *ngIf="aboutUs$ | async as aboutUsContent"
-  class="container about-us-page"
   [innerHTML]="aboutUsContent.cke"
+  class="container about-us-page"
 ></div>

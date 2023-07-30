@@ -1,5 +1,15 @@
-<h1>Treatment section </h1>
-<ul *ngIf="data.subTreatment.length >0">
-    <li sectionHost></li>
-</ul>
-<!--<p treatmentHost>price treatment</p>-->
+<li>
+    <h2>Treatment section</h2>
+    <ng-container *ngIf="data">
+        <ul *ngFor="let treatmentSectionData of data.subSections" [ngStyle]="{ 'margin-left': '30px'}">
+            <app-treatment-section [data]="treatmentSectionData"></app-treatment-section>
+        </ul>
+        <ul *ngFor="let treatmentSectionData of data.subPrices" [ngStyle]="{ 'margin-left': '30px'}">
+            <app-treatment-price [data]="treatmentSectionData"></app-treatment-price>
+        </ul>
+
+        <ul *ngFor="let treatmentSectionData of data.subTreatments" [ngStyle]="{ 'margin-left': '30px'}">
+            <app-treatment-info [data]="treatmentSectionData"></app-treatment-info>
+        </ul>
+    </ng-container>
+</li>

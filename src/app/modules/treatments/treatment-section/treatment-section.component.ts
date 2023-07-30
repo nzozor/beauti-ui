@@ -1,5 +1,4 @@
-import {Component, ComponentRef, Input, OnInit, ViewChild} from '@angular/core';
-import {SectionHostDirective} from "../section-host.directive";
+import {Component, Input, OnInit} from '@angular/core';
 
 @Component({
   selector: 'app-treatment-section',
@@ -9,23 +8,13 @@ import {SectionHostDirective} from "../section-host.directive";
 export class TreatmentSectionComponent implements OnInit {
 
   @Input() data: any;
-  @ViewChild(SectionHostDirective, {static: true}) sectionHostDirective!: SectionHostDirective;
 
   constructor() {
   }
 
   ngOnInit(): void {
-    this.loadComponents();
+    console.log('test treatment section')
   }
 
-  loadComponents() {
-    const viewContainerRef = this.sectionHostDirective.viewContainerRef;
-    viewContainerRef.clear();
-    if (this.data?.subTreatment?.length > 0) {
-      this.data.forEach(componentData => {
-        const componentRef: ComponentRef<any> = viewContainerRef.createComponent<TreatmentSectionComponent>(componentData.type);
-        componentRef.instance.data = componentData.data;
-      });
-    }
-  }
+
 }

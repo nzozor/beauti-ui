@@ -8,9 +8,10 @@
   font-family: 'Nunito Sans', sans-serif;
   color: $grey-black;
 
-  a {
+  a, a.address-google-map {
     text-decoration: none;
     color: inherit;
+
     &:hover {
       text-decoration: underline;
     }
@@ -23,10 +24,12 @@
     font-size: 14px;
     text-align: center;
     line-height: 22px;
+
     &::after {
       content: '';
       width: 106px;
     }
+
     @media (max-width: 767px) {
       flex-direction: column;
       app-beauti-logo {
@@ -39,7 +42,8 @@
         margin: 5px 0 30px;
       }
     }
-    >div {
+
+    > div {
       div {
         margin-bottom: 25px;
       }
@@ -48,7 +52,7 @@
     app-beauti-logo {
       ::ng-deep svg {
         width: initial;
-        height: 25px; 
+        height: 25px;
       }
     }
   }

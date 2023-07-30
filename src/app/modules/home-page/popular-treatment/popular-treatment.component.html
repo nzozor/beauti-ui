@@ -4,37 +4,58 @@
     <div class="feature-box">
       <h4>Aesthetics</h4>
       <div>
-        <p>Anti-Wrinkle Injections</p>
-        <p>Dermal Fillers</p>
-        <p>Profhilo</p>
-        <p>PRP Vampire Facial </p>
+        <p>
+          <a routerLink="/treatments/Anti-Wrinkle-Injections">
+
+            Anti-Wrinkle Injections
+          </a>
+        </p>
+        <p>
+          <a routerLink="/treatments/Dermal-Fillers">
+            Dermal Fillers
+          </a>
+        </p>
+        <p>
+          <a routerLink="/treatments/Profhilo">Profhilo</a>
+        </p>
+        <p>
+          <a routerLink="/treatments/PRP-Vampire-Facial">PRP Vampire Facial </a>
+        </p>
       </div>
     </div>
     <div class="feature-box">
       <h4>Advanced Skin</h4>
       <div>
-        <p>Aqua 3 Hydrotherapy Facial
+        <p>
+          <a routerLink="/treatments/Aqua-3-Hydrotherapy-Facial">Aqua 3 Hydrotherapy Facial</a>
+
         </p>
-        <p>Skin Peel</p>
-        <p>Microneedling</p>
-        <p>TriBella</p>
+        <p>
+          <a routerLink="/treatments/Skin-Peel">Skin Peel</a>
+        </p>
+        <p>
+          <a routerLink="/treatments/Microneedling-with-Dermapen">Microneedling</a>
+        </p>
+        <p>
+          <a routerLink="/treatments/TriBella">TriBella</a>
+        </p>
       </div>
     </div>
   </div>
   <h4 class="sub-heading"> Featured in </h4>
 
 </div>
-  <ngx-slick-carousel
-    #slickModal="slick-carousel"
-    [config]="slideConfig"
-    id="carousel"
-  >
-    <div *ngFor="let slide of slides" class="slide" ngxSlickItem>
-      <img
-        alt="Cinzia profile picture | Beauti Skin Clinic | Oval, Vauxhall, Kennington, Stockwell, brixton, clapham, sw9"
-        class="js-lazy-image"
-        src="{{ slide.img }}"
-        width="100%"
-      />
-    </div>
-  </ngx-slick-carousel>
+<ngx-slick-carousel
+	#slickModal="slick-carousel"
+  [config]="slideConfig"
+  id="carousel"
+>
+  <div *ngFor="let slide of slides" class="slide" ngxSlickItem>
+    <img
+      alt="Cinzia profile picture | Beauti Skin Clinic | Oval, Vauxhall, Kennington, Stockwell, brixton, clapham, sw9"
+      class="js-lazy-image"
+      src="{{ slide.img }}"
+      width="100%"
+    />
+  </div>
+</ngx-slick-carousel>
