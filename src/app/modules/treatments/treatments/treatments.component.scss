@@ -1,7 +1,7 @@
 @import '../../../../scss/palette';
 
 :host {
-  >div {
+  > div {
     background-color: rgba($blue-type1, 0.15);
     padding: 70px 30px;
 
@@ -9,8 +9,8 @@
       padding: 50px 0;
     }
 
-    >.mat-accordion,
-    mat-accordion {
+    ::ng-deep > .mat-accordion,
+    ::ng-deep mat-accordion {
       .mat-expansion-panel {
         &:not(.mat-expanded) .mat-expansion-panel-header:not([aria-disabled=true]):hover {
           background: rgba(0, 0, 0, .01);
@@ -19,7 +19,7 @@
         ::ng-deep .mat-expansion-panel-body {
           padding: 0;
 
-          >div {
+          > div {
             .description:first-child {
               padding-top: 0;
             }
@@ -47,12 +47,12 @@
           .mat-expansion-panel {
             border-bottom: none;
 
-            >.mat-expansion-panel-header {
+            > .mat-expansion-panel-header {
               height: 35px !important;
             }
           }
 
-          >.mat-expansion-panel-header {
+          > .mat-expansion-panel-header {
             height: 48px;
             padding-left: 15px;
             padding-bottom: 20px;
@@ -76,14 +76,14 @@
                 }
               }
 
-              >div {
+              > div {
                 margin-right: 15px;
 
                 @media (min-width: 768px) {
                   margin-right: 55px;
                 }
 
-                >span {
+                > span {
                   display: block;
 
                   &:first-of-type {
@@ -111,7 +111,7 @@
               display: flex;
               flex-direction: column;
 
-              >div {
+              > div {
                 display: flex;
                 flex-direction: row;
                 padding: 10px 15px;
@@ -129,7 +129,7 @@
                   }
                 }
 
-                >div {
+                > div {
                   min-width: 130px;
 
                   @media (max-width: 600px) {
@@ -215,7 +215,7 @@
         background-color: rgba($blue-type1, 0.18);
       }
 
-      >div {
+      > div {
         min-width: 140px;
         padding: 10px 15px;
 
@@ -266,7 +266,7 @@
           background-color: rgba($blue-type1, 0.40);
         }
 
-        >div {
+        > div {
           &:first-of-type {
             width: 52%;
           }
@@ -277,7 +277,7 @@
         }
 
         &.header {
-          >div:first-of-type {
+          > div:first-of-type {
             font-size: 17px;
             font-weight: 400;
           }
@@ -289,7 +289,7 @@
   #hair-removal {
     .direction-column {
       @media (max-width: 600px) {
-        &>div>div {
+        & > div > div {
           min-width: 80px;
         }
       }
@@ -307,12 +307,12 @@
         display: flex;
         background-color: rgba($blue-type1, 0.40);
 
-        >div:first-of-type {
+        > div:first-of-type {
           font-size: 17px;
           font-weight: inherit;
         }
 
-        >div {
+        > div {
           width: 25%;
           padding: 10px 15px;
 
@@ -327,14 +327,14 @@
       }
 
       .body {
-        >div {
+        > div {
           display: flex;
 
           &:nth-of-type(even) {
             background-color: rgba($blue-type1, 0.18);
           }
 
-          >div {
+          > div {
             width: 25%;
 
             @media only screen and (max-width: 600px) {
@@ -380,7 +380,7 @@ h2 {
 .mat-expansion-panel {
   & .mat-expansion-panel-header.mat-expanded {
     ::ng-deep {
-      >.mat-expansion-indicator {
+      > .mat-expansion-indicator {
         top: 4px;
       }
     }
@@ -402,7 +402,6 @@ h2 {
     font-size: 14px;
   }
 }
-
 
 
 .read-more {

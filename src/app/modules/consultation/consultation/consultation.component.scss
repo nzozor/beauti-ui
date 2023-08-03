@@ -72,6 +72,10 @@ form {
   .row {
     display: flex;
 
+    @media (max-width: 600px) {
+      flex-direction: column;
+    }
+
     > div {
       width: 100%;
       margin: 5px 10px;
@@ -111,6 +115,8 @@ form {
       color: red;
     }
   }
+
+
 }
 
 

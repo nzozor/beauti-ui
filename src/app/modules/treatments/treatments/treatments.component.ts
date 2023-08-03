@@ -105,6 +105,7 @@ export class TreatmentsComponent implements OnInit, AfterViewInit, AfterContentC
 
     this.dataService.getFullTreatmentHierarchy().subscribe(full => {
       this.sections = full;
+      console.log(full);
       this.loadComponents();
       console.log('zip result output', full);
     })
@@ -158,16 +159,12 @@ export class TreatmentsComponent implements OnInit, AfterViewInit, AfterContentC
   }
 
   loadComponents() {
-
     this.container.clear();
     Object.keys(this.sections).forEach(section => {
       const componentRef: ComponentRef<any> = this.container.createComponent<TreatmentSectionComponent>(this.sections[section].type);
-      componentRef.instance.data = {
-        subSections: this.sections[section].subSections,
-        subPrices: this.sections[section].subPrices,
-        subTreatments: this.sections[section].subTreatments
-      };
+      componentRef.instance.data = this.sections[section];
       console.log(this.sections[section].subSections)
     });
   }
+
 }

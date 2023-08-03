@@ -1,5 +1,5 @@
-import { Component, Input, OnChanges, Output, EventEmitter, ChangeDetectionStrategy } from '@angular/core';
-import { trigger, style, animate, transition, query, stagger } from '@angular/animations';
+import {ChangeDetectionStrategy, Component, EventEmitter, Input, OnChanges, Output} from '@angular/core';
+import {animate, query, stagger, style, transition, trigger} from '@angular/animations';
 
 export interface Menu {
   title: string;
@@ -20,27 +20,31 @@ export interface SubMenu {
     trigger('openClose', [
       transition('* => *', [
         query(':enter', [
-          style({ opacity: 0, transform: 'translateY(5%)' }),
-          stagger(80, [animate('0.4s', style({ transform: 'translateY(0%)', opacity: 1 }))])
-        ], { optional: true }
+            style({opacity: 0, transform: 'translateY(5%)'}),
+            stagger(80, [animate('0.4s', style({transform: 'translateY(0%)', opacity: 1}))])
+          ], {optional: true}
         )
       ])
     ])
   ],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-  
+
 export class MenuLinkComponent implements OnChanges {
   @Input() active = false;
   @Output() menuLinkOpen = new EventEmitter<boolean>();
   mainMenu: Menu[] = [
-    { title: 'Home', route: '/' },
-    { title: 'About Us', route: '/about-us' },
+    {title: 'Home', route: '/'},
+    {title: 'About Us', route: '/about-us'},
     {
       title: 'Treatments',
       route: '/treatments'
     },
-    { title: 'Contact', route: '/contact' }
+    {
+      title: 'Consultation',
+      route: '/consultation'
+    },
+    {title: 'Contact', route: '/contact'}
   ];
   subMenuActive = false;
   activeSubMenu = {} as Menu;
@@ -56,7 +60,7 @@ export class MenuLinkComponent implements OnChanges {
     this.activeSubMenu = subMenu;
   }
 
-  closeMenuLink():void {
+  closeMenuLink(): void {
     this.menuLinkOpen.emit(false);
   }
 }

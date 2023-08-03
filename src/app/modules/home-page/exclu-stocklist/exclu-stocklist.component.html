@@ -5,12 +5,30 @@
   [config]="slideConfig"
   id="carousel"
 >
-    <div *ngFor="let slide of slides" class="slide" ngxSlickItem>
-        <img
-                alt="Cinzia profile picture | Beauti Skin Clinic | Oval, Vauxhall, Kennington, Stockwell, brixton, clapham, sw9"
-                class="js-lazy-image"
-                src="{{ slide.img }}"
-                width="100%"
-        />
-    </div>
+  <div *ngFor="let slide of slides.slice(0,5)" class="slide" ngxSlickItem>
+    <a [href]="slide.url" target="_blank">
+      <img
+        [src]="slide.img"
+        alt="Cinzia profile picture | Beauti Skin Clinic | Oval, Vauxhall, Kennington, Stockwell, brixton, clapham, sw9"
+        class="js-lazy-image"
+        width="100%"
+      />
+    </a>
+  </div>
+</ngx-slick-carousel>
+<ngx-slick-carousel
+	#slickModal="slick-carousel"
+  [config]="slideConfig"
+  id="carousel"
+>
+  <div *ngFor="let slide of slides.slice(5)" class="slide" ngxSlickItem>
+    <a [href]="slide.url" target="_blank">
+      <img
+        [src]="slide.img"
+        alt="Cinzia profile picture | Beauti Skin Clinic | Oval, Vauxhall, Kennington, Stockwell, brixton, clapham, sw9"
+        class="js-lazy-image"
+        width="100%"
+      />
+    </a>
+  </div>
 </ngx-slick-carousel>

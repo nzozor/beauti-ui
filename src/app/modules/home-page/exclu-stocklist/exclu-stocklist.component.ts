@@ -1,4 +1,4 @@
-import {ChangeDetectionStrategy, Component} from '@angular/core';
+import {ChangeDetectionStrategy, Component, OnInit} from '@angular/core';
 import {SlideConf} from "../../../shared/utils/slider-config";
 
 @Component({
@@ -6,10 +6,9 @@ import {SlideConf} from "../../../shared/utils/slider-config";
   templateUrl: './exclu-stocklist.component.html',
   styleUrls: ['./exclu-stocklist.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
-
 })
 
-export class ExcluStocklistComponent {
+export class ExcluStocklistComponent implements OnInit {
 
   slideConfig: SlideConf = {
     slidesToShow: 5,
@@ -45,11 +44,22 @@ export class ExcluStocklistComponent {
     ]
   };
   slides = [
-    {img: 'assets/exclu-stockist/Group 300.png'},
-    {img: 'assets/exclu-stockist/Group 301.png'},
-    {img: 'assets/exclu-stockist/Group 302.png'},
-    {img: 'assets/exclu-stockist/Group 303.png'},
-    {img: 'assets/exclu-stockist/Group 304.png'},
-
+    {img: 'assets/exclu-stockist/dermapen_logo.png', url: 'https://dermapen.com/'},
+    {img: 'assets/exclu-stockist/logo+cosmelan.png', url: 'https://www.mesoestetic.co.uk/cosmelan-treatment.html'},
+    {img: 'assets/exclu-stockist/Profhilo+blue+Logo+no+background.png', url: 'https://www.profhilo.co.uk/'},
+    {img: 'assets/exclu-stockist/sterex.png', url: 'https://www.sterex.com/'},
+    {img: 'assets/exclu-stockist/hayo\'u.png', url: 'https://hayoumethod.com/'},
+    {img: 'assets/exclu-stockist/Jalupro.png', url: 'https://md.jalupro.com/?p=25'},
+    {img: 'assets/exclu-stockist/Aqua3.png', url: ''}, // URL not provided for Aqua3
+    {
+      img: 'assets/exclu-stockist/Venus_Concept_Venus_Concept_Announces_Financial_Results_for_the.png',
+      url: 'https://www.venusconcept.com/en-uk/'
+    },
+    {img: 'assets/exclu-stockist/sothys-logo.png', url: 'https://www.sothys.fr/en'},
+    {img: 'assets/exclu-stockist/alumier-logo.png', url: 'https://www.alumiermd.co.uk/'},
   ];
+
+  ngOnInit() {
+
+  }
 }

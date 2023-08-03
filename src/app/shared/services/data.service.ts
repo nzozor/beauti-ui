@@ -200,4 +200,16 @@ export class DataService {
   getServerDate(): Observable<Date> {
     return this.http.get<Date>(`${environment.dateApi}/date`)
   }
+
+  postConsultation(consultationData): Observable<any> {
+    return this.http.post(`${this.beautiCmsUrl}/api/consultations`, {
+      data: consultationData,
+    })
+  }
+
+  sendEmail(emailData): Observable<any> {
+    return this.http.post(`${environment.mailService}/send-email`, {
+      data: emailData,
+    })
+  }
 }

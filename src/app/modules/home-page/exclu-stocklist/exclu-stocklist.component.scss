@@ -4,7 +4,7 @@
   > div {
     display: flex;
     justify-content: center;
-    max-width: 1170px;
+    //max-width: 1170px;
     margin: 0 auto;
     flex-wrap: wrap;
     padding: 0 30px 30px;
@@ -93,7 +93,11 @@ h4 {
 }
 
 #carousel {
-  max-width: 855px;
+  max-width: 1000px;
   margin: auto;
   padding-bottom: 30px;
+
+  .slide {
+    margin: 0 10px;
+  }
 }

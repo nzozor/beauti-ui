@@ -1,15 +1,40 @@
-<li>
-    <h2>Treatment section</h2>
-    <ng-container *ngIf="data">
-        <ul *ngFor="let treatmentSectionData of data.subSections" [ngStyle]="{ 'margin-left': '30px'}">
-            <app-treatment-section [data]="treatmentSectionData"></app-treatment-section>
-        </ul>
-        <ul *ngFor="let treatmentSectionData of data.subPrices" [ngStyle]="{ 'margin-left': '30px'}">
-            <app-treatment-price [data]="treatmentSectionData"></app-treatment-price>
-        </ul>
+<ng-container *ngIf="data">
+  <mat-accordion [multi]="true">
+    <mat-expansion-panel [expanded]="true">
+      <mat-expansion-panel-header>
+        <mat-panel-title><h2>{{data.sectionName}}</h2></mat-panel-title>
+        <mat-panel-description>
+          <a
+            class="book-now"
+            href="https://widget.treatwell.co.uk/place/beauti-skin-clinic/"
+            target="_blank"
+          >
+            <button
+              (click)="openBooking($event)"
+              class="main-button"
+              color="primary"
+              mat-flat-button
+            >
+              Book now
+            </button>
+          </a>
+        </mat-panel-description>
+      </mat-expansion-panel-header>
+      <div class="sub">
+        <ng-container *ngFor="let subSection of data.subSections">
 
-        <ul *ngFor="let treatmentSectionData of data.subTreatments" [ngStyle]="{ 'margin-left': '30px'}">
-            <app-treatment-info [data]="treatmentSectionData"></app-treatment-info>
-        </ul>
-    </ng-container>
-</li>
+          <app-treatment-section [data]="subSection"></app-treatment-section>
+        </ng-container>
+
+        <ng-container *ngFor="let treatmentPrices of data.subPrices">
+          <app-treatment-price [data]="treatmentPrices"></app-treatment-price>
+        </ng-container>
+        <ng-container *ngFor="let treatmentTreatments of data.subTreatments">
+          <app-treatment-info [data]="treatmentTreatments"></app-treatment-info>
+        </ng-container>
+      </div>
+    </mat-expansion-panel>
+  </mat-accordion>
+</ng-container>
+
+

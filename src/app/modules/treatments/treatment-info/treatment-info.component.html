@@ -1,2 +1,37 @@
-<p>treatment-info works!</p>
-{{ data | json}}
+<div class="skin-treatment">
+
+  <div class="title">
+    <div>
+      <span>{{data.attributes.title}}</span>
+    </div>
+    <a
+      *ngIf="!data.attributes.hasShowcase"
+      class="book-now"
+      href="https://widget.treatwell.co.uk/place/beauti-skin-clinic/"
+      target="_blank"
+    >
+      <button class="main-button" color="primary" mat-stroked-button>
+        Book now
+      </button>
+    </a>
+
+    <a
+      *ngIf="data.attributes.hasShowcase"
+      [routerLink]="data.attributes.url || data.attributes.title"
+    >
+      <button
+        (click)="
+                  goToTreatmentShowcase(
+                    ['Skin Treatments', 'Aesthetic Treatments'],
+                    treatment.url || treatment.title
+                  )
+                "
+        class="main-button main-button-read-more"
+        color="primary"
+        mat-stroked-button
+      >
+        Read More
+      </button>
+    </a>
+  </div>
+</div>

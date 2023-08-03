@@ -9,7 +9,7 @@ import {SlideConf} from "../../../shared/utils/slider-config";
 export class PopularTreatmentComponent implements OnInit {
 
   slideConfig: SlideConf = {
-    slidesToShow: 4,
+    slidesToShow: 5,
     slidesToScroll: 1,
     centerMode: true,
     responsive: [
@@ -45,8 +45,8 @@ export class PopularTreatmentComponent implements OnInit {
     {img: 'assets/feature-img/Bazaar_Logo.svg.png'},
     {img: 'assets/feature-img/mailonline-vector-logo.png'},
     {img: 'assets/feature-img/metro-co-uk-logo-vector.png'},
+    {img: 'assets/feature-img/hello.png'},
     {img: 'assets/feature-img/The_Sun.svg.png'},
-
   ];
 
   constructor() {
