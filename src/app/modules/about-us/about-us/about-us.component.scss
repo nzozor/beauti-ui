@@ -78,3 +78,14 @@ p, h3 {
     }
   }
 }
+
+.beauti-room {
+  display: flex;
+  justify-content: center;
+
+  img {
+    width: 100%;
+    max-width: 800px;
+    margin-bottom: 90px;
+  }
+}

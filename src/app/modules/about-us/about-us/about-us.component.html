@@ -12,9 +12,14 @@
     />
   </div>
 </ngx-slick-carousel>
+<div class="container about-us-page">
+  <div
+    *ngIf="aboutUs$ | async as aboutUsContent"
+    [innerHTML]="aboutUsContent.cke"
+    class="container about-us-page"
+  ></div>
+  <div class="beauti-room">
+    <img src="assets/beauti-room.jpeg"/>
+  </div>
 
-<div
-  *ngIf="aboutUs$ | async as aboutUsContent"
-  [innerHTML]="aboutUsContent.cke"
-  class="container about-us-page"
-></div>
+</div>
