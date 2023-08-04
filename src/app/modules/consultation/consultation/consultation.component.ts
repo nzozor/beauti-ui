@@ -20,7 +20,7 @@ export class ConsultationComponent implements OnInit {
     contactNumber: ['', Validators.required],
     email: ['', Validators.email],
     message: ['', Validators.required],
-    firstTimeCustomer: [false],
+    firstTimeCustomer: [true, Validators.required],
   });
 
   consultationContent$: Observable<any> = this.dataService.getConsultationPage();

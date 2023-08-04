@@ -22,6 +22,7 @@
   id="carousel"
 >
   <div *ngFor="let slide of slides.slice(5)" class="slide" ngxSlickItem>
+    
     <a [href]="slide.url" target="_blank">
       <img
         [src]="slide.img"

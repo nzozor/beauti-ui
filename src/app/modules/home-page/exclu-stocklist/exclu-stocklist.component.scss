@@ -1,10 +1,6 @@
 @import '../../../../scss/palette';
 
 :host {
-  padding-bottom: 30px;
-  display: flex;
-  flex-direction: column;
-
   > div {
     display: flex;
     justify-content: center;
@@ -98,9 +94,11 @@ h4 {
 #carousel {
   max-width: 1000px;
   margin: auto;
-  padding-bottom: 30px;
+  padding-bottom: 60px;
 
   .slide {
     margin: 0 10px;
+    //width: 160px;
+
   }
 }
