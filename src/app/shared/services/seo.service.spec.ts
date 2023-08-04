@@ -1,5 +1,5 @@
-import { TestBed, inject } from '@angular/core/testing';
-import { SeoService } from './seo.service';
+import {inject, TestBed} from '@angular/core/testing';
+import {SeoService} from './seo.service';
 
 describe('Service: Seo', () => {
   beforeEach(() => {
@@ -13,7 +13,7 @@ describe('Service: Seo', () => {
   }));
 
   it('should set specific title', inject([SeoService], (service: SeoService) => {
-    const customTitle = 'custom Title'
+    const customTitle = 'custom Title | Beauti Skin Clinic'
     service.setTitle(customTitle);
     const titeTag = document.querySelector("title") as HTMLElement;
     expect(titeTag.innerHTML).toBe('custom Title | Beauti Skin Clinic');

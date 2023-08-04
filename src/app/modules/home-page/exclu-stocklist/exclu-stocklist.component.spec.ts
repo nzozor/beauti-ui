@@ -1,6 +1,8 @@
-import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
+import {ComponentFixture, TestBed, waitForAsync} from '@angular/core/testing';
 
-import { ExcluStocklistComponent } from './exclu-stocklist.component';
+import {ExcluStocklistComponent} from './exclu-stocklist.component';
+import {MockModule} from "ng-mocks";
+import {SlickCarouselModule} from "ngx-slick-carousel";
 
 describe('ExcluStocklistComponent', () => {
   let component: ExcluStocklistComponent;
@@ -8,9 +10,10 @@ describe('ExcluStocklistComponent', () => {
 
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
-      declarations: [ ExcluStocklistComponent ]
+      declarations: [ExcluStocklistComponent],
+      imports: [MockModule(SlickCarouselModule)],
     })
-    .compileComponents();
+      .compileComponents();
   }));
 
   beforeEach(() => {

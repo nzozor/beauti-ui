@@ -1,4 +1,4 @@
-import {Component, Input, OnInit} from '@angular/core';
+import {Component, Input} from '@angular/core';
 import {DataService} from "../../../shared/services/data.service";
 
 @Component({
@@ -6,14 +6,12 @@ import {DataService} from "../../../shared/services/data.service";
   templateUrl: './treatment-info.component.html',
   styleUrls: ['./treatment-info.component.scss']
 })
-export class TreatmentInfoComponent implements OnInit {
+export class TreatmentInfoComponent {
   @Input() data: any;
 
   constructor(private dataService: DataService) {
   }
 
-  ngOnInit(): void {
-  }
 
   goToTreatmentShowcase(treatmentParentList: string[], treatmentName: string): void {
     this.dataService.activeTreatmentList = treatmentParentList;

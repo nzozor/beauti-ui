@@ -1,6 +1,7 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+import {ComponentFixture, TestBed} from '@angular/core/testing';
+import {MAT_DIALOG_DATA, MatDialogRef} from '@angular/material/dialog';
 
-import { FormModalComponent } from './form-modal.component';
+import {FormModalComponent} from './form-modal.component';
 
 describe('FormModalComponent', () => {
   let component: FormModalComponent;
@@ -8,9 +9,13 @@ describe('FormModalComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [ FormModalComponent ]
+      imports: [FormModalComponent],
+      providers: [
+        {provide: MatDialogRef, useValue: {}}, // Providing a mock value for MatDialogRef
+        {provide: MAT_DIALOG_DATA, useValue: {}}
+      ]
     })
-    .compileComponents();
+      .compileComponents();
 
     fixture = TestBed.createComponent(FormModalComponent);
     component = fixture.componentInstance;
