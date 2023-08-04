@@ -14,7 +14,7 @@ import {SKIN_TREATMENTS} from '../mocks/skin-treatments';
 import {SKIN_IMP_REM} from '../mocks/skin-imperfections';
 import {WAX_DATA} from '../mocks/waxing';
 import {BODY_CONTOURING, BODY_MASSAGE} from '../mocks/body';
-import {BEAUTY_FACIAL, BEAUTY_NAIL} from '../mocks/beauty';
+import {BEAUTY_FACIAL} from '../mocks/beauty';
 import {HAIR_REMOVAL_ELECTRO, HAIR_REMOVAL_IPL_LASER} from '../mocks/hair-removal';
 import {ActivatedRoute, Router} from '@angular/router';
 import {BookingService} from 'src/app/shared/services/booking.service';
@@ -38,7 +38,6 @@ export class TreatmentsComponent implements OnInit, AfterViewInit, AfterContentC
   bodyRelaxingMassage: any[] = BODY_MASSAGE;
   bodyContouring: any[] = BODY_CONTOURING;
   beautyFacial: any[] = BEAUTY_FACIAL;
-  beautyNail: any[] = BEAUTY_NAIL;
   hairRemoveLaser: {} = HAIR_REMOVAL_IPL_LASER;
   hairRemoveElectro: any[] = HAIR_REMOVAL_ELECTRO;
   aestheticTreatments: any[] = AESTHETIC_TREATMENTS

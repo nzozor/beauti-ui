@@ -71,6 +71,9 @@
 
 }
 
-app-contact + :host {
-  border-top: 0.5px solid rgba($grey-black, .7);
+app-contact, app-consultation, app-about-us, app-home-page {
+  & + :host {
+    border-top: 0.5px solid rgba($grey-black, .7);
+  }
 }
+

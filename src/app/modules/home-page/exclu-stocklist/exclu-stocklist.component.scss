@@ -1,10 +1,13 @@
 @import '../../../../scss/palette';
 
 :host {
+  padding-bottom: 30px;
+  display: flex;
+  flex-direction: column;
+
   > div {
     display: flex;
     justify-content: center;
-    //max-width: 1170px;
     margin: 0 auto;
     flex-wrap: wrap;
     padding: 0 30px 30px;
