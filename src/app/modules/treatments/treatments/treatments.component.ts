@@ -103,12 +103,12 @@ export class TreatmentsComponent implements OnInit, AfterViewInit, AfterContentC
     //   this.loadComponents()
     // });
 
-    this.dataService.getFullTreatmentHierarchy().subscribe(full => {
-      this.sections = full;
-      console.log(full);
-      this.loadComponents();
-      console.log('zip result output', full);
-    })
+    // this.dataService.getFullTreatmentHierarchy().subscribe(full => {
+    //   this.sections = full;
+    //   console.log(full);
+    //   this.loadComponents();
+    //   console.log('zip result output', full);
+    // })
   }
 
   ngAfterViewInit(): void {

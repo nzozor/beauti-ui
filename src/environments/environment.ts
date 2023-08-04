@@ -4,10 +4,13 @@
 
 export const environment = {
   production: false,
-  cmsUrl: 'http://localhost:1339',
+  // cmsUrl: 'http://localhost:1339',
+  cmsUrl: 'http://167.99.200.71:1339',
+
   // cmsUrl: 'https://cms.beautiskinclinic.com',
   dateApi: "https://date.tracksdigital.com",
   mailService: "http://localhost:3002"
+  // mailService: "http://email.beautiskinclinic.com",
 };
 
 /*

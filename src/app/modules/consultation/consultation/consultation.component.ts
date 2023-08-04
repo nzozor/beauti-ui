@@ -5,6 +5,7 @@ import {Observable} from "rxjs";
 import {FormBuilder, Validators} from '@angular/forms';
 import {MatDialog} from "@angular/material/dialog";
 import {FormModalComponent} from "../form-modal/form-modal.component";
+import {switchMap} from "rxjs/operators";
 
 @Component({
   selector: 'app-consultation',
@@ -19,7 +20,7 @@ export class ConsultationComponent implements OnInit {
     contactNumber: ['', Validators.required],
     email: ['', Validators.email],
     message: ['', Validators.required],
-    firstTimeCustomer: [''],
+    firstTimeCustomer: [false],
   });
 
   consultationContent$: Observable<any> = this.dataService.getConsultationPage();
@@ -39,33 +40,33 @@ export class ConsultationComponent implements OnInit {
   onFormSubmit() {
     this.sendBtnStatus = 'clicked';
     if (this.consultationForm.valid) {
-      this.dialog.open(FormModalComponent, {
-        data: {success: true},
-      })
-      // this.dataService.postConsultation(this.consultationForm.value).pipe(
-      //   switchMap(() => {
-      //     return this.dataService.sendEmail({
-      //       to: this.consultationForm.value.email,
-      //       subject: `${this.consultationForm.value.firstName} ${this.consultationForm.value.lastName} booked a consultation`,
-      //       number: this.consultationForm.value.contactNumber,
-      //       text: this.consultationForm.value.message,
-      //       firstTimeCustomer: this.consultationForm.value.firstTimeCustomer ? 'First time customer' : 'Recurring customer'
-      //     });
-      //   })
-      // ).subscribe(
-      //   // Successful handling of both postConsultation and sendEmail
-      //   () => {
-      //     this.dialog.open(FormModalComponent, {
-      //       data: {success: true},
-      //     });
-      //   },
-      //   // Error handling for either postConsultation or sendEmail
-      //   () => {
-      //     this.dialog.open(FormModalComponent, {
-      //       data: {success: false},
-      //     });
-      //   }
-      // );
+      // this.dialog.open(FormModalComponent, {
+      //   data: {success: true},
+      // })
+      this.dataService.postConsultation(this.consultationForm.value).pipe(
+        switchMap(() => {
+          return this.dataService.sendEmail({
+            to: this.consultationForm.value.email,
+            subject: `${this.consultationForm.value.firstName} ${this.consultationForm.value.lastName} booked a consultation`,
+            number: this.consultationForm.value.contactNumber,
+            text: this.consultationForm.value.message,
+            firstTimeCustomer: this.consultationForm.value.firstTimeCustomer ? 'First time customer' : 'Recurring customer'
+          });
+        })
+      ).subscribe(
+        // Successful handling of both postConsultation and sendEmail
+        () => {
+          this.dialog.open(FormModalComponent, {
+            data: {success: true},
+          });
+        },
+        // Error handling for either postConsultation or sendEmail
+        () => {
+          this.dialog.open(FormModalComponent, {
+            data: {success: false},
+          });
+        }
+      );
     }
   }
 
