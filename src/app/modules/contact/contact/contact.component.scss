@@ -28,6 +28,7 @@ h2 {
   @media (max-width: 768px) {
     max-width: 100%;
     flex-direction: column;
+    margin: 20px auto;
   }
 
   > div {
@@ -84,13 +85,15 @@ img {
 
 #carousel {
   margin: 0 auto;
-  margin-bottom: 70px;
+  margin-bottom: 0;
   overflow: hidden;
   max-height: 400px;
 
   ::ng-deep .slick-list {
     padding: 0 !important;
     @media (min-width: 768px) {
+      margin-bottom: 70px;
+
       .slide:not(:last-child):not(:first-child) {
         padding: 0 10px;
       }

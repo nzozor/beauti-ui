@@ -3,8 +3,12 @@
 .container {
   max-width: 856.72px;
   margin: 0 auto;
-  padding: 30px;
+  padding: 10px 30px;
+
   color: $grey-black;
+  @media (min-width: 768px) {
+    padding: 30px;
+  }
 }
 
 h1, h2, h3, h4, h5 {
@@ -65,13 +69,15 @@ p, h3 {
 
 #carousel {
   margin: 0 auto;
-  margin-bottom: 70px;
+  margin-bottom: 0;
   overflow: hidden;
   max-height: 400px;
 
   ::ng-deep .slick-list {
     padding: 0 !important;
     @media (min-width: 768px) {
+      margin-bottom: 70px;
+
       .slide:not(:last-child):not(:first-child) {
         padding: 0 10px;
       }
