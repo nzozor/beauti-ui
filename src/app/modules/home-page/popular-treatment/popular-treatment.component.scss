@@ -89,7 +89,9 @@ a {
 .fade_rule {
   height: 1px;
   background-color: $beauti-grey;
-  width: 66.0em;
+  max-width: 66.0em;
+  width: 100%;
+
   margin: 0 auto;
   background-image: linear-gradient(left, white 2%, $beauti-grey 50%, white 98%);
   background-image: -o-linear-gradient(left, white 2%, $beauti-grey 50%, white 98%);
