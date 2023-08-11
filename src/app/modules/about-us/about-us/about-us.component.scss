@@ -67,6 +67,7 @@ p, h3 {
   margin: 0 auto;
   margin-bottom: 70px;
   overflow: hidden;
+  max-height: 400px;
 
   ::ng-deep .slick-list {
     padding: 0 !important;

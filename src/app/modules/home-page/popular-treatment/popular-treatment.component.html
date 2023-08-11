@@ -11,6 +11,9 @@
           </a>
         </p>
         <p>
+          <a routerLink="/treatments/Aqualyx-Fat-Dissolving-Injections">Aqualyx </a>
+        </p>
+        <p>
           <a routerLink="/treatments/Dermal-Fillers">
             Dermal Fillers
           </a>
@@ -27,34 +30,42 @@
       <h4>Advanced Skin</h4>
       <div>
         <p>
-          <a routerLink="/treatments/Aqua-3-Hydrotherapy-Facial">Aqua 3 Hydrotherapy Facial</a>
-
+          <a routerLink="/treatments/Advanced-Beauti-Signature-Relaxing-Facial">Advanced Relaxing
+            Facial</a>
         </p>
         <p>
-          <a routerLink="/treatments/Skin-Peel">Skin Peel</a>
+          <a routerLink="/treatments/Aqua-3-Hydrotherapy-Facial">Aqua 3 Hydrotherapy Facial</a>
+
         </p>
         <p>
           <a routerLink="/treatments/Microneedling-with-Dermapen">Microneedling</a>
         </p>
         <p>
+          <a routerLink="/treatments/Skin-Peel">Skin Peel</a>
+        </p>
+        <p>
           <a routerLink="/treatments/TriBella">TriBella</a>
         </p>
+
       </div>
     </div>
   </div>
-  <h4 class="sub-heading"> As Featured in </h4>
-</div>
-<ngx-slick-carousel
-	#slickModal="slick-carousel"
-  [config]="slideConfig"
-  id="carousel"
->
-  <div *ngFor="let slide of slides" class="slide" ngxSlickItem>
-    <img
-      alt="Cinzia profile picture | Beauti Skin Clinic | Oval, Vauxhall, Kennington, Stockwell, brixton, clapham, sw9"
-      class="js-lazy-image"
-      src="{{ slide.img }}"
-      width="100%"
-    />
+  <div class="container-featured">
+    <h4 class="sub-heading"> As Featured in </h4>
+    <ngx-slick-carousel
+			#slickModal="slick-carousel"
+      [config]="slideConfig"
+      id="carousel"
+    >
+      <div *ngFor="let slide of slides" class="slide" ngxSlickItem>
+        <img
+          alt="Cinzia profile picture | Beauti Skin Clinic | Oval, Vauxhall, Kennington, Stockwell, brixton, clapham, sw9"
+          class="js-lazy-image"
+          src="{{ slide.img }}"
+          width="100%"
+        />
+      </div>
+    </ngx-slick-carousel>
   </div>
-</ngx-slick-carousel>
+
+</div>

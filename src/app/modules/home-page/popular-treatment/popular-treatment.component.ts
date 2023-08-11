@@ -43,9 +43,9 @@ export class PopularTreatmentComponent implements OnInit {
   };
   slides = [
     {img: 'assets/feature-img/Bazaar_Logo.svg.png'},
+    {img: 'assets/feature-img/hello.png'},
     {img: 'assets/feature-img/mailonline-vector-logo.png'},
     {img: 'assets/feature-img/metro-co-uk-logo-vector.png'},
-    {img: 'assets/feature-img/hello.png'},
     {img: 'assets/feature-img/The_Sun.svg.png'},
   ];
 

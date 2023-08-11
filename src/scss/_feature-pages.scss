@@ -71,4 +71,15 @@
     }
   }
 
+  .consultation-page {
+    h3 {
+      display: inline;
+      font-size: 30px;
+      font-weight: 300;
+
+      & ~ p {
+        display: inline;
+      }
+    }
+  }
 }

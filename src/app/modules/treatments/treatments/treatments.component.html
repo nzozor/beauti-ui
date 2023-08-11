@@ -1,6 +1,26 @@
 <div id="treatment-container">
   <h1>Treatments</h1>
   <mat-accordion [multi]="true">
+    <mat-expansion-panel [disabled]="true">
+      <mat-expansion-panel-header>
+        <mat-panel-title><h2>Consultation</h2></mat-panel-title>
+        <mat-panel-description>
+          <a
+            href="/consultation"
+            class="book-now"
+          >
+            <button
+              mat-flat-button
+              color="primary"
+              class="main-button"
+            >
+              Book now
+            </button>
+          </a>
+        </mat-panel-description>
+      </mat-expansion-panel-header>
+
+    </mat-expansion-panel>
     <mat-expansion-panel [expanded]="isActive('Skin-Treatments')">
       <mat-expansion-panel-header>
         <mat-panel-title><h2>Aesthetic Treatments</h2></mat-panel-title>
@@ -22,22 +42,6 @@
         </mat-panel-description>
       </mat-expansion-panel-header>
       <div class="sub">
-        <div class="skin-treatment">
-
-          <div class="title">
-            <div>
-              <span >Consultation</span>
-            </div>
-            <a
-              href="/consultation"
-              class="book-now"
-            >
-              <button mat-stroked-button color="primary" class="main-button">
-                Book now
-              </button>
-            </a>
-          </div>
-        </div>
         <div
           class="skin-treatment"
           *ngFor="let treatment of aestheticTreatments"

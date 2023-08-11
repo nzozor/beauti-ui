@@ -7,6 +7,7 @@ import {MatDialog} from "@angular/material/dialog";
 import {FormModalComponent} from "../form-modal/form-modal.component";
 import {switchMap} from "rxjs/operators";
 
+
 @Component({
   selector: 'app-consultation',
   templateUrl: './consultation.component.html',
@@ -21,6 +22,8 @@ export class ConsultationComponent implements OnInit {
     email: ['', Validators.email],
     message: ['', Validators.required],
     firstTimeCustomer: [true, Validators.required],
+    funnel: ['', Validators.required],
+
   });
 
   consultationContent$: Observable<any> = this.dataService.getConsultationPage();
@@ -50,7 +53,8 @@ export class ConsultationComponent implements OnInit {
             subject: `${this.consultationForm.value.firstName} ${this.consultationForm.value.lastName} booked a consultation`,
             number: this.consultationForm.value.contactNumber,
             text: this.consultationForm.value.message,
-            firstTimeCustomer: this.consultationForm.value.firstTimeCustomer ? 'First time customer' : 'Recurring customer'
+            firstTimeCustomer: this.consultationForm.value.firstTimeCustomer ? 'First time customer' : 'Recurring customer',
+            funnel: this.consultationForm.value.funnel,
           });
         })
       ).subscribe(

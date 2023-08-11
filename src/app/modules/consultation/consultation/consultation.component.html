@@ -5,6 +5,7 @@
     [innerHTML]="consultationContent.cke | bypassHtmlSecurity"
   >
   </div>
+  <p>Consultation costs £50 and it’s redeemable if a treatment is booked on the same day</p>
 
 
   <form (ngSubmit)="onFormSubmit()" [formGroup]="consultationForm" id="consultation-form">
@@ -52,16 +53,29 @@
         </mat-form-field>
       </div>
     </div>
+    <div class="row">
+      <div>
+        <mat-form-field appearance="fill">
+          <mat-label>How did you hear about us?</mat-label>
+          <mat-select formControlName="funnel">
+            <mat-option value="Passing by">Passing by</mat-option>
+            <mat-option value="Search engine">Search engine</mat-option>
+            <mat-option value="Social media">Social media</mat-option>
+            <mat-option value="Treatwell">Treatwell</mat-option>
+            <mat-option value="Word of mouth">Word of mouth</mat-option>
+            <mat-option value="Other">Other</mat-option>
 
+          </mat-select>
+        </mat-form-field>
+      </div>
+    </div>
     <div class="row">
       <div>
         <mat-checkbox class="example-margin" formControlName="firstTimeCustomer">I am a first-time customer
         </mat-checkbox>
       </div>
     </div>
-    <div class="row">
-      <mat-icon aria-hidden="false" aria-label="Example home icon" color="primary" fontIcon="home"></mat-icon>
-    </div>
+
 
     <div class="row submit">
       <div>
@@ -76,4 +90,8 @@
     </div>
 
   </form>
+  <div>
+    <img alt="Interior Beauti Skin Clinic" class="interior-image"
+         src="assets/consultation/interior-beauti-skin-clinic.jpg">
+  </div>
 </div>

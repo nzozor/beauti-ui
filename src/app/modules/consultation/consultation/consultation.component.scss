@@ -22,11 +22,6 @@ h1 {
   font-weight: 100;
 }
 
-h2 {
-  display: inline;
-  font-size: inherit;
-  font-weight: 300;
-}
 
 h4 {
   font-weight: 300;
@@ -35,6 +30,17 @@ h4 {
 h5 {
   font-weight: 100;
 }
+
+p {
+  text-align: center;
+  margin: 30px 0 0 0;
+}
+
+
+::ng-deep .mat-checkbox-checked.mat-accent .mat-checkbox-background {
+  background-color: $beauti-grey;
+}
+
 
 .beauti {
   margin-bottom: 40px;
@@ -115,8 +121,16 @@ form {
       color: red;
     }
   }
-
-
 }
 
+.interior-image {
+  width: 100%;
+  margin: 90px 0;
+  max-width: none;
+}
+
+
+mat-form-field {
+
+}
 
