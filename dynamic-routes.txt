@@ -34,6 +34,7 @@
 /treatments/Hot-Stone-Massage
 /treatments/Foot-Massage
 /treatments/FaceTone-Massage
+/consultation
 /about-us
 /contact
 /treatments
