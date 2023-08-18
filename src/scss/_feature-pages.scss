@@ -71,6 +71,14 @@
     }
   }
 
+  .about-us-page {
+    img {
+      max-width: 500px;
+      display: flex;
+      margin: auto;
+    }
+  }
+
   .consultation-page {
     h3 {
       display: inline;
@@ -81,5 +89,7 @@
         display: inline;
       }
     }
+
+
   }
 }
