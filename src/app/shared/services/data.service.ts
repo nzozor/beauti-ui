@@ -22,7 +22,7 @@ export class DataService {
   }
 
   getTreatmentShowcase(slug: string): Observable<TreatmentShowcase> {
-    return this.http.get<any>(`${this.beautiCmsUrl}/api/treaments?slug=${slug}&populate=*`).pipe(map(treatment => treatment.data[0].attributes));
+    return this.http.get<any>(`${this.beautiCmsUrl}/api/treaments?filters[slug][$eq]=${slug.toLowerCase()}&populate=*`).pipe(map(treatment => treatment.data[0].attributes));
   }
 
 
@@ -96,8 +96,6 @@ export class DataService {
   }
 
   transformSectionWithHierarchy(treatmentSections, treatmentDetails, treatmentPrices) {
-
-
     const hierarchicalData = {};
     treatmentSections.forEach((item) => {
       const sectionId = item.id;

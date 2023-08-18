@@ -1,12 +1,12 @@
-import { ChangeDetectionStrategy, Component } from "@angular/core";
-import { ActivatedRoute, Router } from "@angular/router";
-import { TreatmentShowcase } from "src/app/shared/models/treatmentShowcase";
-import { DataService } from "src/app/shared/services/data.service";
-import { Observable, tap } from "rxjs";
-import { DomSanitizer, SafeUrl } from "@angular/platform-browser";
-import { BookingService } from "src/app/shared/services/booking.service";
-import { BreakpointObserver, Breakpoints } from "@angular/cdk/layout";
-import { SeoService } from "src/app/shared/services/seo.service";
+import {ChangeDetectionStrategy, Component} from "@angular/core";
+import {ActivatedRoute, Router} from "@angular/router";
+import {TreatmentShowcase} from "src/app/shared/models/treatmentShowcase";
+import {DataService} from "src/app/shared/services/data.service";
+import {Observable, tap} from "rxjs";
+import {DomSanitizer, SafeUrl} from "@angular/platform-browser";
+import {BookingService} from "src/app/shared/services/booking.service";
+import {BreakpointObserver, Breakpoints} from "@angular/cdk/layout";
+import {SeoService} from "src/app/shared/services/seo.service";
 
 @Component({
   selector: "app-treatment-showcase",
@@ -15,6 +15,13 @@ import { SeoService } from "src/app/shared/services/seo.service";
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class TreatmentShowcaseComponent {
+  treatment: TreatmentShowcase;
+  treatmentParentName: string;
+  activeTreatmentList: string[];
+  breakpoint: string;
+  treatmentShowcase$: Observable<TreatmentShowcase>;
+  imageUrl: SafeUrl;
+
   constructor(
     private route: ActivatedRoute,
     private dataService: DataService,
@@ -23,13 +30,8 @@ export class TreatmentShowcaseComponent {
     private bookingService: BookingService,
     public breakpointObserver: BreakpointObserver,
     public seo: SeoService
-  ) { }
-  treatment: TreatmentShowcase;
-  treatmentParentName: string;
-  activeTreatmentList: string[];
-  breakpoint: string;
-  treatmentShowcase$: Observable<TreatmentShowcase>;
-  imageUrl: SafeUrl;
+  ) {
+  }
 
   ngOnInit(): void {
     const slug: string = this.route.snapshot.params.slug;
@@ -74,9 +76,9 @@ export class TreatmentShowcaseComponent {
 
   getImageUrl(treatment: TreatmentShowcase): string {
     if (this.breakpoint === "large") {
-      return `${this.dataService.beautiCmsUrl}${treatment.Images?.data.attributes.formats.large.url}`
+      return `${this.dataService.beautiCmsUrl}${treatment.Images?.data?.attributes?.formats?.medium?.url}`
     }
-    return `${this.dataService.beautiCmsUrl}${treatment.Images?.data.attributes.formats.small.url}`
+    return `${this.dataService.beautiCmsUrl}${treatment.Images?.data?.attributes?.formats?.small?.url}`
   }
 
   goToParent(): void {
