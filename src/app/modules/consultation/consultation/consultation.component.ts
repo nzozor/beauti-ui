@@ -21,13 +21,15 @@ export class ConsultationComponent implements OnInit {
     contactNumber: ['', Validators.required],
     email: ['', Validators.email],
     message: ['', Validators.required],
-    firstTimeCustomer: [true, Validators.required],
-    funnel: ['', Validators.required],
+    firstTimeCustomer: [false, Validators.required],
+    funnel: [''],
 
   });
 
   consultationContent$: Observable<any> = this.dataService.getConsultationPage();
-  sendBtnStatus: 'clicked' | 'pristine' = 'pristine';
+  sendBtnStatus: 'clicked' | 'pristine';
+  sendingFormInfo = false;
+  displayFunnelInput = false;
 
   constructor(private dataService: DataService, private seo: SeoService, private fb: FormBuilder, public dialog: MatDialog) {
     this.seo.setDefaultMeta();
@@ -35,8 +37,15 @@ export class ConsultationComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.consultationForm.valueChanges.subscribe(() => {
+    this.consultationForm.valueChanges.subscribe((form) => {
       this.sendBtnStatus = 'pristine'
+      if (form.firstTimeCustomer === true) {
+        this.displayFunnelInput = true;
+        this.consultationForm.get('funnel').setValidators(Validators.required);
+      } else {
+        this.displayFunnelInput = false;
+        this.consultationForm.get('funnel').clearValidators();
+      }
     })
   }
 
@@ -46,6 +55,7 @@ export class ConsultationComponent implements OnInit {
       // this.dialog.open(FormModalComponent, {
       //   data: {success: true},
       // })
+      this.sendingFormInfo = true;
       this.dataService.postConsultation(this.consultationForm.value).pipe(
         switchMap(() => {
           return this.dataService.sendEmail({
@@ -63,12 +73,16 @@ export class ConsultationComponent implements OnInit {
           this.dialog.open(FormModalComponent, {
             data: {success: true},
           });
+
         },
         // Error handling for either postConsultation or sendEmail
         () => {
           this.dialog.open(FormModalComponent, {
             data: {success: false},
           });
+        },
+        () => {
+          this.sendingFormInfo = false;
         }
       );
     }

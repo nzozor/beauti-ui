@@ -190,7 +190,12 @@
               padding: 0;
 
               @media only screen and (max-width: 600px) {
-                display: none;
+                &:not(.consultation) {
+                  display: none;
+                }
+                &.consultation {
+                  margin-right: 30px;
+                }
               }
             }
           }

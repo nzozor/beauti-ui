@@ -62,7 +62,7 @@ p {
 
 p, h3 {
   font-family: "Nunito Sans", sans-serif;
-  font-size: 17px !important;
+  font-size: 17px;
   font-weight: 100;
   line-height: 32px;
   margin-bottom: 40px;
@@ -71,6 +71,7 @@ p, h3 {
     color: inherit;
   }
 }
+
 
 #carousel ::ng-deep .slick-list.draggable {
   padding: 0 !important;
@@ -93,6 +94,10 @@ form {
 
     &.submit {
       text-align: center;
+    }
+
+    &.first-time-consumer {
+      margin-bottom: 15px;
     }
   }
 
