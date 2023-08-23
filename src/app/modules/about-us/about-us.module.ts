@@ -1,9 +1,10 @@
-import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import {NgModule} from '@angular/core';
+import {CommonModule} from '@angular/common';
 
-import { AboutUsRoutingModule } from './about-us-routing.module';
-import { AboutUsComponent } from './about-us/about-us.component';
-import { HomePageModule } from '../home-page/home-page.module';
+import {AboutUsRoutingModule} from './about-us-routing.module';
+import {AboutUsComponent} from './about-us/about-us.component';
+import {HomePageModule} from '../home-page/home-page.module';
+import {SlickCarouselModule} from "ngx-slick-carousel";
 
 @NgModule({
   declarations: [AboutUsComponent],
@@ -11,6 +12,8 @@ import { HomePageModule } from '../home-page/home-page.module';
     CommonModule,
     AboutUsRoutingModule,
     HomePageModule,
+    SlickCarouselModule
   ]
 })
-export class AboutUsModule { }
+export class AboutUsModule {
+}

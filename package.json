@@ -42,7 +42,7 @@
     "mapbox-gl": "^1.11.1",
     "markdown-to-html-pipe": "^1.2.5",
     "ng-mocks": "^14.2.3",
-    "ngx-slick-carousel": "^0.4.7",
+    "ngx-slick-carousel": "^15.0.0",
     "rxjs": "~7.5.0",
     "slick-carousel": "^1.8.1",
     "tslib": "^2.3.0",

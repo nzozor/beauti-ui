@@ -14,6 +14,7 @@ import {LazyImgDirective} from 'src/app/shared/directives/lazy-img.directive';
 import {MainSliderComponent} from './main-slider/main-slider.component';
 import {BoutiqueSummaryComponent} from './boutique-summary/boutique-summary.component';
 import {PopularTreatmentComponent} from './popular-treatment/popular-treatment.component';
+import {SlickCarouselModule} from "ngx-slick-carousel";
 
 @NgModule({
   imports: [
@@ -21,7 +22,7 @@ import {PopularTreatmentComponent} from './popular-treatment/popular-treatment.c
     HomePageRoutingModule,
     MatIconModule,
     MatButtonModule,
-    // SlickCarouselModule,
+    SlickCarouselModule,
   ],
   declarations: [
     HomePageComponent,
@@ -35,6 +36,7 @@ import {PopularTreatmentComponent} from './popular-treatment/popular-treatment.c
     MainSliderComponent,
     BoutiqueSummaryComponent,
     PopularTreatmentComponent,
+
   ],
   exports: [MapComponent]
 })

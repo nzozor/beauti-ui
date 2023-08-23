@@ -44,7 +44,6 @@ import {PageNotFoundComponent} from './components/page-not-found/page-not-found.
     RouterModule,
     MatProgressSpinnerModule,
     HammerModule,
-
   ],
   providers: [],
   bootstrap: [AppComponent],

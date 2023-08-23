@@ -7106,12 +7106,12 @@ ng-mocks@^14.2.3:
   resolved "https://registry.yarnpkg.com/ng-mocks/-/ng-mocks-14.2.3.tgz#9f4c9156a1f79b3c49bb92852607eaa26a79ebe3"
   integrity sha512-WNNOtz8P05KJCvTGYUjqPJ/d1DdkVL1xtQFgUAoVIpa/SXxjCjq3LGGti9ZK4MWGrEZX6e1wUbAV+3mrywd93Q==
 
-ngx-slick-carousel@^0.4.7:
-  version "0.4.7"
-  resolved "https://registry.yarnpkg.com/ngx-slick-carousel/-/ngx-slick-carousel-0.4.7.tgz#757dda495736bf12f54a69db23809a590dbfb9b0"
-  integrity sha512-pEHeqpr6lkIxsMFyurs31xFQvLxRV3lZtzNHmCqiyqi+Em/n70HjmD9NE3pDVepokaxni5Pl1nVALYqHv9Tmmw==
+ngx-slick-carousel@^15.0.0:
+  version "15.0.0"
+  resolved "https://registry.yarnpkg.com/ngx-slick-carousel/-/ngx-slick-carousel-15.0.0.tgz#3c4da1f1a7962ea4394ddb1a143a598fc314abc8"
+  integrity sha512-4di69uKcA+cDsb3w7411rmGH2cTaTCT98SFD1qqxDhIInNpV2qga7dkXLCdgxHMYraPg8JrnGZus7uHL0lj7lw==
   dependencies:
-    tslib "^1.9.0"
+    tslib "^2.3.0"
 
 nice-napi@^1.0.2:
   version "1.0.2"
