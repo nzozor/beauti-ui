@@ -1,11 +1,10 @@
-import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { TreatmentShowcaseComponent } from './treatment-showcase/treatment-showcase.component';
-import { RouterModule, Routes } from '@angular/router';
-import { HttpClientModule } from '@angular/common/http';
-import { MatIconModule } from '@angular/material/icon';
-import { MatButtonModule } from '@angular/material/button';
-import { MarkdownToHtmlModule } from 'markdown-to-html-pipe';
+import {NgModule} from '@angular/core';
+import {CommonModule} from '@angular/common';
+import {TreatmentShowcaseComponent} from './treatment-showcase/treatment-showcase.component';
+import {RouterModule, Routes} from '@angular/router';
+import {HttpClientModule} from '@angular/common/http';
+import {MatIconModule} from '@angular/material/icon';
+import {MatButtonModule} from '@angular/material/button';
 
 const routes: Routes = [
   {
@@ -22,7 +21,7 @@ const routes: Routes = [
     HttpClientModule,
     MatIconModule,
     MatButtonModule,
-    MarkdownToHtmlModule
   ]
 })
-export class TreatmentShowcaseModule { }
+export class TreatmentShowcaseModule {
+}
