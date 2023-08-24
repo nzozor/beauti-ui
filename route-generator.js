@@ -3,12 +3,10 @@ const axios = require("axios");
 
 let routes = [];
 axios
-	.get("https://cms.beautiskinclinic.com/treatments")
+	.get("http://167.99.200.71:1339/api/treaments")
 	.then((res) => {
-		console.log(`statusCode: ${res.status}`);
-		console.log(res);
 		routes = res;
-		routes = routes.data.map((route) => `/treatments/${route.slug}`);
+		routes = routes.data.data.map((route) => `/treatments/${route.attributes.slug}`);
 		routes.push("/about-us");
 		routes.push("/contact");
 		routes.push("/treatments");
@@ -26,6 +24,6 @@ function writeToFile(routes) {
 		if (err) {
 			console.error(err);
 		}
-		console.log(routes);
+		console.log('prerendered routes successfully generated');
 	});
 }

@@ -1,12 +1,13 @@
-import {ChangeDetectionStrategy, Component} from "@angular/core";
+import {ChangeDetectionStrategy, Component, OnDestroy, OnInit} from "@angular/core";
 import {ActivatedRoute, Router} from "@angular/router";
 import {TreatmentShowcase} from "src/app/shared/models/treatmentShowcase";
 import {DataService} from "src/app/shared/services/data.service";
-import {Observable, tap} from "rxjs";
+import {Observable, Subscription, tap} from "rxjs";
 import {DomSanitizer, SafeUrl} from "@angular/platform-browser";
 import {BookingService} from "src/app/shared/services/booking.service";
 import {BreakpointObserver, Breakpoints} from "@angular/cdk/layout";
 import {SeoService} from "src/app/shared/services/seo.service";
+import * as showdown from 'showdown';
 
 @Component({
   selector: "app-treatment-showcase",
@@ -14,13 +15,15 @@ import {SeoService} from "src/app/shared/services/seo.service";
   styleUrls: ["./treatment-showcase.component.scss"],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class TreatmentShowcaseComponent {
+
+export class TreatmentShowcaseComponent implements OnInit, OnDestroy {
   treatment: TreatmentShowcase;
   treatmentParentName: string;
   activeTreatmentList: string[];
   breakpoint: string;
   treatmentShowcase$: Observable<TreatmentShowcase>;
   imageUrl: SafeUrl;
+  breakpointObserver$: Subscription;
 
   constructor(
     private route: ActivatedRoute,
@@ -32,7 +35,7 @@ export class TreatmentShowcaseComponent {
     public seo: SeoService
   ) {
   }
-
+  
   ngOnInit(): void {
     const slug: string = this.route.snapshot.params.slug;
     this.treatmentParentName = this.dataService.currentParentTreatment;
@@ -40,7 +43,7 @@ export class TreatmentShowcaseComponent {
       ? this.dataService.activeTreatmentList
       : ["Back to Treatments"];
     this.treatmentShowcase$ = this.treatmentShowcase(slug);
-    this.breakpointObserver
+    this.breakpointObserver$ = this.breakpointObserver
       .observe([
         Breakpoints.XSmall,
         Breakpoints.Small,
@@ -87,5 +90,15 @@ export class TreatmentShowcaseComponent {
 
   openBooking(): void {
     this.bookingService.sendBooking();
+  }
+
+  concertMarkDownToHtml(markdown: string): string {
+    return new showdown.Converter().makeHtml(markdown);
+  }
+
+  ngOnDestroy(): void {
+    if (this.breakpointObserver$) {
+      this.breakpointObserver$.unsubscribe();
+    }
   }
 }

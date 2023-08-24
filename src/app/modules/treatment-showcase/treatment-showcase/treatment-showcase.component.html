@@ -3,8 +3,8 @@
     <div class="header">
       <button
         (click)="goToParent()"
-        mat-stroked-button
         class="arrow-button main-button"
+        mat-stroked-button
       >
         <i class="arrow left"></i>
         <h4>
@@ -18,28 +18,28 @@
       </h1>
       <button
         (click)="openBooking()"
-        mat-flat-button
-        color="primary"
         class="main-button book-now"
+        color="primary"
+        mat-flat-button
       >
         Book now
       </button>
     </div>
     <img
       [src]="imageUrl"
-      class="js-lazy-image"
       alt="Treatment showcase | Beauti Skin Clinic | Oval, Brixton London"
+      class="js-lazy-image"
     />
     <div class="showcase-content">
-      <div [innerHTML]="treatment.Content | MarkdownToHtml"></div>
+      <div [innerHTML]="concertMarkDownToHtml(treatment.Content)"></div>
     </div>
   </div>
   <div class="book-treatment-fixed">
     <button
       (click)="openBooking()"
-      mat-flat-button
-      color="primary"
       class="main-button mobile"
+      color="primary"
+      mat-flat-button
     >
       Book now
     </button>

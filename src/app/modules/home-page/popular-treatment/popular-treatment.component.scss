@@ -2,7 +2,6 @@
 
 :host {
   padding-top: 90px;
-
 }
 
 h3 {
@@ -15,7 +14,6 @@ h4.sub-heading {
   @media screen and (min-width: 768px) {
     width: 450px;
     margin: 20px auto;
-    //border-top: 1px solid $beauti-grey;
     padding-top: 30px;
   }
 }
@@ -93,10 +91,10 @@ a {
   width: 100%;
 
   margin: 0 auto;
-  background-image: linear-gradient(left, white 2%, $beauti-grey 50%, white 98%);
-  background-image: -o-linear-gradient(left, white 2%, $beauti-grey 50%, white 98%);
-  background-image: -moz-linear-gradient(left, white 2%, $beauti-grey 50%, white 98%);
-  background-image: -webkit-linear-gradient(left, white 2%, $beauti-grey 50%, white 98%);
-  background-image: -ms-linear-gradient(left, white 2%, $beauti-grey 50%, white 98%);
-  background-image: -webkit-gradient(linear, left bottom, right bottom, color-stop(0.02, white), color-stop(0.5, gray), color-stop(0.98, white));
+  //background-image: linear-gradient(right, white 2%, $beauti-grey 50%, white 98%);
+  //background-image: -o-linear-gradient(right, white 2%, $beauti-grey 50%, white 98%);
+  //background-image: -moz-linear-gradient(right, white 2%, $beauti-grey 50%, white 98%);
+  //background-image: -webkit-linear-gradient(right, white 2%, $beauti-grey 50%, white 98%);
+  //background-image: -ms-linear-gradient(right, white 2%, $beauti-grey 50%, white 98%);
+  //background-image: -webkit-gradient(linear, left bottom, right bottom, color-stop(0.02, white), color-stop(0.5, gray), color-stop(0.98, white));
 }
