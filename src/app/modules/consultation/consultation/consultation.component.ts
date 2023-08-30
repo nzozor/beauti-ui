@@ -73,6 +73,7 @@ export class ConsultationComponent implements OnInit {
           this.dialog.open(FormModalComponent, {
             data: {success: true},
           });
+          this.resetForm();
 
         },
         // Error handling for either postConsultation or sendEmail
@@ -88,6 +89,12 @@ export class ConsultationComponent implements OnInit {
     }
   }
 
+  private resetForm() {
+    this.consultationForm.reset();
+    Object.keys(this.consultationForm.controls).forEach(key => {
+      this.consultationForm.get(key).setErrors(null);
+    });
+  }
 
   private setSeo(): void {
     const pageTitle = 'Consultation | Aesthetic and Skin Consultation in South London';

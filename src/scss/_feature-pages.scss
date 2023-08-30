@@ -85,7 +85,10 @@
       font-weight: 300;
 
       &.booking {
+        font-size: 18px;
+
         text-align: center;
+        font-style: italic;
       }
 
       & ~ p {

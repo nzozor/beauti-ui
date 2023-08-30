@@ -1,5 +1,5 @@
 import {NgModule} from '@angular/core';
-import {CommonModule} from '@angular/common';
+import {CommonModule, NgOptimizedImage} from '@angular/common';
 
 import {ContactRoutingModule} from './contact-routing.module';
 import {ContactComponent} from './contact/contact.component';
@@ -12,7 +12,8 @@ import {SlickCarouselModule} from "ngx-slick-carousel";
     CommonModule,
     ContactRoutingModule,
     HomePageModule,
-    SlickCarouselModule
+    SlickCarouselModule,
+    NgOptimizedImage
   ]
 })
 export class ContactModule {

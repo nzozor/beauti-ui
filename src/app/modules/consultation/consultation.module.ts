@@ -1,5 +1,5 @@
 import {NgModule} from '@angular/core';
-import {CommonModule} from '@angular/common';
+import {CommonModule, NgOptimizedImage} from '@angular/common';
 
 import {ConsultationRoutingModule} from './consultation-routing.module';
 import {ConsultationComponent} from './consultation/consultation.component';
@@ -31,7 +31,8 @@ import {MatSelectModule} from "@angular/material/select";
     MatButtonModule,
     MatDialogModule,
     MatIconModule,
-    MatSelectModule
+    MatSelectModule,
+    NgOptimizedImage
   ]
 })
 export class ConsultationModule {
