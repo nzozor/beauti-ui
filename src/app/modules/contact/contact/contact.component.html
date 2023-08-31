@@ -3,13 +3,13 @@
   <div>
     <h2>Address</h2>
     <div class="address-section">
-      66A Brixton Road <br />
-      Brixton Road, Kennington <br />
+      66A Brixton Road <br/>
+      Brixton Road, Kennington <br/>
       London, &nbsp;
       <a
+        class="address-google-map"
         href="https://g.page/beautiskinclinic?share"
         target="_blank"
-        class="address-google-map"
       >
         SW9 6BP
       </a>
@@ -18,28 +18,28 @@
   <div>
     <h1>Contact Details</h1>
     <div>
-      020 7820 1177 <br />
+      <a href="tel:02032420090">020 3242 0090</a> <br/>
       info@beautiskinclinic.com
     </div>
   </div>
   <div>
     <h2>Hours</h2>
-    <div>Mon-Fri | 10am-8pm <br /></div>
-    <div>Sat | 9am-5pm <br /></div>
+    <div>Mon-Fri | 10am-8pm <br/></div>
+    <div>Sat | 9am-5pm <br/></div>
   </div>
 </div>
 
 <ngx-slick-carousel
-  id="carousel"
   #slickModal="slick-carousel"
-  [config]="slideConfig"
+	[config]="slideConfig"
+  id="carousel"
 >
-  <div ngxSlickItem *ngFor="let slide of slides" class="slide">
+  <div *ngFor="let slide of slides" class="slide" ngxSlickItem>
     <img
-      src="{{ slide.img }}"
       alt="Beauti Salon interior picture | Beauti Skin Clinic | Oval, Vauxhall, Kennington, Stockwell, brixton, clapham, sw9"
-      width="100%"
       class="js-lazy-image"
+      src="{{ slide.img }}"
+      width="100%"
     />
   </div>
 </ngx-slick-carousel>
