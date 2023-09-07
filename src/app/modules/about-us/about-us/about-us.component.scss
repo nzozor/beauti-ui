@@ -81,7 +81,11 @@ p, h3 {
       .slide:not(:last-child):not(:first-child) {
         padding: 0 10px;
       }
-
+      img {
+        max-height: 400px;
+        object-fit: cover;
+        object-position: 0 20%;
+      }
     }
   }
 }
