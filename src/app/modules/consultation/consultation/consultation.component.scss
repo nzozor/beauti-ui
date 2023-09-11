@@ -91,6 +91,9 @@ form {
     > div {
       width: 100%;
       margin: 5px 10px;
+      @media (max-width: 600px) {
+        margin: 0;
+      }
     }
 
     &.submit {

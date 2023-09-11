@@ -1,11 +1,11 @@
 <ngx-slick-carousel
-  class="carousel hp-slider"
   #slickModal="slick-carousel"
-  [config]="slideConfig"
-  *ngIf="homageBanners$ | async as banners"
+	*ngIf="homageBanners$ | async as banners"
   [class.single-banner]="banners.length === 1"
+  [config]="slideConfig"
+  class="carousel hp-slider"
 >
-  <div ngxSlickItem *ngFor="let slide of banners" class="slide" >
+  <div *ngFor="let slide of banners" class="slide" ngxSlickItem>
     <div
       [style.background-image]="
         getBackGroudImg(slide.image.data.attributes.url, slide.imgSmall.data.attributes.url)
@@ -16,23 +16,23 @@
         <h1 class="semi-bold">{{ slide.title2 }}</h1>
 
         <h2 class="light">{{ slide.title3 }}</h2>
-        <h5 class="light">{{ slide.title4 }}</h5>
+        <h5 *ngIf="slide?.title4" class="light">{{ slide.title4 }}</h5>
       </div>
       <button
         *ngIf="slide.findOutMoreUrl"
-        mat-flat-button
-        color="primary"
-        class="main-button treatments"
         [routerLink]="'/treatments/' + slide.findOutMoreUrl"
+        class="main-button treatments"
+        color="primary"
+        mat-flat-button
       >
         FIND OUT MORE
       </button>
       <button
-        *ngIf="!slide.findOutMoreUrl"
-        mat-flat-button
-        color="primary"
-        class="main-button treatments"
         (click)="openBooking()"
+        *ngIf="!slide.findOutMoreUrl"
+        class="main-button treatments"
+        color="primary"
+        mat-flat-button
       >
         BOOK NOW
       </button>
