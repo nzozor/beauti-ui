@@ -10,23 +10,23 @@ export const AESTHETIC_TREATMENTS: any = [
       {
         treatment: `One Area`,
         options: [
-          { key: 'Duration', value: '60 mins' },
-          { key: 'Single', value: '£200' },
+          {key: 'Duration', value: '60 mins'},
+          {key: 'Single', value: '£200'},
         ]
       },
       {
         treatment: `Two Areas`,
         options: [
-          { key: 'Duration', value: '60 mins' },
-          { key: 'Single', value: '£280' },
+          {key: 'Duration', value: '60 mins'},
+          {key: 'Single', value: '£280'},
         ]
       },
       {
         treatment: `Three Areas`,
         description: ``,
         options: [
-          { key: 'Duration', value: '60 mins' },
-          { key: 'Single', value: '£320' },
+          {key: 'Duration', value: '60 mins'},
+          {key: 'Single', value: '£320'},
         ]
       },
     ]
@@ -42,23 +42,23 @@ export const AESTHETIC_TREATMENTS: any = [
       {
         treatment: `0.5ml`,
         options: [
-          { key: 'Duration', value: '60 mins' },
-          { key: 'Single', value: '£190' },
+          {key: 'Duration', value: '60 mins'},
+          {key: 'Single', value: '£190'},
         ]
       },
       {
         treatment: `1ml`,
         options: [
-          { key: 'Duration', value: '60 mins' },
-          { key: 'Single', value: '£250' },
+          {key: 'Duration', value: '60 mins'},
+          {key: 'Single', value: '£250'},
         ]
       },
       {
         treatment: `2ml`,
         description: ``,
         options: [
-          { key: 'Duration', value: '60 mins' },
-          { key: 'Single', value: '£350' },
+          {key: 'Duration', value: '60 mins'},
+          {key: 'Single', value: '£350'},
         ]
       },
     ]
@@ -75,25 +75,25 @@ export const AESTHETIC_TREATMENTS: any = [
       {
         treatment: 'Skin Booster, known as "Injectable Moisturiser"',
         options: [
-          { key: '   Duration', value: '' },
-          { key: '   Single', value: '' },
-          { key: '   2 Courses', value: '' },
+          {key: '   Duration', value: ''},
+          {key: '   Single', value: ''},
+          {key: '   2 Courses', value: ''},
         ]
       },
       {
         treatment: `    Face or Neck`,
         options: [
-          { key: '', value: '    60 mins' },
-          { key: '', value: '    £340' },
-          { key: '', value: '    £612' },
+          {key: '', value: '    60 mins'},
+          {key: '', value: '    £340'},
+          {key: '', value: '    £612'},
         ]
       },
       {
         treatment: `Face and Neck`,
         options: [
-          { key: '', value: '60 mins' },
-          { key: '', value: '£646' },
-          { key: '', value: '£1163' },
+          {key: '', value: '60 mins'},
+          {key: '', value: '£646'},
+          {key: '', value: '£1163'},
         ]
       },
     ]
@@ -110,19 +110,19 @@ export const AESTHETIC_TREATMENTS: any = [
       {
         treatment: '',
         options: [
-          { key: '   Duration', value: '' },
-          { key: '   Single', value: '' },
-          { key: '   2 Courses', value: '' },
-          { key: '   3 Courses', value: '' },
+          {key: '   Duration', value: ''},
+          {key: '   Single', value: ''},
+          {key: '   2 Courses', value: ''},
+          {key: '   3 Courses', value: ''},
         ]
       },
       {
         treatment: ``,
         options: [
-          { key: '', value: '60 mins' },
-          { key: '', value: '£200' },
-          { key: '', value: '£360' },
-          { key: '', value: '£540' },
+          {key: '', value: '60 mins'},
+          {key: '', value: '£200'},
+          {key: '', value: '£360'},
+          {key: '', value: '£540'},
         ]
       },
     ]
@@ -140,25 +140,25 @@ export const AESTHETIC_TREATMENTS: any = [
       {
         treatment: '                            ',
         options: [
-          { key: '   Duration', value: '' },
-          { key: '   Single', value: '' },
-          { key: '   4 courses', value: '' },
+          {key: '   Duration', value: ''},
+          {key: '   Single', value: ''},
+          {key: '   4 courses', value: ''},
         ]
       },
       {
         treatment: `    Face Meso`,
         options: [
-          { key: '', value: '    60 mins' },
-          { key: '', value: '    £350' },
-          { key: '', value: '    £1260' },
+          {key: '', value: '    60 mins'},
+          {key: '', value: '    £350'},
+          {key: '', value: '    £1260'},
         ]
       },
       {
         treatment: `Neck & Decolletage`,
         options: [
-          { key: '', value: '60 mins' },
-          { key: '', value: '£400' },
-          { key: '', value: '£1440' },
+          {key: '', value: '60 mins'},
+          {key: '', value: '£400'},
+          {key: '', value: '£1440'},
         ]
       },
     ]
@@ -175,25 +175,25 @@ export const AESTHETIC_TREATMENTS: any = [
       {
         treatment: 'One Area',
         options: [
-          { key: '   Duration', value: '' },
-          { key: '   Single', value: '' },
-          { key: '   Courses', value: '' },
+          {key: '   Duration', value: ''},
+          {key: '   Single', value: ''},
+          {key: '   Courses', value: ''},
         ]
       },
       {
         treatment: `Head and Neck`,
         options: [
-          { key: '', value: '45 mins' },
-          { key: '', value: '£450' },
-          { key: '   2 Courses', value: '£810' },
+          {key: '', value: '45 mins'},
+          {key: '', value: '£450'},
+          {key: '   2 Courses', value: '£810'},
         ]
       },
       {
         treatment: `Body`,
         options: [
-          { key: '', value: '45 mins' },
-          { key: '', value: '£500' },
-          { key: '   3 Courses', value: '£1350' },
+          {key: '', value: '45 mins'},
+          {key: '', value: '£500'},
+          {key: '   3 Courses', value: '£1350'},
         ]
       },
     ]
@@ -210,17 +210,17 @@ export const AESTHETIC_TREATMENTS: any = [
       {
         treatment: '',
         options: [
-          { key: '   Duration', value: '' },
-          { key: '   Single', value: '' },
-          { key: '   3 Courses', value: '' },
+          {key: '   Duration', value: ''},
+          {key: '   Single', value: ''},
+          {key: '   3 Courses', value: ''},
         ]
       },
       {
         treatment: ``,
         options: [
-          { key: '', value: '75 mins' },
-          { key: '', value: '£475' },
-          { key: '', value: '£1283' },
+          {key: '', value: '75 mins'},
+          {key: '', value: '£475'},
+          {key: '', value: '£1283'},
         ]
       },
     ]
@@ -237,115 +237,19 @@ export const AESTHETIC_TREATMENTS: any = [
       {
         treatment: '',
         options: [
-          { key: '   Duration', value: '' },
-          { key: '   Single', value: '' },
-          { key: '   3 Courses', value: '' },
+          {key: '   Duration', value: ''},
+          {key: '   Single', value: ''},
+          {key: '   3 Courses', value: ''},
         ]
       },
       {
         treatment: '',
         options: [
-          { key: '', value: '75 mins' },
-          { key: '', value: '£475' },
-          { key: '', value: '£1283' },
+          {key: '', value: '75 mins'},
+          {key: '', value: '£475'},
+          {key: '', value: '£1283'},
         ]
       },
-    ]
-  },
-  {
-    title: 'Plasma Face Lift',
-    url: 'Plasma-Face-Lift',
-    hasShowcase: true,
-    treatment: `Prices below include one free top up session`,
-    description: ``,
-    orientation: 'row',
-    options: [
-      {
-        treatment: `Upper Eye`,
-        options: [
-          { key: 'Duration', value: '60 mins' },
-          { key: 'Single', value: '£450' },
-        ]
-      },
-      {
-        treatment: `Lower Eye`,
-        options: [
-          { key: 'Duration', value: '60 mins' },
-          { key: 'Single', value: '£350' },
-        ]
-      },
-      {
-        treatment: `Upper and Lower Eye`,
-        description: ``,
-        options: [
-          { key: 'Duration', value: '60 mins' },
-          { key: 'Single', value: '£600' },
-        ]
-      },
-      {
-        treatment: `Upper Lip`,
-        description: ``,
-        options: [
-          { key: 'Duration', value: '60 mins' },
-          { key: 'Single', value: '£450' }
-        ]
-      },
-      {
-        treatment: `Lower Lip`,
-        description: ``,
-        options: [
-          { key: 'Duration', value: '60 mins' },
-          { key: 'Single', value: '£350' },
-        ]
-      },
-      {
-        treatment: `Brow Lift`,
-        description: ``,
-        options: [
-          { key: 'Duration', value: '60 mins' },
-          { key: 'Single', value: '£450' },
-        ]
-      },
-      {
-        treatment: `Nasal Labia`,
-        description: ``,
-        options: [
-          { key: 'Duration', value: '60 mins' },
-          { key: 'Single', value: '£500' }
-        ]
-      },
-      {
-        treatment: `Crow Feet`,
-        description: ``,
-        options: [
-          { key: 'Duration', value: '60 mins' },
-          { key: 'Single', value: '£550' },
-        ]
-      },
-      {
-        treatment: `Neck`,
-        description: ``,
-        options: [
-          { key: 'Duration', value: '60 mins' },
-          { key: 'Single', value: '£900' }
-        ]
-      },
-      {
-        treatment: `Jawline`,
-        description: ``,
-        options: [
-          { key: 'Duration', value: '60 mins' },
-          { key: 'Single', value: '£100' },
-        ]
-      },
-      {
-        treatment: `Full Face`,
-        description: ``,
-        options: [
-          { key: 'Duration', value: '60 mins' },
-          { key: 'Single', value: '£2000' },
-        ]
-      }
     ]
   },
 ];
