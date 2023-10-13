@@ -68,6 +68,18 @@ export const SKIN_TREATMENTS: any = [
     ]
   },
   {
+    title: `Cosmelan Depigmentation Programm`,
+    url: `cosmelan-depigmentation-programme`,
+    hasShowcase: true,
+    treatment: ``,
+    description: ``,
+    options: [
+      {key: 'Duration', value: '6-12 months'},
+      {key: '6-12 months', value: '£1200'},
+      {key: 'Single', value: '£1000'},
+    ]
+  },
+  {
     title: `Radio Frequency Skin Tightening`,
     url: `Radio-Frequency-Skin-Tightening`,
     treatment: `Add LED Light Therapy for £20, (extra 15 mins)<br /> Add Dermaplaning for £30, (extra 15 mins)	`,
