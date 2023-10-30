@@ -73,7 +73,7 @@ export const AESTHETIC_TREATMENTS: any = [
     fullOptions: 'true',
     options: [
       {
-        treatment: 'Skin Booster, known as "Injectable Moisturiser"',
+        treatment: '',
         options: [
           {key: '   Duration', value: ''},
           {key: '   Single', value: ''},
