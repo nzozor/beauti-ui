@@ -75,7 +75,6 @@ export const SKIN_TREATMENTS: any = [
     description: ``,
     options: [
       {key: 'Duration', value: '6-12 months'},
-      {key: '6-12 months', value: '£1200'},
       {key: 'Single', value: '£1000'},
     ]
   },
