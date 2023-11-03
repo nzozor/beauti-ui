@@ -35,7 +35,7 @@ export class TreatmentShowcaseComponent implements OnInit, OnDestroy {
     public seo: SeoService
   ) {
   }
-  
+
   ngOnInit(): void {
     const slug: string = this.route.snapshot.params.slug;
     this.treatmentParentName = this.dataService.currentParentTreatment;

@@ -31,7 +31,7 @@
       class="js-lazy-image"
     />
     <div class="showcase-content">
-      <div [innerHTML]="treatment.Content"></div>
+      <div [innerHTML]="treatment.Content | markdownToHtml"></div>
     </div>
   </div>
   <div class="book-treatment-fixed">

@@ -5,6 +5,7 @@ import {RouterModule, Routes} from '@angular/router';
 import {HttpClientModule} from '@angular/common/http';
 import {MatIconModule} from '@angular/material/icon';
 import {MatButtonModule} from '@angular/material/button';
+import {MarkdownToHtmlPipe} from '@pipes/markdown-to-html/markdown-to-html.pipe';
 
 const routes: Routes = [
   {
@@ -14,7 +15,8 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  declarations: [TreatmentShowcaseComponent],
+  declarations: [TreatmentShowcaseComponent,
+    MarkdownToHtmlPipe],
   imports: [
     CommonModule,
     RouterModule.forChild(routes),

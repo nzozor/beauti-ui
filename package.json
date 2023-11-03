@@ -41,6 +41,7 @@
     "jquery": "^3.5.1",
     "mapbox-gl": "^1.11.1",
     "markdown-to-html-pipe": "^1.2.5",
+    "marked": "^9.1.5",
     "ng-mocks": "^14.2.3",
     "ngx-slick-carousel": "^15.0.0",
     "rxjs": "~7.5.0",

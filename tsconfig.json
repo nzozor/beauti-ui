@@ -18,6 +18,11 @@
       "es2018",
       "dom"
     ],
+    "paths": {
+      "@pipes/*": [
+        "src/app/shared/pipe/*"
+      ]
+    },
     "useDefineForClassFields": false
   }
 }
