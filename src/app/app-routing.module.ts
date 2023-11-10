@@ -1,11 +1,12 @@
-import { NgModule } from '@angular/core';
-import { Routes, RouterModule } from '@angular/router';
+import {NgModule} from '@angular/core';
+import {RouterModule, Routes} from '@angular/router';
 import {PageNotFoundComponent} from "./components/page-not-found/page-not-found.component";
+import {HomePageComponent} from "./modules/home-page/home-page.component";
 
 const routes: Routes = [
   {
     path: '',
-    loadChildren: () => import('./modules/home-page/home-page.module').then(m => m.HomePageModule)
+    component: HomePageComponent
   },
   {
     path: 'treatments',
@@ -27,7 +28,8 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes, { anchorScrolling: 'enabled' })],
+  imports: [RouterModule.forRoot(routes, {anchorScrolling: 'enabled'})],
   exports: [RouterModule]
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {
+}
