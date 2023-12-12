@@ -3,7 +3,7 @@
 /treatments/aqua-3-hydrotherapy-facial
 /treatments/aqualyx-fat-dissolving-injections
 /treatments/beauti-signature-relaxing-facial-1
-/treatments/cosmelan-depigmentation-peel
+/treatments/cosmelan-depigmentation-programme
 /treatments/dermal-fillers
 /treatments/dermaplaning
 /treatments/electrolysis
@@ -21,7 +21,7 @@
 /treatments/skin-imperfection-removal
 /treatments/skin-peel
 /treatments/skin-resurfacing
-/treatments/tri-bella
+/treatments/tribella
 /treatments/skin-consultation
 /about-us
 /contact

@@ -84,16 +84,16 @@ export const AESTHETIC_TREATMENTS: any = [
         treatment: `    Face or Neck`,
         options: [
           {key: '', value: '    60 mins'},
-          {key: '', value: '    £340'},
-          {key: '', value: '    £612'},
+          {key: '', value: '    £300'},
+          {key: '', value: '    £540'},
         ]
       },
       {
         treatment: `Face and Neck`,
         options: [
           {key: '', value: '60 mins'},
-          {key: '', value: '£646'},
-          {key: '', value: '£1163'},
+          {key: '', value: '£500'},
+          {key: '', value: '£900'},
         ]
       },
     ]
@@ -149,16 +149,16 @@ export const AESTHETIC_TREATMENTS: any = [
         treatment: `    Face Meso`,
         options: [
           {key: '', value: '    60 mins'},
-          {key: '', value: '    £350'},
-          {key: '', value: '    £1260'},
+          {key: '', value: '    £190'},
+          {key: '', value: '    £684'},
         ]
       },
       {
         treatment: `Neck & Decolletage`,
         options: [
           {key: '', value: '60 mins'},
-          {key: '', value: '£400'},
-          {key: '', value: '£1440'},
+          {key: '', value: '£240'},
+          {key: '', value: '£864'},
         ]
       },
     ]
