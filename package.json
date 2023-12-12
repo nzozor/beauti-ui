@@ -30,7 +30,7 @@
     "@angular/router": "^16.2.1",
     "@angular/ssr": "17.0.0",
     "@cypress/schematic": "^2.2.0",
-    "@ngtools/webpack": "^14.0.1",
+    "@ngtools/webpack": "^17.0.6",
     "@nguniversal/express-engine": "^16.2.0",
     "@types/hammerjs": "^2.0.41",
     "browserslist": "^4.13.0",
@@ -49,7 +49,7 @@
     "slick-carousel": "^1.8.1",
     "tslib": "^2.3.0",
     "yarn": "^1.22.10",
-    "zone.js": "~0.13.1"
+    "zone.js": "~0.14.1"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "^16.2.0",
@@ -76,7 +76,7 @@
     "ts-loader": "^5.2.0",
     "ts-node": "~7.0.0",
     "tslint": "~6.1.0",
-    "typescript": "~4.9.5",
+    "typescript": "~5.3.3",
     "webpack-cli": "^3.3.12",
     "xml-js": "^1.6.11"
   }
