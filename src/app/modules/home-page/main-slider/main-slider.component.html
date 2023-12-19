@@ -1,17 +1,19 @@
 <ngx-slick-carousel
-  #slickModal="slick-carousel"
-	*ngIf="homageBanners$ | async as banners"
+	#slickModal="slick-carousel"
+  *ngIf="homageBanners$ | async as banners"
   [class.single-banner]="banners.length === 1"
   [config]="slideConfig"
   class="carousel hp-slider"
 >
   <div *ngFor="let slide of banners" class="slide" ngxSlickItem>
-    <div
-      [style.background-image]="
-        getBackGroudImg(slide.image.data.attributes.url, slide.imgSmall.data.attributes.url)
-      "
-    >
+    <div>
+      <img [ngSrc]="getBackGroudImgRaw(slide.image.data.attributes.url, slide.imgSmall.data.attributes.url)"
+           alt="Beauti Promo"
+           fill="true"
+           priority="true"
+      />
       <div class="slider-title">
+
         <h3>{{ slide.title1 }}</h3>
         <h1 class="semi-bold">{{ slide.title2 }}</h1>
 
@@ -20,7 +22,7 @@
       </div>
       <button
         *ngIf="slide.findOutMoreUrl"
-        [routerLink]="'/treatments/' + slide.findOutMoreUrl"
+        [routerLink]="slide.findOutMoreUrl"
         class="main-button treatments"
         color="primary"
         mat-flat-button

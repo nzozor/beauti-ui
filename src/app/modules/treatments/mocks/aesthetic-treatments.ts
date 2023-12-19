@@ -128,6 +128,64 @@ export const AESTHETIC_TREATMENTS: any = [
     ]
   },
   {
+    title: `Jalupro HMV - Skin Booster`,
+    url: 'Jalupro',
+    hasShowcase: true,
+    treatment: ``,
+    description: ``,
+    orientation: 'row',
+    fullOptions: 'true',
+    options: [
+      {
+        treatment: '',
+        options: [
+          {key: '   Duration', value: ''},
+          {key: '   Single', value: ''},
+          {key: '   2 Courses', value: ''},
+          {key: '   3 Courses', value: ''},
+        ]
+      },
+      {
+        treatment: ``,
+        options: [
+          {key: '', value: '60 mins'},
+          {key: '', value: '£235'},
+          {key: '', value: '£635'},
+          {key: '', value: '£540'},
+        ]
+      },
+    ]
+  },
+  {
+    title: `Jalupro Super Hydro - Skin Booster`,
+    url: 'Jalupro',
+    hasShowcase: true,
+    treatment: ``,
+    description: ``,
+    orientation: 'row',
+    fullOptions: 'true',
+    options: [
+      {
+        treatment: '',
+        options: [
+          {key: '   Duration', value: ''},
+          {key: '   Single', value: ''},
+          {key: '   2 Courses', value: ''},
+          {key: '   3 Courses', value: ''},
+        ]
+      },
+      {
+        treatment: ``,
+        options: [
+          {key: '', value: '60 mins'},
+          {key: '', value: '£280'},
+          {key: '', value: '£504'},
+          {key: '', value: '£756'},
+        ]
+      },
+    ]
+  },
+  {
     title: `Mesotherapy - Skin Booster`,
     url: 'Mesotherapy',
     treatment: `Add Dermaplaning for £30, (extra 15 mins)<br />

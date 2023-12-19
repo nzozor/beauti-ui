@@ -46,7 +46,7 @@ div {
   position: relative;
 }
 
-.main-button.mat-flat-button.mat-primary {
+.main-button.mat-primary {
   &.treatments {
     margin: 50px 0 75px;
     padding: 5px 27px;
@@ -65,13 +65,14 @@ div {
     }
   }
 }
-  app-quote {
-    position: absolute;
-    top: -27px;
-    left: -44px;
 
-    ::ng-deep svg {
-      height: 100px;
-      width: 70px;
-    }
+app-quote {
+  position: absolute;
+  top: -27px;
+  left: -44px;
+
+  ::ng-deep svg {
+    height: 100px;
+    width: 70px;
   }
+}

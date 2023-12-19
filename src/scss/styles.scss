@@ -111,7 +111,7 @@ body {
 }
 
 .slick-slide {
-  height: inherit !important;
+  height: inherit;
 }
 
 .container {
@@ -210,7 +210,7 @@ ul {
   align-items: center;
   justify-content: center;
 
-  .main-button.mat-flat-button.mat-primary.mobile {
+  .main-button.mat-primary.mobile {
     border: none;
     width: 146px;
     height: 41px;

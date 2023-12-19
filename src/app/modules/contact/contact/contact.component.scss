@@ -93,18 +93,28 @@ img {
   overflow: hidden;
   max-height: 400px;
 
+
   ::ng-deep .slick-list {
     padding: 0 !important;
+
+    .slide {
+      height: 400px;
+      position: relative;
+    }
+
+    img {
+      max-height: 400px;
+      object-fit: cover;
+      object-position: 0 20%;
+    }
+
     @media (min-width: 768px) {
       margin-bottom: 70px;
 
       .slide:not(:last-child):not(:first-child) {
-        padding: 0 10px;
+        margin: 0 10px;
       }
-      img {
-        max-height: 400px;
-        object-fit: cover;
-      }
+
     }
   }
 }

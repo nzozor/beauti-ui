@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, ChangeDetectionStrategy } from '@angular/core';
+import {ChangeDetectionStrategy, Component, Input} from '@angular/core';
 
 @Component({
   selector: 'app-beauti-logo',
@@ -6,12 +6,9 @@ import { Component, OnInit, Input, ChangeDetectionStrategy } from '@angular/core
   styleUrls: ['./beauti-logo.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class BeautiLogoComponent implements OnInit {
-  public fill =  '#000';
+export class BeautiLogoComponent {
+  public fill = '#000';
   @Input() sticky = false;
-  constructor() { }
 
-  ngOnInit() {
-  }
 
 }

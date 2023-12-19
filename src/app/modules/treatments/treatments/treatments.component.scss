@@ -183,7 +183,7 @@
             top: 50%;
             transform: translate(0, -50%);
 
-            ::ng-deep .main-button.mat-flat-button.mat-primary {
+            ::ng-deep .main-button.mat-primary {
               border: none;
               width: 146px;
               height: 41px;
@@ -392,6 +392,17 @@ h2 {
   }
 }
 
+
+.main-button.mat-primary.main-button-read-more {
+
+  color: $grey-black;
+  background-color: transparent !important;
+  border-color: black;
+  padding: 8px 25px;
+  height: 38px;
+}
+
+
 @media (max-width: 600px) {
   .title {
     display: block !important;
@@ -403,8 +414,9 @@ h2 {
     padding: 0;
     display: block !important;
     font-style: italic;
-    color: initial !important;
+    color: $grey-black !important;
     font-size: 14px;
+
   }
 }
 

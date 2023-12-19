@@ -1,5 +1,5 @@
 import {NgModule} from '@angular/core';
-import {CommonModule} from '@angular/common';
+import {CommonModule, NgOptimizedImage} from '@angular/common';
 import {MatButtonModule} from '@angular/material/button';
 import {HomePageComponent} from './home-page.component';
 import {HomePageRoutingModule} from './home-page.routing.module';
@@ -23,6 +23,7 @@ import {SlickCarouselModule} from "ngx-slick-carousel";
     MatIconModule,
     MatButtonModule,
     SlickCarouselModule,
+    NgOptimizedImage
   ],
   declarations: [
     HomePageComponent,

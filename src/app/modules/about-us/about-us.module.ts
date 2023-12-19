@@ -1,5 +1,5 @@
 import {NgModule} from '@angular/core';
-import {CommonModule} from '@angular/common';
+import {CommonModule, NgOptimizedImage} from '@angular/common';
 
 import {AboutUsRoutingModule} from './about-us-routing.module';
 import {AboutUsComponent} from './about-us/about-us.component';
@@ -12,7 +12,8 @@ import {SlickCarouselModule} from "ngx-slick-carousel";
     CommonModule,
     AboutUsRoutingModule,
     HomePageModule,
-    SlickCarouselModule
+    SlickCarouselModule,
+    NgOptimizedImage
   ]
 })
 export class AboutUsModule {

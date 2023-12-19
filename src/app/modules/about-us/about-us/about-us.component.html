@@ -6,9 +6,10 @@
   <div *ngFor="let slide of slides" class="slide" ngxSlickItem>
     <img
       [alt]="slide.alt"
-      [src]="slide.img"
+      [ngSrc]="slide.img"
       class="js-lazy-image"
-      width="100%"
+      fill="true"
+      priority="true"
     />
   </div>
 </ngx-slick-carousel>
@@ -19,6 +20,6 @@
     class="container about-us-page"
   ></div>
   <div class="beauti-room">
-    <img src="assets/beauti-room.jpg"/>
+    <img height="667" ngSrc="assets/beauti-room-medium.jpg" width="1000"/>
   </div>
 </div>
