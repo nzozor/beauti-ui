@@ -6,9 +6,9 @@
   <div *ngFor="let slide of slides" class="slide" ngxSlickItem>
     <img
       [alt]="slide.alt"
-      [src]="slide.img"
+      [ngSrc]="slide.img"
       class="js-lazy-image"
-      width="100%"
+      fill="true"
     />
   </div>
 </ngx-slick-carousel>

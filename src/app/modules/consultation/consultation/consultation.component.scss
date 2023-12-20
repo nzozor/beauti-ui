@@ -105,7 +105,18 @@ form {
     }
   }
 
-  mat-form-field, mat-checkbox {
+  .mat-mdc-checkbox {
+
+
+    ::ng-deep .mdc-checkbox .mdc-checkbox__native-control:enabled:checked ~ .mdc-checkbox__background, .mat-mdc-checkbox .mdc-checkbox .mdc-checkbox__native-control:enabled:indeterminate ~ .mdc-checkbox__background, .mat-mdc-checkbox .mdc-checkbox .mdc-checkbox__native-control[data-indeterminate=true]:enabled ~ .mdc-checkbox__background {
+      background-color: $grey-black !important;
+      border-color: $grey-black !important;
+    }
+  }
+
+  mat-form-field, .mat-mdc-checkbox {
+
+
     width: 100%;
     font-family: 'Nunito Sans', sans-serif !important;
     font-size: 17px;
@@ -140,6 +151,7 @@ form {
   position: relative;
   width: 100%;
   margin: 0;
+  height: auto
 }
 
 .interior-image {

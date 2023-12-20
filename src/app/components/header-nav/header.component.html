@@ -1,13 +1,13 @@
 <div [class.sticky]="sticky">
   <div>
     <app-burger-menu
+      (menuLinkOpen)="setMenuLink($event)"
       [active]="menuLinkOpen"
       [sticky]="sticky"
-      (menuLinkOpen)="setMenuLink($event)"
     ></app-burger-menu>
     <app-beauti-logo
-      [sticky]="sticky"
       (click)="menuLinkOpen = false"
+      [sticky]="sticky"
     ></app-beauti-logo>
 
     <ul class="menu-list">
@@ -18,10 +18,10 @@
       <li><a routerLink="/contact">CONTACT</a></li>
     </ul>
     <button
-      mat-flat-button
-      color="primary"
-      class="main-button"
       (click)="openBooking()"
+      class="main-button"
+      color="primary"
+      mat-flat-button
     >
       Book now
     </button>
@@ -30,7 +30,7 @@
   </div>
 </div>
 <app-menu-link
+  (menuLinkOpen)="setMenuLink($event)"
   [active]="menuLinkOpen"
   [class.active]="menuLinkOpen"
-  (menuLinkOpen)="setMenuLink($event)"
 ></app-menu-link>

@@ -13,20 +13,18 @@ export const slideConfig: SlideConf = {
   centerMode: true,
   responsive: [
     {
-      breakpoint: 768,
+      breakpoint: 1200,
       settings: {
         arrows: true,
         dots: true,
         centerMode: true,
-        variableWidth: true,
         slidesToShow: 2
       }
     },
     {
-      breakpoint: 480,
+      breakpoint: 768,
       settings: {
         dots: true,
-
         arrows: false,
         centerMode: true,
         slidesToShow: 1

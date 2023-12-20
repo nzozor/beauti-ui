@@ -98,7 +98,7 @@ h3 {
   text-align: center;
   width: 100%;
   margin: 10px;
-  height: 250px;
+  max-height: 330px;
   border: 1px solid $blue-type1;
   outline: none;
   padding: 22px;
@@ -232,7 +232,7 @@ h3 {
 
       @media only screen and (min-width: 600px) {
         margin: 0 50px;
-        transform: scale(1.2);
+        transform: scale(1.1);
       }
     }
   }

@@ -56,4 +56,11 @@ export class MainSliderComponent {
     }
   }
 
+  getBackGroudImgRaw(imgLarge: string, imgSmall: string): string {
+    if (isPlatformBrowser(this.platformId) && window.innerWidth > 768) {
+      return `${this.cmsUrl}${imgLarge}`;
+    } else {
+      return `${this.cmsUrl}${imgSmall}`;
+    }
+  }
 }

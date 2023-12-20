@@ -58,6 +58,16 @@ button {
 
 .slide {
   > div {
+
+    :not(img) {
+      z-index: 1;
+    }
+
+    img {
+      object-fit: cover;
+      object-position: top;
+    }
+
     display: flex;
     flex-direction: column;
     justify-self: center;

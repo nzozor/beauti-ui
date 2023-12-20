@@ -1,9 +1,9 @@
-import { Component, OnInit, Inject, ChangeDetectionStrategy } from '@angular/core';
-import { fromEvent } from 'rxjs';
-import { throttleTime, tap } from 'rxjs/operators';
+import {ChangeDetectionStrategy, Component, Inject, OnInit} from '@angular/core';
+import {fromEvent} from 'rxjs';
+import {tap, throttleTime} from 'rxjs/operators';
 
-import { DOCUMENT } from '@angular/common';
-import { BookingService } from '../../shared/services/booking.service';
+import {DOCUMENT} from '@angular/common';
+import {BookingService} from '../../shared/services/booking.service';
 
 @Component({
   selector: 'app-header-nav',
@@ -13,19 +13,21 @@ import { BookingService } from '../../shared/services/booking.service';
 })
 export class HeaderNavComponent implements OnInit {
 
-  constructor(@Inject(DOCUMENT) private document: Document, private bookingService: BookingService) { }
-
   scrolltop = false;
   stickyHeader = false;
-  private _menuLinkOpen = false;
-
   sticky = false;
-  set menuLinkOpen(menuLinkOpen: boolean) {
-    this._menuLinkOpen = menuLinkOpen;
+
+  constructor(@Inject(DOCUMENT) private document: Document, private bookingService: BookingService) {
   }
+
+  private _menuLinkOpen = false;
 
   get menuLinkOpen(): boolean {
     return this._menuLinkOpen;
+  }
+
+  set menuLinkOpen(menuLinkOpen: boolean) {
+    this._menuLinkOpen = menuLinkOpen;
   }
 
   ngOnInit(): void {
