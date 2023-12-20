@@ -53,8 +53,8 @@ export class DataService {
       map((banners: HomePageSlider[]) => {
         const defaultBanner = () => banners.filter(banner => banner.isDefaultBanner === true)
         const filteredBanners = banners
-          .filter(banner => serverDate ? new Date(serverDate).getTime() - new Date(banner.expirationDate).getTime() <= 0 : true)
-          .filter(banner => serverDate ? new Date(serverDate).getTime() - new Date(banner.publication).getTime() >= 0 : true)
+          .filter(banner => serverDate && banner.expirationDate ? new Date(serverDate).getTime() - new Date(banner.expirationDate).getTime() <= 0 : true)
+          .filter(banner => serverDate && banner.publication ? new Date(serverDate).getTime() - new Date(banner.publication).getTime() >= 0 : true)
           .sort((a: HomePageSlider, b: HomePageSlider) => new Date(b.publication).getTime() - new Date(a.publication).getTime()).filter((banner) => !banner.hide)
         return filteredBanners.length > 0 ? filteredBanners : defaultBanner()
       })
