@@ -83,7 +83,7 @@ export const AESTHETIC_TREATMENTS: any = [
       {
         treatment: `    Face or Neck`,
         options: [
-          {key: '', value: '    60 mins'},
+          {key: '', value: '    45 mins'},
           {key: '', value: '    £300'},
           {key: '', value: '    £540'},
         ]
@@ -91,7 +91,7 @@ export const AESTHETIC_TREATMENTS: any = [
       {
         treatment: `Face and Neck`,
         options: [
-          {key: '', value: '60 mins'},
+          {key: '', value: '45 mins'},
           {key: '', value: '£500'},
           {key: '', value: '£900'},
         ]
@@ -119,7 +119,7 @@ export const AESTHETIC_TREATMENTS: any = [
       {
         treatment: ``,
         options: [
-          {key: '', value: '60 mins'},
+          {key: '', value: '45 mins'},
           {key: '', value: '£200'},
           {key: '', value: '£360'},
           {key: '', value: '£540'},
@@ -148,7 +148,7 @@ export const AESTHETIC_TREATMENTS: any = [
       {
         treatment: ``,
         options: [
-          {key: '', value: '60 mins'},
+          {key: '', value: '45 mins'},
           {key: '', value: '£235'},
           {key: '', value: '£635'},
           {key: '', value: '£540'},
@@ -177,10 +177,37 @@ export const AESTHETIC_TREATMENTS: any = [
       {
         treatment: ``,
         options: [
-          {key: '', value: '60 mins'},
+          {key: '', value: '45 mins'},
           {key: '', value: '£280'},
           {key: '', value: '£504'},
           {key: '', value: '£756'},
+        ]
+      },
+    ]
+  },
+  {
+    title: `Seventy Hyal 2000 - Skin Booster`,
+    url: 'seventy-hyal-2000',
+    treatment: ``,
+    hasShowcase: true,
+    description: ``,
+    orientation: 'row',
+    fullOptions: 'true',
+    options: [
+      {
+        treatment: '                            ',
+        options: [
+          {key: '   Duration', value: ''},
+          {key: '   Single', value: ''},
+          {key: '   2 courses', value: ''},
+        ]
+      },
+      {
+        treatment: ``,
+        options: [
+          {key: '', value: '    45 mins'},
+          {key: '', value: '    £200'},
+          {key: '', value: '    £360'},
         ]
       },
     ]

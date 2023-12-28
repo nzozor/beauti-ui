@@ -70,6 +70,11 @@
               align-items: center;
               margin-bottom: 20px;
 
+              a {
+                text-decoration: none;
+
+              }
+
               @media (max-width: 600px) {
                 button {
                   display: none;
@@ -78,7 +83,6 @@
 
               > div {
                 margin-right: 15px;
-
                 @media (min-width: 768px) {
                   margin-right: 55px;
                 }
@@ -90,6 +94,8 @@
                     font-size: 17px;
                   }
                 }
+
+
               }
 
               background-color: rgba($blue-type1, 0.6);
@@ -394,12 +400,16 @@ h2 {
 
 
 .main-button.mat-primary.main-button-read-more {
-
   color: $grey-black;
   background-color: transparent !important;
   border-color: black;
   padding: 8px 25px;
   height: 38px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
 }
 
 
