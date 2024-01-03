@@ -22,7 +22,7 @@ export class MainSliderComponent {
   slideConfig = {
     slidesToShow: 1, slidesToScroll: 1, dots: true,
     infinite: true,
-    adaptiveHeight: false,
+    adaptiveHeight: true,
     focusOnSelect: false,
     touchThreshold: 1000,
     autoplay: false,
