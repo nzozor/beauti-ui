@@ -1,31 +1,27 @@
 <div class="wrapper">
-    <div class="container">
-        <div>
-            Beauti Skin Clinic is a top-rated boutique skin clinic in South London led by experienced Aesthetician
-            Cinzia Campigotto. We specialise in providing aesthetic and advanced skin treatments to improve skin
-            conditions such as ageing, acne, rosacea and pigmentation. We believe in delivering the most effective
-            results while creating a warm, clean and friendly atmosphere for all our customers at affordable prices.
-
-        </div>
-        <button
-                (click)="sendGtaData('view treatment')"
-                class="main-button"
-                color="primary"
-                mat-flat-button
-                routerLink="/treatments"
-        >
-            View Treatments
-        </button>
-
-        <button
-                (click)="sendGtaData('book a consultation')"
-                class="main-button"
-                color="primary"
-                mat-flat-button
-                routerLink="/consultation"
-        >
-            Book Consultation
-        </button>
-
+  <div class="container">
+    <div *ngIf="homepageSummary$ | async; let summary">
+      {{summary.content}}
     </div>
+    <button
+      (click)="sendGtaData('view treatment')"
+      class="main-button"
+      color="primary"
+      mat-flat-button
+      routerLink="/treatments"
+    >
+      View Treatments
+    </button>
+
+    <button
+      (click)="sendGtaData('book a consultation')"
+      class="main-button"
+      color="primary"
+      mat-flat-button
+      routerLink="/consultation"
+    >
+      Book Consultation
+    </button>
+
+  </div>
 </div>

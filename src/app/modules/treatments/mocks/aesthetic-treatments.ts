@@ -29,6 +29,38 @@ export const AESTHETIC_TREATMENTS: any = [
           {key: 'Single', value: '£320'},
         ]
       },
+      {
+        treatment: `Jawline Slimming / Teeth Grinding`,
+        description: ``,
+        options: [
+          {key: 'Duration', value: '60 mins'},
+          {key: 'Single', value: '£350'},
+        ]
+      },
+      {
+        treatment: `Excessive Sweating (Underarms)`,
+        description: ``,
+        options: [
+          {key: 'Duration', value: '60 mins'},
+          {key: 'Single', value: '£380'},
+        ]
+      },
+      {
+        treatment: `Gummy Smile`,
+        description: ``,
+        options: [
+          {key: 'Duration', value: '60 mins'},
+          {key: 'Single', value: '£250'},
+        ]
+      },
+      {
+        treatment: `Marionette Lines`,
+        description: ``,
+        options: [
+          {key: 'Duration', value: '60 mins'},
+          {key: 'Single', value: '£250'},
+        ]
+      },
     ]
   },
   {
@@ -117,7 +149,7 @@ export const AESTHETIC_TREATMENTS: any = [
         ]
       },
       {
-        treatment: ``,
+        treatment: `Classic`,
         options: [
           {key: '', value: '45 mins'},
           {key: '', value: '£200'},
@@ -125,57 +157,17 @@ export const AESTHETIC_TREATMENTS: any = [
           {key: '', value: '£540'},
         ]
       },
-    ]
-  },
-  {
-    title: `Jalupro HMV - Skin Booster`,
-    url: 'Jalupro',
-    hasShowcase: true,
-    treatment: ``,
-    description: ``,
-    orientation: 'row',
-    fullOptions: 'true',
-    options: [
       {
-        treatment: '',
-        options: [
-          {key: '   Duration', value: ''},
-          {key: '   Single', value: ''},
-          {key: '   2 Courses', value: ''},
-          {key: '   3 Courses', value: ''},
-        ]
-      },
-      {
-        treatment: ``,
+        treatment: `HMW`,
         options: [
           {key: '', value: '45 mins'},
           {key: '', value: '£235'},
+          {key: '', value: '£423'},
           {key: '', value: '£635'},
-          {key: '', value: '£540'},
-        ]
-      },
-    ]
-  },
-  {
-    title: `Jalupro Super Hydro - Skin Booster`,
-    url: 'Jalupro',
-    hasShowcase: true,
-    treatment: ``,
-    description: ``,
-    orientation: 'row',
-    fullOptions: 'true',
-    options: [
-      {
-        treatment: '',
-        options: [
-          {key: '   Duration', value: ''},
-          {key: '   Single', value: ''},
-          {key: '   2 Courses', value: ''},
-          {key: '   3 Courses', value: ''},
         ]
       },
       {
-        treatment: ``,
+        treatment: `Super Hydro`,
         options: [
           {key: '', value: '45 mins'},
           {key: '', value: '£280'},

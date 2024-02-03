@@ -1,5 +1,7 @@
-import {ChangeDetectionStrategy, Component} from '@angular/core';
+import {ChangeDetectionStrategy, Component, OnInit} from '@angular/core';
 import {BookingService} from "../../../shared/services/booking.service";
+import {DataService} from "../../../shared/services/data.service";
+import {Observable} from "rxjs";
 
 @Component({
   selector: 'app-boutique-summary',
@@ -7,9 +9,16 @@ import {BookingService} from "../../../shared/services/booking.service";
   styleUrls: ['./boutique-summary.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class BoutiqueSummaryComponent {
+export class BoutiqueSummaryComponent implements OnInit {
 
-  constructor(private bookingService: BookingService) {
+  homepageSummary$: Observable<any>;
+
+  constructor(private bookingService: BookingService, private dataService: DataService) {
+
+  }
+
+  ngOnInit() {
+    this.homepageSummary$ = this.dataService.getHomepageSummary();
   }
 
   sendGtaData(eventLabel: string, eventCategory = 'homepage', event = 'button clicks') {

@@ -12,7 +12,6 @@ import {TreatmentSectionComponent} from "../../modules/treatments/treatment-sect
   providedIn: 'root'
 })
 export class DataService {
-
   beautiCmsUrl = environment.cmsUrl;
   currentParentTreatment = 'Skin Treatmetns';
   activeTreatmentList: string[];
@@ -83,6 +82,14 @@ export class DataService {
     return this.http.get(`${this.beautiCmsUrl}/api/prices?populate=*`).pipe(
       map((response: any) => {
         return response.data;
+      }),
+    );
+  }
+
+  getHomepageSummary(): Observable<[]> {
+    return this.http.get(`${this.beautiCmsUrl}/api/homepage-summary`).pipe(
+      map((response: any) => {
+        return response.data.attributes;
       }),
     );
   }
