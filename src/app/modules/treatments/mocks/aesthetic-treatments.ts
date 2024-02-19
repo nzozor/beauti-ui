@@ -241,8 +241,8 @@ export const AESTHETIC_TREATMENTS: any = [
     ]
   },
   {
-    title: `Aqualyx Fat Dissolving Injections`,
-    url: `Aqualyx-Fat-Dissolving-Injections`,
+    title: `Fat Dissolving Injections`,
+    url: `Fat-Dissolving-Injections`,
     hasShowcase: true,
     treatment: ``,
     description: ``,
