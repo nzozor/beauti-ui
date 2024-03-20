@@ -1,8 +1,6 @@
 import {ComponentFixture, TestBed} from '@angular/core/testing';
 
 import {PopularTreatmentComponent} from './popular-treatment.component';
-import {MockModule} from "ng-mocks";
-import {SlickCarouselModule} from "ngx-slick-carousel";
 
 describe('PopularTreatmentComponent', () => {
   let component: PopularTreatmentComponent;
@@ -11,8 +9,6 @@ describe('PopularTreatmentComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       declarations: [PopularTreatmentComponent],
-      imports: [MockModule(SlickCarouselModule)],
-
     })
       .compileComponents();
 

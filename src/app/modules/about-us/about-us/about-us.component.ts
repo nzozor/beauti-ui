@@ -3,6 +3,7 @@ import {Observable} from 'rxjs';
 import {DataService} from 'src/app/shared/services/data.service';
 import {SeoService} from 'src/app/shared/services/seo.service';
 import {SLIDE_CONFIG, slideConfig} from "../../../shared/utils/slider-config";
+import {ICarouselImg} from "../../../components/image-showcase/image-showcase.component";
 
 export interface SlideConf {
   slidesToShow: number;
@@ -20,11 +21,10 @@ export interface SlideConf {
 
 })
 export class AboutUsComponent {
-
-  slides = [
-    {img: 'assets/consultation/cinzia-beauti-consultation-1.jpg', alt: 'Beauti Skin Clinic Founder Cinzia Campigotto'},
-    {img: 'assets/consultation/cinzia-beauti-consultation-2.jpg', alt: 'Beauti Skin Clinic Founder Cinzia Campigotto'},
-    {img: 'assets/consultation/cinzia-beauti-consultation-3.jpg', alt: 'Beauti Skin Clinic Founder Cinzia Campigotto'},
+  images: ICarouselImg[] = [
+    {url: 'assets/consultation/cinzia-beauti-consultation-1.jpg', alt: 'Beauti Skin Clinic Founder Cinzia Campigotto'},
+    {url: 'assets/consultation/cinzia-beauti-consultation-2.jpg', alt: 'Beauti Skin Clinic Founder Cinzia Campigotto'},
+    {url: 'assets/consultation/cinzia-beauti-consultation-3.jpg', alt: 'Beauti Skin Clinic Founder Cinzia Campigotto'},
   ];
   aboutUs$: Observable<any> = this.dataService.getAboutUsPage();
 

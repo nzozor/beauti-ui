@@ -1,17 +1,5 @@
-<ngx-slick-carousel
-	#slickModal="slick-carousel"
-  [config]="slideConfig"
-  id="carousel"
->
-  <div *ngFor="let slide of slides" class="slide" ngxSlickItem>
-    <img
-      [alt]="slide.alt"
-      [ngSrc]="slide.img"
-      class="js-lazy-image"
-      fill="true"
-    />
-  </div>
-</ngx-slick-carousel>
+<img-showcase [images]="images"></img-showcase>
+
 <div class="contact-points">
   <div>
     <h2>Address</h2>

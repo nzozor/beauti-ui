@@ -1,18 +1,4 @@
-<ngx-slick-carousel
-	#slickModal="slick-carousel"
-  [config]="slideConfig"
-  id="carousel"
->
-  <div *ngFor="let slide of slides" class="slide" ngxSlickItem>
-    <img
-      [alt]="slide.alt"
-      [ngSrc]="slide.img"
-      class="js-lazy-image"
-      fill="true"
-      priority="true"
-    />
-  </div>
-</ngx-slick-carousel>
+<img-showcase [images]="images"></img-showcase>
 <div class="container about-us-page">
   <div
     *ngIf="aboutUs$ | async as aboutUsContent"
@@ -20,6 +6,6 @@
     class="container about-us-page"
   ></div>
   <div class="beauti-room">
-    <img height="667" ngSrc="assets/beauti-room-medium.jpg" width="1000"/>
+    <img height="667" ngSrc="assets/beauti-room-medium.jpg" priority="true" width="1000"/>
   </div>
 </div>

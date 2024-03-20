@@ -4,7 +4,7 @@ import {SlideConf} from "../../../shared/utils/slider-config";
 @Component({
   selector: 'app-popular-treatment',
   templateUrl: './popular-treatment.component.html',
-  styleUrls: ['./popular-treatment.component.scss']
+  styleUrls: ['./popular-treatment.component.scss'],
 })
 export class PopularTreatmentComponent implements OnInit {
 
@@ -41,13 +41,18 @@ export class PopularTreatmentComponent implements OnInit {
       }
     ]
   };
-  slides = [
-    {img: 'assets/feature-img/Bazaar_Logo.svg.png'},
-    {img: 'assets/feature-img/hello.png'},
-    {img: 'assets/feature-img/mailonline-vector-logo.png'},
-    {img: 'assets/feature-img/metro-co-uk-logo-vector.png'},
-    {img: 'assets/feature-img/The_Sun.svg.png'},
+  slides: any = [
+    {url: 'assets/feature-img/Bazaar_Logo.svg.png'},
+    {url: 'assets/feature-img/hello.png'},
+    {url: 'assets/feature-img/mailonline-vector-logo.png'},
+    {url: 'assets/feature-img/metro-co-uk-logo-vector.png'},
+    {url: 'assets/feature-img/The_Sun.svg.png'},
   ];
+
+  slideStyles = {
+    maxWidth: '855px',
+    margin: 'auto',
+  }
 
   constructor() {
   }

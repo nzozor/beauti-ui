@@ -51,23 +51,7 @@
   </div>
   <div class="container-featured">
     <div class="fade_rule"></div>
-
     <h4 class="sub-heading"> As Featured in </h4>
-    <ngx-slick-carousel
-			#slickModal="slick-carousel"
-      [config]="slideConfig"
-      id="carousel"
-    >
-      <div *ngFor="let slide of slides" class="slide" ngxSlickItem>
-        <img
-          [ngSrc]="slide.img"
-          alt="Cinzia profile picture | Beauti Skin Clinic | Oval, Vauxhall, Kennington, Stockwell, brixton, clapham, sw9"
-          class="js-lazy-image"
-          height="86"
-          width="151"
-        />
-      </div>
-    </ngx-slick-carousel>
+    <logo-carousel [images]="slides" [styles]="slideStyles"></logo-carousel>
   </div>
-
 </div>

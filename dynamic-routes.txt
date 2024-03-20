@@ -1,7 +1,7 @@
 /treatments/advanced-beauti-signature-relaxing-facial
 /treatments/anti-wrinkle-injections
 /treatments/aqua-3-hydrotherapy-facial
-/treatments/aqualyx-fat-dissolving-injections
+/treatments/fat-dissolving-injections
 /treatments/beauti-signature-relaxing-facial
 /treatments/cosmelan-depigmentation-programme
 /treatments/dermal-fillers

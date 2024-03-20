@@ -1,16 +1,14 @@
-<ngx-slick-carousel
-	#slickModal="slick-carousel"
-  *ngIf="homageBanners$ | async as banners"
-  [class.single-banner]="banners.length === 1"
-  [config]="slideConfig"
-  class="carousel hp-slider"
->
-  <div *ngFor="let slide of banners" class="slide" ngxSlickItem>
+<swiper-container *ngIf="homageBanners$ | async as banners" class="swiper-container"
+                  init="false" pagination="true" pagination-clickable="true" pagination-dynamic-bullets="true">
+  <swiper-slide *ngFor="let slide of banners; index as i" class="slide" lazy="true">
     <div>
-      <img [ngSrc]="getBackGroudImgRaw(slide.image.data.attributes.url, slide.imgSmall.data.attributes.url)"
-           alt="Beauti Promo"
-           fill="true"
-           priority="true"
+      <img
+        *ngIf="getBackGroudImgRaw(slide.image.data.attributes.formats.large.url, slide.imgSmall.data.attributes.formats.small.url)"
+        [loading]="i !== 0? 'lazy' : undefined"
+        [ngSrc]="getBackGroudImgRaw(slide.image.data.attributes.formats.large.url, slide.imgSmall.data.attributes.formats.small.url)"
+        [priority]="i === 0"
+        alt="Beauti Promo"
+        fill="true"
       />
       <div class="slider-title">
 
@@ -40,6 +38,5 @@
       </button>
       <div class="asterisk">{{ slide.asterisk }}</div>
     </div>
-  </div>
-</ngx-slick-carousel>
-
+  </swiper-slide>
+</swiper-container>

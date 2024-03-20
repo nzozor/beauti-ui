@@ -2,7 +2,7 @@ app-burger-menu {
   display: none;
   width: 175px;
 
-  @media (max-width: 1023px) {
+  @media (max-width: 1200px) {
     display: initial;
   }
 
@@ -12,7 +12,7 @@ app-burger-menu {
 }
 
 :host {
-  &>div {
+  & > div {
     padding: 18px 70px;
     background-color: white;
 
@@ -25,14 +25,13 @@ app-burger-menu {
       app-beauti-logo {
         ::ng-deep svg {
           width: initial;
-          height: 25px; 
+          height: 25px;
         }
       }
     }
 
 
-
-    >div {
+    > div {
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -59,7 +58,7 @@ app-burger-menu {
     color: #3E3D3C; // TO DO: to move
     padding: 0;
 
-    @media (max-width: 1023px) {
+    @media (max-width: 1199px) {
       display: none;
     }
 

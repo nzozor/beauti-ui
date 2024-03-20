@@ -236,4 +236,40 @@ h3 {
       }
     }
   }
+
+  swiper-slide {
+    padding: 30px;
+  }
+
 }
+
+
+swiper-container {
+  padding: 0 20px;
+}
+
+swiper-slide {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+  font-size: 14px;
+
+  > div {
+    border: 1px solid $blue-type1;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    align-self: normal;
+    justify-content: center;
+
+    .name {
+      color: $beauti-grey;
+      //margin-bottom: 15px;
+      margin: 15px;
+    }
+  }
+}
+
+

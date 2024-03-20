@@ -13,12 +13,12 @@ div {
 h3 {
   font-size: 19px;
   color: white;
+  text-align: left;
 }
 
 
 h1,
 h2 {
-  font-size: 44px;
   color: white;
   text-align: left;
 
@@ -28,13 +28,27 @@ h2 {
 
   &.light {
     font-weight: 300;
-    line-height: 55px;
   }
 
-  @media (max-width: 479px) {
-    font-size: 34px;
+  font-size: 22px;
+  line-height: 28px;
+
+  @media (min-width: 480px) {
+    font-size: 25px;
+    line-height: 35px;
+  }
+
+  @media (min-width: 768px) {
+    font-size: 35px;
+    line-height: 50px;
+  }
+
+  @media (min-width: 992px) {
+    font-size: 38px;
+    line-height: 55px;
   }
 }
+
 
 h5 {
   line-height: 30px;
@@ -74,7 +88,6 @@ button {
 
     display: flex;
     flex-direction: column;
-    justify-self: center;
     align-items: flex-start;
     background-color: white;
     color: white;
@@ -84,7 +97,7 @@ button {
     background-position: 57%;
     padding: 5% 75px 3%;
 
-    @media (max-width: 479px) {
+    @media (max-width: 768px) {
       padding: 5% 30px 3% 30px;
       background-position: 0;
     }
@@ -94,19 +107,26 @@ button {
 .carousel {
   width: 100%;
   overflow: hidden;
-  //max-height: 550px;
 }
 
-ngx-slick-carousel.carousel {
-  margin-bottom: 0;
+swiper-container {
+  display: grid;
+}
+
+.slider-title {
+  max-width: 800px;
+}
+
+.slider-content {
+  img {
+    z-index: -2;
+  }
 
   .slider-title {
-    max-width: 800px;
-
-    h3 {
-      text-align: left;
-    }
+    z-index: 2;
   }
 }
 
-
+swiper-slide {
+  
+}

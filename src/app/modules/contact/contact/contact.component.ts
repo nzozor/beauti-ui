@@ -11,18 +11,18 @@ import {SLIDE_CONFIG, SlideConf, slideConfig} from "../../../shared/utils/slider
 })
 export class ContactComponent implements OnInit {
 
-  slides = [
+  images = [
     {
       alt: 'Top-rated Beauti Skin Clinic in South London, serving Oval, Brixton, Kennington, Vauxhall, Stockwell and Clapham',
-      img: 'assets/beauti-Interior-waiting-area-2@2x.jpg'
+      url: 'assets/beauti-Interior-waiting-area-2@2x.jpg'
     },
     {
       alt: 'Top-rated Beauti Skin Clinic in South London, serving Oval, Brixton, Kennington, Vauxhall, Stockwell and Clapham',
-      img: 'assets/beauti-Exterior-store-front@2x.jpg'
+      url: 'assets/beauti-Exterior-store-front@2x.jpg'
     },
     {
       alt: 'Top-rated Beauti Skin Clinic in South London, serving Oval, Brixton, Kennington, Vauxhall, Stockwell and Clapham',
-      img: 'assets/beauti-Interior-treatment-room-1@2x.jpg'
+      url: 'assets/beauti-Interior-treatment-room-1@2x.jpg'
     },
   ];
 

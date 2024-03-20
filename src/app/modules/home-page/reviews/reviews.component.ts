@@ -1,17 +1,23 @@
-import {ChangeDetectionStrategy, Component, ElementRef, ViewChild} from '@angular/core';
+import {AfterViewInit, ChangeDetectionStrategy, Component, ElementRef, ViewChild} from '@angular/core';
+import {register} from 'swiper/element/bundle';
+import {v4 as uuidv4} from 'uuid';
 
 @Component({
   selector: 'app-reviews',
   templateUrl: './reviews.component.html',
   styleUrls: ['./reviews.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
+  // encapsulation: ViewEncapsulation.None,
 })
-export class ReviewsComponent {
+export class ReviewsComponent implements AfterViewInit {
   @ViewChild('sliderEl') sliderEl: ElementRef;
   @ViewChild('start') start: ElementRef;
   @ViewChild('slickModal') slickModal: any;
+  @ViewChild('swiperRef') swiperRef: ElementRef;
 
   stars = [1, 2, 3, 4, 5];
+  uuid;
+
   reviews: { quote: string, reviewerName: string }[] = [
     {
       quote: `I had my first Aqua 3 facial today with Cinzia and it was wonderful! Cinzia put me at complete ease, took the time to explain what she was doing and she was absolutely amazing! I could not believe my face could look so good after just treatment and I cannot wait to go back and get a second one. Highly recommended.`,
@@ -43,45 +49,71 @@ export class ReviewsComponent {
     }
   ];
 
-  slideConfig = {
-    slidesToShow: 3,
+
+  params = {
     slidesToScroll: 1,
-    nextArrow: '<div class=\'nav-btn next-slide\'></div>',
-    prevArrow: '<div class=\'nav-btn prev-slide\'></div>',
-    dots: true,
+    slidesPerView: 3,
     infinite: true,
-    centerMode: true,
-    variableWidth: true,
-    adaptiveHeight: true,
     focusOnSelect: false,
-    touchThreshold: 200,
+    touchThreshold: 1000,
     autoplay: false,
-    speed: 2500,
-    touchMove: true,
-    responsive: [
-      {
-        breakpoint: 768,
-        settings: {
-          arrows: true,
-          centerMode: true,
-          variableWidth: true,
-          slidesToShow: 3
-        }
+    autoplayDelay: 2500,
+    freeMode: true,
+    fade: true,
+    spaceBetween: 30,
+    breakpoints: {
+      0: {
+        slidesPerView: 1,
       },
-      {
-        breakpoint: 480,
-        settings: {
-          arrows: false,
-          centerMode: true,
-          slidesToShow: 1
-        }
-      }
-    ]
+      768: {
+        slidesPerView: 2,
+
+      },
+      1024: {
+        slidesPerView: 3,
+        spaceBetween: 50,
+      },
+    },
+    injectStyles: [
+      `
+          .swiper-pagination {
+              position: initial;
+              margin: 34px 0 10px;
+              margin-left: 50%;
+            }
+          @media (min-width: 768px) {
+            .swiper-pagination {
+              scale: 1.5
+              
+            }
+         
+          }
+         
+           .swiper-pagination-bullet-active {
+            background: white;
+          }
+        `,
+    ],
   };
+  styles = {
+    maxWidth: '1200px',
+
+    margin: 'auto',
+  }
+
+  constructor() {
+    register();
+    this.uuid = uuidv4().replace(/-/g, '').substring(0, 16);
+  }
 
   swipe(): void {
     setTimeout(() => {
       this.slickModal.slickGoTo(this.slickModal.currentIndex);
     }, 0);
+  }
+
+  ngAfterViewInit() {
+    Object.assign(this.swiperRef.nativeElement, this.params);
+    this.swiperRef.nativeElement.initialize();
   }
 }

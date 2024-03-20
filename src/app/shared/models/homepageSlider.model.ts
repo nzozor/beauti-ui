@@ -1,10 +1,11 @@
 export interface HomePageSliderRaw {
   attributes: HomePageSlider;
 }
+
 export interface HomePageSlider {
   images: Image[];
-  image: { data: { attributes: {url: string}}};
-  imgSmall: { data: { attributes: {url: string}}};
+  image: { data: { attributes: { url: string, formats: any } } };
+  imgSmall: { data: { attributes: { url: string, formats: any } } };
   title1: string;
   findOutMoreUrl: string;
   asterisk: string;
